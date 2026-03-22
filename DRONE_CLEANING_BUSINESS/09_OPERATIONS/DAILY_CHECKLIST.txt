@@ -1,0 +1,48 @@
+DAILY CHECKLIST
+
+Ucel dokumentu
+- Dat timu jednoduchy denny kontrolny list pred vyjazdom, na mieste a po navrate.
+
+Pred vyjazdom
+- [ ] Skontrolovany kalendar a zoznam dnesnych objektov
+- [ ] Potvrdeny kontakt na klienta
+- [ ] Potvrdene pocasie a go / no-go stav
+- [ ] Nabite baterie a funkcne nabijanie
+- [ ] Pumpa, hadice, trysky a fitingy zbalene
+- [ ] Chemia, voda alebo plan zdroja vody potvrdeny
+- [ ] PPE a bezpecnostna vybava zbalene
+- [ ] Telefon, powerbank, dokumentacia, foto vybava zbalene
+- [ ] Auto / transport pripraveny
+- [ ] Adresa a trasa skontrolovana
+
+Na mieste pred startom
+- [ ] Vizualna kontrola objektu a okolia
+- [ ] Potvrdeny pristup na pozemok
+- [ ] Potvrdeny klient alebo kontaktna osoba
+- [ ] Ludia, auta, zvierata a citlive zony mimo pracovnej zony
+- [ ] Povrch objektu vizualne zodpoveda tomu, co bolo hlasene
+- [ ] Vietor, dazd a povrch vyhodnotene ako bezpecne
+- [ ] Spravene pred-foto
+- [ ] Stanoveny perimeter a escape plan
+
+Pocas prace
+- [ ] Prubezne sledovana stabilita letu a cistiaceho systemu
+- [ ] Kontrolovane uniky vody, chemie a fitingov
+- [ ] Kontrolovany pohyb ludi v okoli
+- [ ] Prerusit pracu pri zmene pocasia alebo rizika
+
+Po skonceni prace
+- [ ] Spravene po-foto
+- [ ] Klientovi ukazany vysledok
+- [ ] Potvrdeny rozsah a doplatok
+- [ ] Zapisany cas realizacie a poznamky k objektu
+- [ ] Zapisane technicke problemy alebo incidenty
+- [ ] Vybavenie oplachnute, skontrolovane a odlozene
+- [ ] Baterie oznacene na nabijanie alebo servis
+
+Po navrate
+- [ ] Lead / job status aktualizovany
+- [ ] Assety ulozene a oznacene
+- [ ] Incident alebo near-miss zapisany
+- [ ] Dalsie kroky pre klienta zapisane
+- [ ] Vytvoreny zoznam veci na doplnenie pred dalsim vyjazdom

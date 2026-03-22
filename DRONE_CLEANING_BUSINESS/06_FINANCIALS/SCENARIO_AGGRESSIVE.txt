@@ -1,0 +1,47 @@
+SCENARIO AGGRESSIVE
+
+Ucel dokumentu
+- Popisat silny rastovy scenar, ale bez fantasy predpokladov.
+
+FAKT Z WORKSPACE
+- Rocny scenar v cashflow dokumente:
+  - 243 zaloh
+  - 211 dokoncenych zakaziek
+  - 221 550 EUR trzba
+  - 7 290 EUR marketing spend
+  - 181 640 EUR cisty cashflow
+
+Pracovny operacny preklad
+- vysoka konverzia funnelu
+- silne SK referencie
+- funkcny DE pilot alebo lokalny expansion layer
+- vyssia operacna kapacita a lepsia organizacia timov
+
+Predpoklady
+- CAC na zalohu okolo 30 EUR
+- kvalitny creative mix a remarketing
+- stabilny proces od leadu po realizaciu
+- pripraveny helper alebo druha kapacitna vrstva
+
+Cisla pre rozhodovanie
+| Metrika | Hodnota |
+|---|---:|
+| Rocne zaloha cash-in | 12 150 EUR |
+| Dokoncene zakazky | 211 |
+| Trzba | 221 550 EUR |
+| Marketing spend | 7 290 EUR |
+| Cisty cashflow | 181 640 EUR |
+
+Co tento scenar znamena
+- tento scenar nie je startovaci plan
+- je to scenar po dokazanej konverzii, assetoch a procese
+- dava priestor na rychlejsie reinvestovanie, nie na bezhlavy rast
+
+Rizika
+- najvacsi risk je predcasny scale bez kapacity a compliance
+- pri vysokom pocte zakaziek rastie tlak na scheduling, helperov a servis techniky
+- bez systematickeho telemetry / maintenance layeru rastie operacne riziko
+
+Dalsie kroky
+- agresivny scenar pouzivat len ako scale target, nie ako vstupny plan
+- pred scale mat hotovy CRM, lead pipeline, maintenance rytmus a legal review DE vetvy

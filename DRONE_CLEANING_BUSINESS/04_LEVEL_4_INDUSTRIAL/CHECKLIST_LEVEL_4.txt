@@ -1,0 +1,31 @@
+CHECKLIST LEVEL 4 (INDUSTRIAL) – Veľké priemyselné areály, enterprise/B2B
+
+Legislatíva & povolenia
+- [ ] Compliance mapa pre UAS + interné pravidlá areálu klienta | kde vybaviť: compliance tím + HSE klienta | odhad času: 2–5 dní
+- [ ] Povolenie vstupu do priemyselného areálu a bezpečnostné previerky tímu | kde vybaviť: security oddelenie klienta | odhad času: 1–7 dní
+- [ ] Prevádzkový plán pre práce v blízkosti kritickej infraštruktúry | kde vybaviť: project manager + safety officer | odhad času: 1–3 dni
+  - DE poznámka: Pri DE priemyselných zákazkách počítať s prísnejšími site pravidlami a dokumentáciou v nemčine.
+
+Poistenie
+- [ ] Enterprise poistné limity (vysoké škody, prerušenie prevádzky) | kde vybaviť: broker/poisťovňa | odhad času: 3–10 dní
+- [ ] Overenie zmluvných poistných požiadaviek klienta (tender) | kde vybaviť: právnik + procurement | odhad času: 1–2 dni
+
+Pilotná spôsobilosť
+- [ ] Špecializovaný výcvik pre priemyselné prostredie (HSE + UAS) | kde vybaviť: akreditované školenie + interný tréning | odhad času: 2–5 dní
+- [ ] Evidencia oprávnení pre každý typ areálu/objektu | kde vybaviť: interný HR/compliance register | odhad času: 0.5–1 deň
+
+Prevádzkové procesy
+- [ ] Industrial SOP: permit-to-work, lockout zóny, koordinácia s údržbou klienta | kde vybaviť: interný SOP + HSE klienta | odhad času: 2–3 dni
+- [ ] Safety management system (KPI, incident trendy, CAPA) | kde vybaviť: interný SMS systém | odhad času: 3–7 dní
+- [ ] Multi-site plánovanie tímov a techniky | kde vybaviť: operations planner | odhad času: 1–2 dni
+
+Dokumenty pre klienta
+- [ ] B2B rámcová zmluva + SLA + zodpovednosti strán | kde vybaviť: právnik + obchod | odhad času: 2–5 dní
+- [ ] HSE balík dokumentov (RAMS/JSA podľa požiadaviek klienta) | kde vybaviť: HSE špecialista | odhad času: 1–3 dni
+- [ ] Audit-ready evidencia výkonu a zásahov | kde vybaviť: interný reporting systém | odhad času: 1–2 dni
+  - DE poznámka: Pri DE kontraktoch pripraviť DE jazykové verzie zmlúv, SLA a HSE podkladov.
+
+Technika & údržba
+- [ ] Preventívna údržba podľa MTBF a servisných intervalov | kde vybaviť: maintenance plán + servis partner | odhad času: priebežne / mesačne
+- [ ] Náhradné diely a záložné zostavy pre bezvýpadkovú prevádzku | kde vybaviť: sklad + procurement | odhad času: 1–2 dni inicializácia
+- [ ] Telemetria a archivácia letových dát pre audit klienta | kde vybaviť: cloud úložisko + interný IT | odhad času: 1–3 dni

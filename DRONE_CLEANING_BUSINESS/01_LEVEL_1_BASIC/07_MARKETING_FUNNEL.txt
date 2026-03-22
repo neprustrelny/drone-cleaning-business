@@ -1,0 +1,59 @@
+MARKETING FUNNEL
+
+Ucel dokumentu
+- Dat Level 1 zhrnutie, ako sa navstevnik meni na lead, zalohu a realizovanu zakazku.
+
+Vstup
+- lokalny traffic z Meta ads
+- odporucania
+- lokalne skupiny a organicky obsah
+- neskor Google search
+
+CTA
+- hlavne CTA: rezervovat termin
+- alternativne CTA: zaplatit zalohu
+- sekundarne CTA: poslat dopyt alebo vyziadat obhliadku
+
+Prvy plateny krok
+- PRACOVNY ODHAD podla aktualneho workspace: rezervacna zaloha, aktualne modelovana ako 50 EUR preorder mechanizmus.
+- Zaloha ma filtrovat vaznych zaujemcov, tvorit vcasny cashflow a viazat klienta na dalsi krok.
+- Ak je objekt nejasny alebo rizikovy, prvy krok moze byt lead-first bez platby.
+
+Zakladny funnel
+1. Traffic pride na landing page.
+2. Landing page vysvetli sluzbu, cenu, bezpecnost a dovod na akcny krok.
+3. Navstevnik vyplni formular alebo ide na payment step.
+4. Backend zachyti lead a priradi dalsi follow-up.
+5. Prebehne kvalifikacia, pricing a booking decision.
+6. Klient zaplati zalohu alebo potvrdi rezervaciu.
+7. Job sa odjazdi a uzavrie doplatkom.
+
+Follow-up
+- do 15 minut automaticke potvrdenie
+- do 24 hodin manualny kontakt
+- do 48 hodin dalsi krok: quote, fotky, obhliadka, booking alebo odmietnutie
+- po realizacii follow-up na testimonial, referral a upsell
+
+Hlavny conversion ciel
+- primarne: zaplatena zaloha alebo potvrdeny kvalifikovany booking
+- sekundarne: kvalitny lead s dostatocnymi datami na rychlu kvalifikaciu
+- obchodny ciel: closed_won job s doplatkom a referenciou
+
+Hlavne dovody straty leadu
+- pomaly alebo slaby follow-up
+- chybajuce fotky a zla kvalifikacia objektu
+- slaby trust layer na zalohu
+- nejasna cena alebo nejasne pravidla rezervacie
+- pocasie, pristup alebo rizikovy scope
+- neekonomicka zakazka
+
+Prepojenie na dalsie dokumenty
+- detailna struktura funnelu: 05_MARKETING_AND_SALES/FUNNEL_STRUCTURE.txt
+- segmenty: 05_MARKETING_AND_SALES/TARGET_SEGMENTS.txt
+- preorder logika: 05_MARKETING_AND_SALES/PREORDER_STRATEGY.txt
+- pricing: 01_LEVEL_1_BASIC/06_PRICING_MODEL.txt
+- pipeline: 09_OPERATIONS/LEAD_STATUS_PIPELINE.txt
+
+Prakticky zaver
+- Funnel nie je len reklama a web. Funnel konci az pri realizovanom a inkasovanom jobe.
+- Ak nefunguje follow-up, pricing alebo booking disciplina, marketing sam biznis nezachrani.

@@ -1,0 +1,53 @@
+DRONE SETUP
+
+Ucel dokumentu
+- Definovat minimalny technicky setup pre komercny start.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Neexistuje overeny vendor-specific BOM.
+  - Priorita je funkcny funnel, cashflow a realna dodavatelnost sluzby.
+- PRACOVNY ODHAD:
+  - Setup musi byt najprv spolahlivy, nie maximalisticky.
+
+Odporucany model / navrh
+
+MVP setup
+- letovy nosic vhodny pre stabilnu a opakovatelnu pracu
+- dostatok baterii na 1 plny vyjazd
+- zakladna kamera a dokumentacia vysledku
+- cistiaci delivery system napojeny na pumpu
+- transportny a bezpecnostny kit
+
+Co musi byt spolahlive hned
+- stabilita letu
+- konzistentny cistiaci vystup
+- rychla kontrola technickeho stavu pred misiou
+- jednoducha udrzba a vymena spotrebnych dielov
+
+Co je nice-to-have
+- druhy dron
+- nadstandardne video vybavenie
+- rozsiahla automatizacia a AI vrstvy
+- rozsiahla telemetria navyse mimo zakladnych logov
+
+Upgrade neskor
+- vyssia kapacita baterii
+- rychlejsia priprava na dalsi vyjazd
+- redundantny nosic
+- lepsia asset capture vrstva pre marketing a audit
+
+Technicke rizika
+- prilis komplexny setup spomali start
+- poddimenzovane baterie alebo pumpa znizia throughput
+- bez nahradnych dielov bude kazdy mensi problem znamenat vypadok
+
+Co treba overit
+- konkretne parametre nosica pre realny cistiaci payload
+- vendor ceny a servisny support
+- ake typy objektov MVP setup zvladne a ktore uz nie
+
+Prakticke dalsie kroky
+- vybrat realisticky start setup, nie maximalny
+- doplnit vendor shortlist
+- prepojit setup rozhodnutie s CAPEX variantou

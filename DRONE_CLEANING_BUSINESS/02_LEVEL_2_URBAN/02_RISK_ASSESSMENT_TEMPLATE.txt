@@ -1,0 +1,97 @@
+RISK ASSESSMENT TEMPLATE
+
+Ucel dokumentu
+- Dat timu prakticku sablonu na risk assessment pred Level 2 jobom v mestskom alebo citlivejsom prostredi.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Level 1 uz pracuje s weather go / no-go, checklistom a incident zapisom.
+  - Level 2 ma riesit zlozitejsie objekty, mesto, viac ludi v okoli a vyssie operacne trenie.
+- PRACOVNY ODHAD:
+  - Level 2 risk assessment ma byt povinny pred bookingom alebo najneskor pred finalnym go na objekt.
+
+SABLONA RISK ASSESSMENTU
+
+1. Identifikacia jobu
+- ID jobu:
+- Klient:
+- Adresa objektu:
+- Typ objektu:
+- Predpokladany rozsah:
+- Datum a cas planu:
+- Operacny owner:
+- Field operator:
+- Spotter / pomocnik:
+
+2. Lokalita a okolie
+- Hustota zastavby: nizka / stredna / vysoka
+- Typ lokality: rezidencna / zmiesana / komercna / ina
+- Pristup na miesto: jasny / obmedzeny / komplikovany
+- Moznost vytvorit perimeter: ano / podmienecne / nie
+- Body vstupu a vystupu:
+- Priestor na parkovanie a logistiku:
+
+3. Ludia, doprava a okolie
+- Pohyb ludi v okoli: nizky / stredny / vysoky
+- Vozidla v okoli: nizke / stredne / vysoke riziko
+- Chodnik / cesta / vstup pod objektom:
+- Citlive body: skoly, zastavky, prevadzky, deti, zvierata, terasy, balkony
+- Potreba docasneho usmernenia ludi: ano / nie
+- Potreba komunikacie so spravcom alebo susedmi: ano / nie
+
+4. Objekt a prekazky
+- Vyska objektu: nizka / stredna / vyssia Level 2 hranica
+- Prekazky: stromy, vedenie, lampy, balkony, markizy, reklamy, anteny
+- Povrch a sklon:
+- Viditelnost operatora:
+- Priestor na bezpecny start a pracu:
+- Stav objektu z fotiek alebo obhliadky:
+
+5. Pocasie a podmienky
+- Predpoved pocasia:
+- Vietor:
+- Dazd / vlhkost:
+- Viditelnost:
+- Teplota:
+- Povrch suchy / citatelny: ano / nie
+- Weather status podla matice: go / podmienecne go / no-go
+
+6. Risk scoring
+- Lokalita a hustota okolia: low / medium / high
+- Perimeter a kontrola ludi: low / medium / high
+- Doprava a pohyb vozidiel: low / medium / high
+- Pristup a logistika: low / medium / high
+- Technicka narocnost objektu: low / medium / high
+- Pocasie: low / medium / high
+- Celkovy risk: low / medium / high
+
+7. Mitigacia
+- Perimeter rozsirit alebo presunut
+- Pridat spottera / pomocnika
+- Zmenit cas realizacie na menej exponovane okno
+- Vyziadat dalsie fotky alebo povinnu obhliadku
+- Znizit scope alebo rozdelit job na viac krokov
+- Presunut termin pri weather alebo crowd riziku
+- Job odmietnut alebo eskalovat do vyssieho levelu
+
+8. Final go / no-go
+- Finalne rozhodnutie: go / podmienecne go / no-go
+- Podmienky, ktore musia byt splnene pred startom:
+- Kto urobil finalne rozhodnutie:
+- Datum a cas rozhodnutia:
+
+Kto robi final go / no-go
+- Operacny owner robi finalne go / no-go pri bookingu a pred vyjazdom.
+- Field operator ma pravo spravit finalny stop na mieste, ak realita nezodpoveda risk assessmentu.
+
+Kedy job patri mimo Level 2
+- Perimeter sa neda realne udrzat ani s pomocnikom.
+- Hustota ludi alebo vozidiel je trvalo vysoka.
+- Objekt je vyskovy, velmi exponovany alebo operacne tesny nad bezny urban job.
+- Viditelnost, pristup alebo citlive body robia z jobu vyssiu bezpecnostnu alebo regulatornu triedu.
+- TREBA OVERIT: presne hranice medzi Level 2, Level 3 a SORA-like posudenim podla realnej prevadzky a pravneho ramca.
+
+Prakticke dalsie kroky
+- Risk assessment ukladat ku kazdemu Level 2 jobu.
+- Po kazdom incidente alebo no-go doplnit, ci sablona zachytila realne riziko.
+- Po prvych 10 - 20 urban joboch sprisnit scoring a escalation pravidla.

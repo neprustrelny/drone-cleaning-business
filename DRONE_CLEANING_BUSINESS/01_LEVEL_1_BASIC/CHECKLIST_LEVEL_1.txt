@@ -1,0 +1,30 @@
+CHECKLIST LEVEL 1 (BASIC) – Rodinné domy, nízka komplexita
+
+Legislatíva & povolenia
+- [ ] Registrácia prevádzkovateľa UAS (Open category) | kde vybaviť: Dopravný úrad SR / register prevádzkovateľov UAS | odhad času: 0.5 dňa
+  - DE poznámka: Pred letmi v Nemecku spraviť registráciu aj podľa LBA/EU pravidiel cez nemecký portál.
+- [ ] Overenie geozón a obmedzení pred každou zákazkou | kde vybaviť: DronView/airspace mapy + miestne NOTAM zdroje | odhad času: 15–30 min na zákazku
+- [ ] Interná smernica pre GDPR pri práci s adresami klientov | kde vybaviť: interná dokumentácia + právna konzultácia | odhad času: 1–2 dni
+
+Poistenie
+- [ ] Poistenie zodpovednosti za škodu spôsobenú prevádzkou dronu | kde vybaviť: komerčné poisťovne (Aviation/UAS produkty) | odhad času: 1–3 dni
+- [ ] Overiť limity poistného krytia pre škody na streche/fasáde | kde vybaviť: poisťovňa + poistné podmienky | odhad času: 0.5 dňa
+
+Pilotná spôsobilosť
+- [ ] Platné EU A1/A3 školenie pre pilotov | kde vybaviť: schválené online školiace centrum | odhad času: 1 deň
+- [ ] Interné preškolenie na čistiaci setup (náklad, hadice, tlak) | kde vybaviť: interný tréning | odhad času: 1 deň
+
+Prevádzkové procesy
+- [ ] Predletový checklist (počasie, batérie, zóna, bezpečný perimetr) | kde vybaviť: interný SOP dokument | odhad času: 0.5 dňa na vytvorenie
+- [ ] Proces pre zlé počasie a presun termínu | kde vybaviť: interný SOP + SMS/email šablóna | odhad času: 0.5 dňa
+- [ ] Incident reporting formulár (near-miss, poškodenie, reklamácia) | kde vybaviť: interný formulár + cloud storage | odhad času: 0.5 dňa
+
+Dokumenty pre klienta
+- [ ] Krátke obchodné podmienky pre čistenie striech | kde vybaviť: právnik SR / interný template | odhad času: 1–2 dni
+- [ ] GDPR informácia a súhlas so spracovaním údajov | kde vybaviť: právnik SR / GDPR šablóna | odhad času: 1 deň
+- [ ] Potvrdzovací email po objednávke + rozsah služby | kde vybaviť: CRM/email automatizácia | odhad času: 0.5–1 deň
+
+Technika & údržba
+- [ ] Evidencia batérií (cykly, vnútorný odpor, vyradenie) | kde vybaviť: interná tabuľka / app | odhad času: 0.5 dňa
+- [ ] Servisný plán čerpadla, trysiek a hadíc | kde vybaviť: interný maintenance log | odhad času: 0.5 dňa
+- [ ] Základný sklad náhradných dielov (vrtule, trysky, fitingy) | kde vybaviť: dodávateľ techniky | odhad času: 1 deň

@@ -1,0 +1,67 @@
+ROI CALCULATOR
+
+Ucel dokumentu
+- Ukazat kolko zakaziek mesacne treba na break-even a na zisk.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Priemerna realizovana trzba = 1 050 EUR / zakazka.
+  - Priama prevadzkova cena = 120 EUR / zakazka.
+  - Hlavny funnel metric je aj CAC na zalohu.
+- PRACOVNY ODHAD:
+  - Pre jednoduchy vypocet berieme contribution pred fixnymi nakladmi = 930 EUR / zakazka.
+
+Zakladny vypocet
+- Priemerna realizovana trzba: 1 050 EUR
+- Priame premenne naklady: 120 EUR
+- Contribution po premennych nakladoch: 930 EUR / zakazka
+
+Break-even podla mesacnych fixnych nakladov
+| Mesacne fixne naklady | Potrebne zakazky na break-even |
+|---:|---:|
+| 900 EUR | 1 zakazka |
+| 1 800 EUR | 2 zakazky |
+| 2 700 EUR | 3 zakazky |
+| 3 600 EUR | 4 zakazky |
+| 5 400 EUR | 6 zakaziek |
+
+Realisticky model
+- Ak fixne + marketing + admin spolu vychadzaju okolo 2 800 EUR / mesiac:
+  - break-even = 2 800 / 930 = 3.0 zakazky
+  - na bezpecny ziskovy mesiac treba minimalne 5-6 zakaziek
+
+Cielove mesacne pasma
+| Zakazky / mesiac | Hruby contribution | Interpretacia |
+|---:|---:|---|
+| 2 | 1 860 EUR | prilis malo na stabilny rast |
+| 4 | 3 720 EUR | zakladny break-even / tesna rezerva |
+| 6 | 5 580 EUR | zdravy zaklad pre maly zisk |
+| 8 | 7 440 EUR | priestor na assety a helpera |
+| 10 | 9 300 EUR | priestor na scale testovanie |
+
+ROI na CAPEX
+| CAPEX | Zakazky potrebne na navratnost pri 930 EUR contribution |
+|---:|---:|
+| 15 000 EUR | 17 zakaziek |
+| 29 600 EUR | 32 zakaziek |
+| 56 800 EUR | 62 zakaziek |
+
+Interpretacia
+- Lean MVP sa moze vratit relativne rychlo, ak sa podari stabilne 4-6 zakaziek mesacne.
+- Realisticky start potrebuje zhruba 32 plnych zakaziek na navratnost CAPEX.
+- Vyssi setup je bez silneho dopytu a bez B2B pipeline predcasny.
+
+Scenarovy zaver
+- Pesimisticky: biznis prezije len ak ostane overhead velmi nizky.
+- Realisticky: ekonomicky to dava zmysel pri 4-6 zakazkach mesacne a discipline v marketingu.
+- Agresivny: dava zmysel az po dokazanej konverzii a operacnej spolahlivosti.
+
+Co treba overit
+- realny blended revenue po prvych 10-20 zakazkach
+- realny cost per job po zapocitani dopravy a servisu
+- ci helper zvysuje throughput viac, nez zvysuje fixne naklady
+
+Prakticke dalsie kroky
+- po prvych 10 zakazkach prepocitat contribution per job
+- sledovat samostatne SK a DE economics
+- nastavovat growth len ak break-even zostava pod 4 zakazkami mesacne v aktualnej faze

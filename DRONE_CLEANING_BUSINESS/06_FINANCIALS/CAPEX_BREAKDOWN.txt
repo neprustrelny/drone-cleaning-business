@@ -1,0 +1,65 @@
+CAPEX BREAKDOWN
+
+Ucel dokumentu
+- Urcit pracovny rozsah vstupnej investicie pre start biznisu.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Workspace pocita s low-overhead rezimom.
+  - Priama prevadzkova cena na realizovanu zakazku je v cashflow modeli 120 EUR.
+  - Nie je tu presny overeny BOM ani vendor cennik.
+- PRACOVNY ODHAD:
+  - CAPEX treba brat ako pracovny navrh do prveho vendor overenia.
+
+Odporucany model / navrh
+
+Varianta A - Lean MVP start
+- ciel: rozbehnut predaj, overit dopyt a prvych 5-10 zakaziek bez maximalistickej vybavy
+- vhodne, ak chceme minimalizovat riziko a overit funnel rychlo
+
+| Polozka | Lean MVP | Realisticky start | Vyssi setup |
+|---|---:|---:|---:|
+| Dron / alternativa | 8 000 EUR | 15 000 EUR | 28 000 EUR |
+| Baterie, nabijanie, power | 1 200 EUR | 2 500 EUR | 4 000 EUR |
+| Pumpa a tlakovy system | 1 500 EUR | 3 000 EUR | 6 000 EUR |
+| Hadice, fitingy, trysky | 600 EUR | 1 200 EUR | 2 000 EUR |
+| Nadrz / voda / manipulacia | 400 EUR | 1 000 EUR | 2 000 EUR |
+| PPE a bezpecnostna vybava | 500 EUR | 1 000 EUR | 1 800 EUR |
+| Servisne nahradne diely | 600 EUR | 1 200 EUR | 2 500 EUR |
+| Transport a ulozenie | 800 EUR | 2 000 EUR | 5 000 EUR |
+| Kamera / dokumentacia / assety | 500 EUR | 1 200 EUR | 2 500 EUR |
+| Web / legal / setup rezerva | 900 EUR | 1 500 EUR | 3 000 EUR |
+| SPOLU | 15 000 EUR | 29 600 EUR | 56 800 EUR |
+
+Interpretacia
+- Lean MVP davaa zmysel len ak je ciel rychlo validovat dopyt a nepretazit cashflow.
+- Realisticky start je pravdepodobne najlepsi kompromis medzi spolahlivostou a capex rizikom.
+- Vyssi setup nema zmysel pred stabilnym dopytom a bez realnych dat zo zakaziek.
+
+Co musi byt kupene hned
+- spolahlivy letovy nosic alebo overena alternativa
+- pumpa, hadice, trysky, napajanie
+- baterie a nabijanie
+- PPE a bezpecnostna vybava
+- zakladna dokumentacia a transport
+
+Co moze pockat
+- druhy dron
+- rozsiahla telemetria navyse
+- nadstandardne video vybavenie
+- vacsie skladove a logisticke vybavenie
+
+Rizika
+- podstrelena cena dronu alebo pumpy posunie break-even.
+- nakup silneho setupu prilis skoro zvysi tlak na cashflow.
+- bez rezervy na servis a nahradne diely bude prevadzka krehka.
+
+Co treba overit
+- realne vendor ceny dronu a cistiaceho systemu.
+- ci je nutny vlastny full setup uz od prveho mesiaca.
+- kolko z CAPEX sa da odlozit az po prvych platenych zakazkach.
+
+Prakticke dalsie kroky
+- overit 3 cenove ponuky na dron / alternativu
+- overit 3 cenove ponuky na pumpu a hadicovy system
+- rozhodnut, ci ist cez lean MVP alebo realisticky start

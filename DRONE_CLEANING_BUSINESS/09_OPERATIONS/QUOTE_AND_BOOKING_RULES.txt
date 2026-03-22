@@ -1,0 +1,96 @@
+QUOTE AND BOOKING RULES
+
+Ucel dokumentu
+- Dat timu tvrde pravidla, kedy staci orientacna cena, kedy treba individualnu ponuku, kedy pytat zalohu a kedy job nebookovat.
+
+Vychodisko
+- FAKT Z WORKSPACE:
+  - Funnel pocita s lead-first aj deposit-first vetvou.
+  - Preorder strategia pracuje so zalohou ako filtrom vaznych zaujemcov.
+  - Pricing model ma iba pracovny charakter do prvych realnych dat.
+- PRACOVNY ODHAD:
+  - Booking pravidla sa budu musiet sprisnit po prvych 20 - 30 realnych kvalifikaciach a realizaciach.
+
+1. Kedy staci orientacna cena
+- jednoduchy rodinny dom
+- standardna strecha alebo mensia fasada
+- klient dodal dostatocne fotky
+- pristup, voda a okolie su citatelne
+- objekt vyzera byt v standardnom pricing pasme bez zvlastnej komplikacie
+- vystup: cenove pasmo alebo predbezna suma s poznamkou, ze final sa potvrdi po kvalifikacii
+
+2. Kedy treba individualnu ponuku
+- vacsia plocha alebo kombinacia strecha + fasada
+- silne znecistenie alebo nejasny povrch
+- komplikovany pristup, tesne okolie, husty pohyb ludi alebo vozidiel
+- vyssia vzdialenost alebo logistika vody mimo standardu
+- komercny, bytovy alebo inak netypicky objekt
+- klient ziada presny scope, termin, SLA alebo specificky vystup
+
+3. Kedy pytat zalohu
+- retail job je dostatocne kvalifikovany
+- objekt je v obsluhovanej lokalite
+- termin sa ma aktivne rezervovat
+- nie je potrebna povinna obhliadka pred potvrdenim jobu
+- klient dostal jasne vysvetlenie, co zaloha znamena a ze sa odpocita z finalnej ceny
+
+4. Kedy staci rezervacia bez zalohy
+- treba najprv dodat fotky alebo doplnujuce udaje
+- treba urobit obhliadku
+- objekt je vacsi, rizikovejsi alebo nejasny
+- ide o strategicky B2B lead alebo vacsi dopyt, kde je najprv dolezite scope potvrdit
+- trust layer este nestaci na pytanie zalohy v danom segmente alebo trhu
+
+5. Kedy je obhliadka povinna
+- objekt nie je dostatocne citatelny z fotiek
+- pristup na pozemok alebo perimeter je nejasny
+- povrch, sklon alebo rozsah znecistenia mozu menit ekonomiku jobu
+- ide o vacsi bundle alebo netypicky objekt
+- existuje podozrenie na bezpecnostne alebo compliance obmedzenie
+- TREBA OVERIT: presny prah, od akej vysky, hustoty zastavby alebo typu operacie sa obhliadka stava povinnou podla realneho setupu
+
+6. Kedy job prejde do booked
+- klient potvrdil cenu alebo cenovy mechanizmus
+- termin alebo terminove okno je potvrdene
+- kontakt na den realizacie je potvrdeny
+- scope je dostatocne jasny na operacnu pripravu
+- zaloha je pripisana, ak ju model vyzaduje
+- ak zaloha nie je vyzadovana, je jasne zapisane preco
+
+7. Pravidla pre prebookovanie terminu
+- ak je dovod pocasie alebo bezpecnost, job sa prebookuje bez sankcie
+- ak klient poziada o presun s dostatocnym predstihom, termin sa presunie podla kapacity
+- PRACOVNY ODHAD: za dostatocny predstih sa v retaili da povazovat aspon 24 - 48 hodin, ale treba to otestovat proti realnej kapacite
+- opakovane presuvanie bez zavazneho dovodu ma znizit prioritu terminu alebo viest k novej zalohe
+
+8. Refund a non-refundable cast
+- TREBA OVERIT: presne pravne a obchodne znenie podmienok vratky a nevratnej casti
+- PRACOVNY ODHAD:
+  - pri nevhodnom objekte zistenom po poctivej kvalifikacii ma byt pravidlo vratky alebo kredit jasne komunikovane vopred
+  - pri presune pre pocasie nema byt klient penalizovany iba za bezpecne preplanovanie
+  - pri neskorom zruseni zo strany klienta moze davat zmysel ponechat si administrativnu alebo rezervacnu cast, ale az po pravnom overeni a jasnom zneni podmienok
+- bez overenych podmienok netreba slubovat tvrde non-refundable pravidla
+
+9. Kedy job odmietnut ako neekonomicky alebo rizikovy
+- cena by po kvalifikacii padla pod minimalny ekonomicky zmysluplny prah
+- cestovanie, pristup alebo voda znicia marzu jobu
+- rozsah rizika je vyssi nez hodnota zakazky
+- klient tlaci na termin alebo cenu sposobom, ktory rozbije bezpecny standard
+- perimeter sa neda udrzat alebo weather logika dava opakovane no-go
+- scope je natolko nejasny, ze by booking vytvoril viac operacneho chaosu nez hodnoty
+
+10. Minimalne evidencne pole pri quote a bookingu
+- typ ponuky: orientacna / individualna
+- cenove pasmo alebo suma
+- co je v cene
+- co nie je v cene
+- potreba obhliadky: ano / nie
+- zaloha: ano / nie / caka sa
+- termin alebo terminove okno
+- dovod odmietnutia, ak sa job nezabookuje
+
+Prakticky zaver
+- Orientacna cena patri len na jednoduche, citatelne retail objekty.
+- Individualna ponuka patri vsade tam, kde sa moze zlomit bezpecnost, ekonomika alebo scope.
+- Zaloha ma filtrovat vaznych klientov, nie vytvarat zbytocny konflikt.
+- Nejasny job sa nema bookovat len preto, aby pipeline vyzerala plna.

@@ -1,0 +1,103 @@
+TARGET SEGMENTS
+
+Ucel dokumentu
+- Urcit komu predavat ako prveho, v akom poradi a s akou ponukou.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Priorita c. 1 je funnel a 50 EUR zaloha.
+  - Verejne balicky su 199 / 299 / 399 EUR.
+  - Strategia je najprv SK testovacie zakazky, potom DE Kassel + 50 km.
+  - Interny priemer realizovanej trzby je 1 050 EUR.
+- PRACOVNY ODHAD:
+  - Prve segmenty musia byt jednoduche na vysvetlenie, rychle na obhliadku a vhodne na ziskanie referencii.
+
+Odporucany model / navrh
+
+SEGMENT 1 - SK rodinne domy so spinavou strechou a jednoduchym pristupom
+- Segment: majitel rodinneho domu, vizualne spinava strecha, nizka organizacna zlozitost.
+- Offer: rychle cistenie strechy alebo strecha + fasada bez lesenia.
+- CTA: vyplnit formular a rezervovat termin / zaplatit zalohu podla aktualneho funnelu.
+- Funnel krok: prvy plateny a validacny segment.
+- Objections:
+  - je to bezpecne?
+  - neposkodi to krytinu?
+  - preco mam platit zalohu?
+  - preco nie klasicka firma?
+- Follow-up: do 15 minut automaticke potvrdenie, do 24 hodin manualny kontakt a potvrdenie vhodnosti objektu.
+- Dovod poradia: najrychlejsi zdroj prvych fotiek, videi, referencii a realnych dat.
+
+SEGMENT 2 - SK domy s vyssou hodnotou a kombinaciou strecha + fasada
+- Segment: vacsi dom, vyssi esteticky tlak, vacsia ochota zaplatit 299+ EUR.
+- Offer: viditelny before/after efekt a uspora organizacneho chaosu.
+- CTA: objednat obhliadku alebo rezervovat termin.
+- Funnel krok: po potvrdeni funkcnosti segmentu 1.
+- Objections:
+  - potrebujem presnu cenu dopredu
+  - co ak bude objekt zlozitejsi
+  - co ak nebude vhodne pocasie
+- Follow-up: fotky objektu, rychla predkalkulacia, termin realizacie.
+
+SEGMENT 3 - SK male firemne objekty a prevadzky
+- Segment: male prevadzky, showroomy, skladove strechy, male fasady.
+- Offer: cistenie bez odstavenia prevadzky a bez lesenia.
+- CTA: vyziadat obhliadku a cenovu ponuku.
+- Funnel krok: lead-first, nie nutne hned zaloha.
+- Objections:
+  - potrebujeme fakturu a termin mimo spicky
+  - kto nesie zodpovednost
+  - aka je poistna a bezpecnostna pripravenost
+- Follow-up: telefonat, obhliadka, individualna ponuka.
+
+SEGMENT 4 - DE rodinne domy v Kassel regione po SK validacii
+- Segment: homeowner market v Kassel + 50 km.
+- Offer: jednoducha DE landing page, nizky vstup, bezpecne cistenie dronom.
+- CTA: lead alebo zaloha podla stavu lokalneho funnelu a trust vrstvy.
+- Funnel krok: az po ziskani SK referencii a stabilneho procesu.
+- Objections:
+  - regulacie a legalita v DE
+  - jazyk a lokalna doveryhodnost
+  - servis po platbe a planovanie terminu
+- Follow-up: DE email, FAQ, lokalizovany kontakt alebo partner.
+
+SEGMENT 5 - B2B / vacsie objekty / industrial
+- Segment: bytove domy, facility, priemysel, vysoke objekty.
+- Offer: nie standardny webovy balicek, ale obhliadka, risk review a individualna ponuka.
+- CTA: poziadat o obhliadku a konzultaciu.
+- Funnel krok: az po dokazani beznej prevadzky a poistenia.
+- Objections:
+  - compliance
+  - zmluvy a SLA
+  - riziko prerusenia prevadzky
+- Follow-up: manualny obchodny proces.
+
+Poradie segmentov
+1. SK rodinne domy - jednoduche, rychle, referencie.
+2. SK vacsie domy / strecha + fasada - lepsi blended revenue.
+3. SK male firemne objekty - manualny predaj, vyssia hodnota.
+4. DE homeowner pilot - az po SK validacii.
+5. B2B / industrial - az po procesnej a pravnej pripravenosti.
+
+SK vs DE predpoklady
+- SK:
+  - lepsi start pre testovacie zakazky
+  - jednoduchsia logistika a rychlejsi feedback loop
+  - rychlejsie ziskanie realnych assetov
+- DE:
+  - vacsi trhovy potencial podla workspace
+  - vyssia potreba trust vrstvy, lokalizacie a regulatorneho overenia
+
+Rizika
+- prilis skoro cielit DE bez SK validacie.
+- prilis skoro slubovat B2B bez compliance a poistnej pripravy.
+- prilis siroky targeting bez jasneho prveho segmentu.
+
+Co treba overit
+- realna konverzia segmentu 1 na zalohu.
+- realna ochota platit zalohu v SK vs DE.
+- ci segment 2 prinasa vyssi blended revenue bez dramatickeho rastu rizika.
+
+Prakticke dalsie kroky
+- Spustat kampane najprv na segment 1.
+- Zbierat before/after assety a objection log.
+- Po 5-10 SK zakazkach prehodnotit segment 2 a DE pilot.

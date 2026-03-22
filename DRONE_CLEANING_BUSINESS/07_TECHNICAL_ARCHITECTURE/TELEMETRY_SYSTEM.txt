@@ -1,0 +1,49 @@
+TELEMETRY SYSTEM
+
+Ucel dokumentu
+- Urcit ake technicke a operacne data sa maju zaznamenavat pre bezpecnost, servis a audit.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Workspace nema detailny telemetry plan.
+  - Bezpecnost a operacna spolahlivost su klucove pre scale.
+
+Odporucany model / navrh
+
+Minimum telemetry od prveho dna
+- datum a cas misie
+- objekt a adresa
+- operator a tim
+- pocet letov / cyklov
+- stav baterii pred a po misii
+- zaznam technickych problemov
+- pocasie a go / no-go rozhodnutie
+- incident / near-miss flag
+
+Co ma telemetry riesit
+- bezpecnostne dokazovanie rozhodnuti
+- rychlejsie hladanie priciny poruchy
+- servisne planovanie
+- audit trail pri reklamacii alebo incidente
+
+Co je nice-to-have neskor
+- detailne automaticke logovanie parametrov letu
+- dashboard opotrebenia komponentov
+- prepojenie s maintenance logom a incident logom
+
+Vztah telemetry a bezpecnosti
+- bez logu sa tazko dokazuje, preco sa let prerusil alebo neodstartoval
+- bez logu sa tazko hlada, ci bol problem technicky, operacny alebo poveternostny
+- telemetry ma podporit rozhodovanie, nie komplikovat start
+
+Rizika
+- prilis slaby log = zla analyza problemov
+- prilis komplexny log od prveho dna = administrativna zataz bez uzitku
+
+Co treba overit
+- ake automaticke logy dava realny hardware
+- co vieme tahat bez dodatocneho software stacku
+
+Prakticke dalsie kroky
+- zaviest minimum telemetry fields od prveho vyjazdu
+- po prvych 10-20 misiac doplnit, co realne chyba

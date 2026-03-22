@@ -1,0 +1,42 @@
+PUMP SYSTEM
+
+Ucel dokumentu
+- Definovat minimalny cistiaci system a jeho prevadzkove poziadavky.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Workspace neobsahuje presnu specifikaciu pumpy ani chemie.
+- PRACOVNY ODHAD:
+  - Pump system musi byt jednoduchy, servisovatelny a predvidatelny.
+
+Odporucany model / navrh
+- nizkotlakovy alebo kontrolovany tlakovy system vhodny pre citlive povrchy
+- jednoduche hadicove vedenie
+- trysky s rychlou vymenou
+- nadrz / zdroj vody s jasnou logikou doplnania
+- rychla izolacia uniku a rychly shutdown
+
+Co musi byt spolahlive hned
+- konzistentny tlak
+- tesnost fitingov
+- jednoducha vymena trysiek
+- rychle cistenie a preplach po praci
+
+Co je nice-to-have
+- pokrocile davkovanie chemie
+- modul pre rychlu zmenu rezimov podla povrchu
+- live senzory nad ramec zakladnej prevadzkovej kontroly
+
+Rizika
+- uniky vody alebo chemie
+- nestabilny tlak a nekonzistentny vysledok
+- spinavy alebo zaneseny system po viacerych vyjazdoch
+
+Co treba overit
+- kompatibilitu pumpy s realnym nosicom
+- realne servisne intervaly
+- ake chemicke riesenie je vhodne pre planovane povrchy a trhy
+
+Prakticke dalsie kroky
+- doplnit pracovny servisny list pump systemu
+- rozhodnut 2-3 povolene pracovne rezimy podla typu objektu

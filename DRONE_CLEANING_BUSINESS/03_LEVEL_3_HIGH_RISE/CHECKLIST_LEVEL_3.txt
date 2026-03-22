@@ -1,0 +1,31 @@
+CHECKLIST LEVEL 3 (HIGH-RISE) – Výškové budovy a špecifická kategória
+
+Legislatíva & povolenia
+- [ ] Vyhodnotenie, či operácia patrí do Specific kategórie | kde vybaviť: interný compliance lead + EASA rámec | odhad času: 1 deň
+- [ ] Spracovanie SORA (alebo ekvivalentného risk frameworku) pre profil misie | kde vybaviť: interný safety tím / externý konzultant | odhad času: 3–10 dní
+- [ ] Koordinácia s príslušným úradom pri špecifických letoch | kde vybaviť: Dopravný úrad SR | odhad času: 2–6 týždňov podľa scenára
+  - DE poznámka: V DE koordinovať s LBA/príslušným Landesluftfahrtamt podľa lokality.
+- [ ] Postup pre NOTAM/airspace koordináciu (ak je potrebné) | kde vybaviť: ANSP/letecké informačné služby | odhad času: 1–3 dni na operáciu
+
+Poistenie
+- [ ] Zvýšené limity poistenia pre high-rise a husté okolie | kde vybaviť: poisťovňa / broker | odhad času: 2–5 dní
+- [ ] Overenie krytia pre prerušenie prevádzky klienta (B2B) | kde vybaviť: poisťovňa + zmluva | odhad času: 1–2 dni
+
+Pilotná spôsobilosť
+- [ ] Pokročilý výcvik pre lety v blízkosti výškových objektov | kde vybaviť: špecializovaný tréning UAS | odhad času: 2–5 dní
+- [ ] Periodické proficiency checky pilotov a spotterov | kde vybaviť: interný training log | odhad času: 1 deň/kvartál
+
+Prevádzkové procesy
+- [ ] High-rise SOP: vertikálne sektory, bezpečné koridory, núdzové pristátie | kde vybaviť: operačný manuál | odhad času: 1–2 dni
+- [ ] Safety briefing pred misiou (pilot, spotter, kontakt klienta) | kde vybaviť: onsite proces | odhad času: 20 min na misiu
+- [ ] Povinný post-mission report (incidenty, odchýlky, lekcie) | kde vybaviť: interný SMS/QA systém | odhad času: 30–60 min na misiu
+
+Dokumenty pre klienta
+- [ ] Špecifická zmluvná príloha pre výškové budovy (risk allocation) | kde vybaviť: právnik + B2B obchod | odhad času: 1–3 dni
+- [ ] Metodika BOZP pre objekt klienta a návštevný režim | kde vybaviť: HSE koordinátor klienta | odhad času: 1 deň
+- [ ] Detailný harmonogram zásahu a obmedzení okolia | kde vybaviť: project manager + klient | odhad času: 0.5–1 deň
+
+Technika & údržba
+- [ ] Výkonnostné testy pri vetre a turbulencii medzi budovami | kde vybaviť: interné testovacie lety | odhad času: 1–2 dni
+- [ ] Kontrola redundancie napájania a failsafe nastavení | kde vybaviť: servisný checklist | odhad času: 0.5 dňa
+- [ ] Záložný komunikačný kanál (rádio/telefón) pre kritické situácie | kde vybaviť: interný comms plán | odhad času: 0.5 dňa

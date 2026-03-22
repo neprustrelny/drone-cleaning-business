@@ -1,0 +1,76 @@
+PRICING MODEL
+
+Ucel dokumentu
+Nastavit pracovny pricing model pre prve realne predaje tak, aby ceny podporovali lead generation aj ekonomiku zakazky.
+
+Aktualny stav / vychodisko
+- PRACOVNY ODHAD: Financial model v workspace pocita s priemernym revenue na realizovanu zakazku okolo 1 050 EUR.
+- To znamena, ze biznis nemoze stat iba na lacnych jednorazovych zakazkach. Potrebuje mix vacsich objektov, kombinovanych balikov a upsellov.
+- Tento dokument je pracovny pricing model do prvych realnych dat z trhu.
+
+Pricing logika
+- Vstupna komunikacia moze pouzivat jednoduche cenove pasma, nie univerzalny pevny cennik.
+- Finalna cena sa ma potvrdzovat po kvalifikacii objektu: plocha, sklon, znecistenie, pristup, voda, riziko, lokalita.
+- Ciel nie je mat najnizsiu cenu. Ciel je mat ekonomicky udrzatelnu cenu za bezpecne dorucenie sluzby.
+
+Baliky pre rodinne domy - strechy
+1. Roof Basic
+- Typ objektu: mensi rodinny dom, lahky az stredny nanos, jednoduchy pristup
+- Rozsah: zakladne cistenie strechy bez rozsiahlych doplnkov
+- Orientacne pasmo: 299 - 449 EUR
+- Zaklad obsahuje: standardny vyjazd v lokalnom radius, bezne mnozstvo chemie, zakladnu foto dokumentaciu
+- Typicky upsell: odmachovanie kritickych miest, zlab, extra oplach, doplnkova foto/video dokumentacia
+
+2. Roof Standard
+- Typ objektu: bezny rodinny dom, vacsia plocha alebo stredna komplexita
+- Rozsah: kompletnejsie cistenie strechy, bezpecnejsi casovy budget, standardne pripravy na mieste
+- Orientacne pasmo: 449 - 699 EUR
+- Zaklad obsahuje: rozsireny cas na objekte, standardne znecistenie, bezne logisticke naklady
+- Typicky upsell: zlabovy servis, lokalne osetrenie silneho porastu, urgentny termin
+
+3. Roof Premium / Large House
+- Typ objektu: vacsi dom, zlozitejsi sklon, horsi pristup alebo kombinovany objekt
+- Rozsah: rozsiahlejsi zasah alebo vyssia komplikovanost realizacie
+- Orientacne pasmo: 699 - 1 200 EUR
+- Zaklad obsahuje: vyssiu logisticku a operacnu narocnost
+- Typicky upsell: fasada, dlhsia priprava, vacsia vzdialenost, rozsiahla dokumentacia, follow-up osetrenie
+
+Baliky pre fasady
+1. Facade Refresh Small
+- Typ objektu: mala plocha, lahke az stredne znecistenie
+- Orientacne pasmo: 249 - 399 EUR
+- Zaklad obsahuje: lokalne cistenie jednoduchej fasady pri beznom pristupe
+- Upsell: silne znecistenie, vysoka spotreba vody, komplikovane okolie
+
+2. Facade Standard House
+- Typ objektu: bezny rodinny dom alebo vacsia predna / bocna plocha
+- Orientacne pasmo: 399 - 799 EUR
+- Zaklad obsahuje: standardny domovy objekt s beznym operacnym casom
+- Upsell: rohy, tazsie dostupne casti, kombinacia s okrajmi strechy alebo soklom
+
+3. Facade + Roof Bundle
+- Typ objektu: kombinovana zakazka s vyssou hodnotou kosika
+- Orientacne pasmo: 899 - 1 800 EUR+
+- Zaklad obsahuje: jedna mobilizacia, viac ploch, vyssia operacna hodnota
+- Poznamka: tento typ zakazky je klucovy pre dosahovanie vyssieho average revenue na realizaciu
+
+Zaklad vs upsell
+- Zaklad: lokalny vyjazd, standardna priprava, bezne znecistenie, bezna spotreba chemie a vody, zakladna foto dokumentacia
+- Upsell: silne biologicke znecistenie, narocna logistika vody, vyssia vzdialenost, komplikovany pristup, zlabovy servis, urgentny termin, doplnkova dokumentacia, opakovane osetrenie, kombinacia strecha + fasada
+
+Minimalna ekonomicky zmysluplna cena
+- Minimalna cena pre lokalnu jednoduchu realizaciu: 299 EUR.
+- Pod 299 EUR dava zmysel ist iba vtedy, ak ide o strategicky pilot, referencny objekt alebo kombinovanu trasu s velmi nizkym cestovnym casom.
+- PRACOVNY ODHAD: Pri standardnej individualnej zakazke by cielova minimalna fakturovana suma mala byt skor 399 EUR+, inak sa priestor na marketing, chyby a sezonne vypadky rychlo rozpada.
+
+Kedy zakazku odmietnut alebo preceinit ako neekonomicku
+- Ak klient tlaci cenu pod minimalny prah a objekt nie je strategicky do portfolia.
+- Ak cestovanie, voda alebo logistika zvysia direct cost tak, ze marza je prilis tenka.
+- Ak je objekt prilis maly, ale operacna zlozitost je vysoka.
+- Ak compliance, pristup alebo bezpecnost vyzaduju viac pripravy, nez zodpoveda hodnote zakazky.
+- Ak sa odhadovana cena po kvalifikacii nedostane aspon na uroven, ktora ponecha rezervu na direct cost, acquisition cost a primerany prispevok k fixed cost.
+
+Pracovny zaver
+- Pre retail vstup dava zmysel komunikovat startovacie pasma od 299 EUR, ale aktivne tlacit bundle a vyssie hodnotove realizacie.
+- Najzdravsi model nie je predat co najviac lacnych jobov, ale zvysovat average revenue cez vacsie objekty, fasadu, bundle a rozumne upselly.
+- Tento pricing model treba po prvych 20 - 30 realnych zakazkach prepocitat podla skutocneho casu, spotreby a konverzie.

@@ -1,0 +1,52 @@
+MAINTENANCE SCHEDULE
+
+Ucel dokumentu
+- Nastavit minimalny rytmus udrzby, aby technika neskolabovala pocas sezony.
+
+PRACOVNY ODHAD
+- Intervaly nizsie su pracovny navrh do prveho realneho servisneho logu.
+
+Po kazdom vyjazde
+- oplach a vizualna kontrola pumpy, hadic a trysiek
+- kontrola mechanickeho poskodenia nosica
+- zapis stavu baterii
+- zapis spotrebneho materialu a dielov
+
+Denne pred vyjazdom
+- rychly function check nosica
+- function check pump systemu
+- kontrola fitingov, trysiek a uniku
+- kontrola PPE a transportneho kitu
+
+Tyzdenne
+- hlbsia kontrola opotrebenia
+- kontrola baterii a nabijania
+- kontrola rezervnych dielov
+- kontrola logov problemov z tyzdna
+
+Mesacne
+- servisny review techniky
+- vymena alebo preplach kritickych casti podla opotrebenia
+- update maintenance logu
+- rozhodnutie, ci nieco prechadza do servisnej rezervy alebo vyradenia
+
+Po incidente alebo near-misse
+- okamzita mimoriadna kontrola
+- zapis priciny a opatreni
+- zakaz dalsieho nasadenia, kym nie je technika schvalena
+
+Co treba sledovat najviac
+- baterie
+- fitingy
+- trysky
+- stabilitu tlaku
+- drobne uniky
+- vibracie alebo neobvykly zvuk
+
+Rizika
+- preskocena udrzba sa prejavi pocas ostrej zakazky
+- bez maintenance logu sa neda spajat porucha s realnou pricinou
+
+Prakticke dalsie kroky
+- zaviest maintenance log v tabulke alebo appke
+- po prvych 30 dnoch doplnit realne intervaly podla prevadzky

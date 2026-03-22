@@ -1,0 +1,93 @@
+CLIENT CONTRACT TEMPLATE
+
+Ucel dokumentu
+- Dat pracovnu strukturu klientskej objednavky alebo kontraktu pre Level 2 joby bez neoverenych pravnych tvrdeni.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Workspace pracuje so zalohou, booking pravidlami, weather presunom a klientskym onboardingom.
+- PRACOVNY ODHAD:
+  - Pri Level 2 je potrebna silnejsia pisomna struktura scope, terminu, sucinnosti klienta a rizikov ako pri Level 1.
+- TREBA OVERIT:
+  - finalne pravne znenie zmluvy, reklamacii, storna a limitov zodpovednosti pre SK a neskor DE.
+
+Pracovna struktura kontraktu / objednavky
+
+1. Identifikacia stran
+- Dodavatel: nazov, ICO ak je relevantne, kontakt
+- Klient: meno / firma, adresa, kontaktna osoba, email, telefon
+
+2. Identifikacia objektu
+- Adresa objektu
+- Typ objektu
+- Popis priestoru, kde sa bude pracovat
+- Potvrdenie, ze klient ma pravo umoznit pristup a objednat sluzbu na danom objekte
+
+3. Scope sluzby
+- Co sa bude cistit
+- Co sa nebude cistit
+- Aky je predpokladany rozsah
+- Ci ide o standardny rozsah alebo individualny scope
+- Odkaz na fotky, obhliadku alebo risk assessment, ak boli podkladom ponuky
+
+4. Cena
+- Predbezna alebo finalna cena
+- Co cena obsahuje
+- Co cena neobsahuje
+- Podmienky zmeny ceny, ak sa objekt na mieste ukaze ako odlisny od vstupnych dat
+
+5. Zaloha
+- Vyska zalohy
+- Kedy sa plati
+- Ze sa odpocitava z finalnej ceny, ak to plati v aktualnom modeli
+- Co sa stane, ak booking prejde bez zalohy
+
+6. Termin alebo terminove okno
+- Datum alebo casove okno realizacie
+- Kto potvrdzuje finalny termin
+- Kedy sa termin povazuje za rezervovany
+
+7. Pocasie a presun terminu
+- FAKT Z WORKSPACE:
+  - Pri zlom pocasi sa termin presuva, nie dokoncuje za kazdu cenu.
+- PRACOVNY ODHAD:
+  - Kontrakt ma obsahovat, ze bezpecnostne a poveternostne podmienky mozu viest k presunu terminu bez automatickeho naroku na realizaciu v povodnom case.
+- TREBA OVERIT:
+  - finalne pravne znenie tejto klauzuly.
+
+8. Sucinnost klienta
+- Klient zabezpeci pristup na miesto
+- Klient upozorni na citlive miesta, obmedzenia, pohyb ludi alebo vozidiel
+- Klient potvrdi dostupnost vody, parkovania alebo ine logisticke podmienky, ak su sucastou dohody
+- Klient poskytne pravdive vstupne informacie a fotky, ak boli podkladom nacenenia
+
+9. Pristup a okolie
+- Klient potvrdi, ze vie umoznit pristup k objektu v dohodnutom case
+- Klient potvrdi, ci je potrebna koordinacia so spravcom, susedmi alebo prevadzkou
+- Ak sa pristup na mieste ukaze ako nevyhovujuci, job sa moze presunut, obmedzit alebo zastavit
+
+10. Zodpovednost a limity
+- PRACOVNY ODHAD:
+  - Kontrakt ma mat jasne oddelenie medzi beznym vykonom sluzby a situaciami, kde klient neposkytol spravne informacie alebo sucinnost
+  - Kontrakt ma odkazovat na to, ze realizacia podlieha bezpecnostnemu rozhodnutiu timu na mieste
+- TREBA OVERIT:
+  - pravne limity zodpovednosti, poistne krytie a formulacie o skodach, reklamaciach a vylukach
+
+11. Reklamacie
+- Ako sa reklamacia hlasi
+- V akom case sa ma nahlasit
+- Ake podklady sa maju dolozit: fotky, popis, datum
+- Ze reklamacia sa posudzuje proti dohodnutemu scope, nie proti nepisanym ocakavaniam
+- TREBA OVERIT: finalne znenie reklamacnej casti
+
+12. Storno / refund ramce
+- PRACOVNY ODHAD:
+  - pri weather presune nema byt klient penalizovany za bezpecne preplanovanie
+  - pri neskorom zruseni zo strany klienta moze existovat administrativny alebo rezervacny ramec
+  - pri nevhodnom objekte po poctivej kvalifikacii ma byt vopred dohodnute, ci ide o refund, kredit alebo novu ponuku
+- TREBA OVERIT:
+  - pravne aj obchodne znenie storna a refund podmienok
+
+Prakticky zaver
+- Tento dokument nie je finalna pravna zmluva.
+- Je to pracovny kontraktovy skeleton, ktory ma prinutit tim zapisat scope, termin, cenu, pristup, weather logiku a sucinnost klienta jasne a vopred.

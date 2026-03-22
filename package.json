@@ -1,0 +1,17 @@
+{
+  "name": "dron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "dev": "npm --prefix \"./DRONE_CLEANING_BUSINESS/stranka umyvanie strechy\" run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^4.64.0"
+  },
+  "type": "module"
+}

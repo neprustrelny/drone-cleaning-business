@@ -1,0 +1,62 @@
+OPERATION SOP
+
+Ucel dokumentu
+- Dat Level 1 operacny standard od leadu po close bez zbytocnej detailnosti.
+
+Zakladny flow
+1. Lead prijaty
+- Vstup: formular, telefon, sprava, referral.
+- Rozhoduje: sales alebo operacny owner prebera lead.
+- Kontrolny bod: lead ma kontakt, adresu a typ objektu.
+
+2. Prvy kontakt
+- Cas: do 24 hodin.
+- Rozhoduje: sales alebo operacny owner.
+- Kontrolny bod: klient reaguje, doplni fotky a zakladne info.
+- Go / no-go: bez kontaktu alebo bez fotiek lead nezostava v aktivnej pipeline bez follow-up terminu.
+
+3. Kvalifikacia
+- Rozhoduje: operacny owner.
+- Kontrolny bod: pricing pasmo, potreba obhliadky, pristup, voda, rizika, ekonomika jobu.
+- Go / no-go: ak je job neekonomicky, nejasny alebo rizikovy, nejde do bookingu.
+
+4. Quote a booking decision
+- Rozhoduje: operacny owner podla pricing a booking rules.
+- Kontrolny bod: orientacna cena vs individualna ponuka, zaloha vs rezervacia bez zalohy, potreba obhliadky.
+- Go / no-go: booked vznikne az po potvrdeni scope, terminu a obchodneho kroku.
+
+5. Pred-vyjazdova priprava
+- Rozhoduje: field operator alebo operacny owner.
+- Kontrolny bod: daily checklist, weather matrix, vybavenie, trasa, kontakt na klienta.
+- Go / no-go: bez splneneho checklistu a priazniveho weather rozhodnutia sa nejde na realizaciu.
+
+6. Realizacia na mieste
+- Rozhoduje: field operator.
+- Kontrolny bod: perimeter, stav objektu, pred-foto, zhodnost s kvalifikaciou, technicky stav setupu.
+- Go / no-go: ak sa neda udrzat bezpecnost, scope nesedi alebo pocasie pada do no-go, job sa prerusi alebo prebookuje.
+
+7. Dokoncenie jobu
+- Rozhoduje: field operator potvrdi technicke dokoncenie, operacny owner uzatvori obchodnu cast.
+- Kontrolny bod: po-foto, potvrdeny rozsah, doplatok, zaznam odchylok.
+
+8. Close
+- Rozhoduje: sales alebo operacny owner.
+- Kontrolny bod: status completed -> closed_won alebo closed_lost, testimonial, referral, zapis ekonomiky jobu.
+
+Kto robi ake rozhodnutie
+- Sales alebo operacny owner: prvy kontakt, follow-up, pipeline disciplina.
+- Operacny owner: kvalifikacia, quote, booking, obhliadka, odmietnutie jobu.
+- Field operator: go / no-go na den realizacie, bezpecnost na mieste, technicke prerusenie jobu.
+
+Prepojenie na dalsie dokumenty
+- Lead statusy: LEAD_STATUS_PIPELINE.txt
+- Booking a quote pravidla: QUOTE_AND_BOOKING_RULES.txt
+- Pred-vyjazdova kontrola: DAILY_CHECKLIST.txt
+- Pocasie a go / no-go: WEATHER_DECISION_MATRIX.txt
+- Incidenty a near-miss: INCIDENT_REPORT_TEMPLATE.txt
+- Onboarding flow: CLIENT_ONBOARDING_PROCESS.txt
+
+Prakticky zaver
+- Bez statusu, kvalifikacie a booking pravidiel sa funnel rozpada medzi marketingom a realizaciou.
+- Bez checklistu, weather logiky a incident zapisu sa rozpadne bezpecna prevadzka.
+- SOP ma byt kratky: kazdy job bud ide cez standardny flow, alebo sa zastavi a prehodnoti.

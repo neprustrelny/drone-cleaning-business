@@ -1,0 +1,98 @@
+AD STRATEGY
+
+Ucel dokumentu
+- Urcit ako ziskavat relevantny traffic s cielom leadov a zaloh, nie len lacnych klikov.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Priorita je funnel, zalohy a cashflow.
+  - Segmentacna logika hovori: najprv SK, potom DE.
+  - Potrebujeme before/after materialy, FAQ a trust vrstvu.
+- PRACOVNY ODHAD:
+  - Prve kampane musia byt jednoduche, lokalne a silno vizualne.
+
+Odporucany model / navrh
+
+Kanal 1 - Meta ads
+- Segment: SK rodinne domy v rozumnej dojazdovej vzdialenosti.
+- Offer: cistenie strechy bez lesenia, rychlo a bez lezenia po krytine.
+- CTA: rezervovat termin / ziskat ponuku / zaplatit zalohu podla aktualneho funnelu.
+- Funnel krok: top of funnel a primary acquisition.
+- Follow-up: remarketing na form start a nedokonceny checkout.
+- Dovod: najlepsi mix lokality, vizualu a rychleho testovania creative.
+
+Kanal 2 - Google Search
+- Segment: ludia s aktivnym dopytom typu cistenie strechy, cistenie fasady, odstranenie machu.
+- Offer: rychly a lokalny vykon bez lesenia.
+- CTA: vyziadat termin alebo ponuku.
+- Funnel krok: high intent traffic.
+- Follow-up: call-back alebo email do 24 hodin.
+- Dovod: neskor, ked budu jasnejsie keyword data a lokalne referencie.
+
+Kanal 3 - Organicky obsah / social proof
+- Segment: lokalni majitelia domov.
+- Offer: before/after dokaz a vysvetlenie procesu.
+- CTA: napisat / vyplnit formular / rezervovat termin.
+- Funnel krok: trust layer a remarketing feed.
+- Follow-up: DM alebo lead form.
+
+Creative angle priority
+1. Before / after vysledok.
+2. Bez lesenia a bez lezenia po streche.
+3. Zaloha rezervuje termin, nie celu cenu.
+4. Rychlost a nizky organizacny chaos.
+5. Lokalny pilotny termin a obmedzena kapacita.
+
+Objections, ktore musi reklama alebo landing vyriesit
+- je to bezpecne?
+- neposkodi to strechu?
+- preco mam platit zalohu?
+- kolko to realne stoji?
+- co ak bude objekt zlozitejsi?
+- co ak bude zle pocasie?
+
+Minimalne reklamne assety
+- 3 kratke videa alebo reels
+- 5 before/after obrazkov
+- 3 varianty hero claimu
+- 3 varianty CTA textu
+- 1 kratka testimonial karta
+- 1 FAQ creative k zaloham a bezpecnosti
+
+SK model
+- start s lokalnym radius targetingom
+- len jednoduche rodinne domy ako primary audience
+- ciel kampani: form starts a leady; po trust layer aj zalohy
+- remarketing na vsetkych, co videli landing a nedokoncili formular
+
+DE model
+- nespustat vacsi spend bez SK referencii
+- najprv pripravit DE landing, FAQ, trust layer a lokalny proces
+- prve DE kampane len pilotne a s manualnym dohliadanim na lead quality
+
+Ciselny pracovny ram
+- PRACOVNY ODHAD:
+  - test budget SK start: 10-30 EUR / den
+  - creative refresh: kazdych 7-14 dni podla CTR a CPL
+  - stop pravidlo: ak CAC na zalohu > 50 EUR, neoplatit sa scale bez zmeny offeru alebo creative
+
+Rozhodovacie pravidla
+- ak CTR pada, oprav creative prve 3 sekundy
+- ak form start je slaby, oprav landing a hero offer
+- ak Stripe click je slaby, oprav trust a objection handling
+- ak payment success je slaby, oprav checkout a follow-up logiku
+
+Rizika
+- reklamy bez realnych assetov budu posobit genericky
+- DE kampane bez lokalneho trustu budu drahe
+- prilis siroke audience spali budget bez lead quality
+
+Co treba overit
+- ktory creative angle dava najviac form starts
+- ci je zaloha vhodna uz v prvej SK kampani alebo az po trust vrstve
+- ci search traffic dava lepsi lead quality nez Meta social traffic
+
+Prakticke dalsie kroky
+- pripravit prve 3 creative sety pre SK segment 1
+- zavest weekly review: spend, CTR, form start rate, CAC na lead, CAC na zalohu
+- remarketing nastavovat hned od prveho trafficu

@@ -1,0 +1,59 @@
+TECH SETUP
+
+Ucel dokumentu
+- Dat Level 1 technicky obraz toho, co je potrebne na bezpecny komercny start a co zatial netreba kupovat.
+
+Vychodisko
+- FAKT Z WORKSPACE:
+  - Priorita je funkcny funnel, cashflow a realna dodavatelnost sluzby.
+  - Vendor-specific BOM este nie je kanonicky overeny.
+- PRACOVNY ODHAD:
+  - Start setup ma byt lean, servisovatelny a bez zbytocnej technickej zlozitosti.
+
+Minimalny startovaci setup
+- 1 letovy nosic vhodny pre stabilny pracovny let s cistiacim payloadom
+- zakladny pump system s predvidatelnym tlakom a rychlym shutdownom
+- dostatok baterii na 1 vyjazdovy blok
+- nabijanie a transportny kit
+- hadice, trysky, fitingy a zakladne nahradne diely
+- PPE a bezpecnostna vybava
+- zakladna foto dokumentacia pred / po
+- telefon alebo tablet pre komunikaciu, navigaciu a zapis jobu
+
+Must-have
+- stabilny dronovy nosic
+- funkcna pumpa a tesny rozvod
+- baterie a nabijanie bez improvizacie
+- pre-flight kontrola a rychly post-flight servis
+- bezpecnostny perimeter kit
+- zakladny incident zapis a operacna dokumentacia
+
+Nice-to-have
+- druhy nosic ako rezerva
+- vyssia asset capture vrstva pre marketing
+- rozsiahlejsia telemetria nad zakladne logy
+- rychlejsi charging workflow pre vyssiu dennu kapacitu
+- pokrocile davkovanie chemie alebo viac pracovnych rezimov
+
+Technicky kriticke pre bezpecny start
+- stabilita letu pod realnym pracovnym zatazenim
+- konzistentny tlak a kontrola vystupu z pump systemu
+- rychly stop pri uniku, technickej chybe alebo weather no-go
+- jednoducha kontrola fitingov, hadic a trysek pred kazdym jobom
+- schopnost urobit vyjazd bez improvizacie v nabijani, vode a transporte
+
+Co zatial nemusi byt kupene hned
+- druhy dron
+- rozsiahla AI vrstva
+- nadstandardne video vybavenie
+- draha automatizacia mimo realnej potreby prvej sezony
+- scale hardware pre B2B alebo velke objekty, ak este nie su validovane retail joby
+
+Prepojenie na CAPEX logiku
+- Lean CAPEX ma pokryt iba to, co je nutne na bezpecne dorucenie prveho jobu.
+- Realistic CAPEX ma pridat rezervne diely, vyssiu prevadzkovu istotu a mensie logisticke trenie.
+- Vyssi CAPEX dava zmysel az po dokazani, ze funnel prinasa dost leadov a pricing unesie navratnost setupu.
+
+Prakticky zaver
+- Kupovat treba iba to, co priamo zvysuje bezpecnost, spolahlivost a schopnost odjazdit prvy plateni job.
+- Nekupovat scale alebo nice-to-have vybavenie skor, nez je potvrdeny demand, pricing a operacna disciplina.

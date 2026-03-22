@@ -1,0 +1,46 @@
+WEATHER DECISION MATRIX
+
+Ucel dokumentu
+- Dat timu prakticke rozhodovacie pravidla pre go / no-go pri pocasi a podmienkach na mieste.
+
+FAKT Z WORKSPACE
+- Pocasie je kriticky faktor prevadzky.
+- Pri zlom pocasi sa termin ma presunut, nie silou-mocou dokoncit.
+
+PRACOVNY ODHAD
+- Konretne limity treba overit podla realneho setupu, hmotnosti nosica, typu pumpy a typu operacie.
+- Nizsie uvedene prahy su pracovny navrh, nie definitivny letovy manual.
+
+Rozhodovacia matica
+| Faktor | GO | PODMIENECNE GO | NO-GO |
+|---|---|---|---|
+| Dazd | bez dazda | slabe mrholenie len po manualnom potvrdeni | suvisly dazd |
+| Vietor | nizky a stabilny | narazovy, ale zvladnutelny po test checku | silny alebo narazovy vietor |
+| Povrch strechy | suchy alebo predvidatelny | miestami vlhky, ale citatelny | klzky, namraza, nepredvidatelny povrch |
+| Viditelnost | dobra | mierne zhorsena | slaba viditelnost |
+| Teplota | bezne prevadzkove pasmo | hranicne podmienky | mraz / extremne podmienky |
+| Okolie ludi | perimeter sa da udrzat | perimeter je tesny | ludia sa nedaju bezpecne oddelit |
+| Pristup | jasny a stabilny | komplikovany, ale zvladnutelny | zly pristup, konflikt s prevadzkou |
+
+Prakticke pravidla
+- Ak je pochybnost o bezpecnosti letu alebo stabilite systemu, vysledok je NO-GO.
+- Ak sa nedari udrzat perimeter, vysledok je NO-GO.
+- Ak sa pocasie horsi pocas realizacie, praca sa prerusi a preplanuje.
+- Ak povrch objektu vyzera inak ako pri onboarding fotkach, treba urobit novu kvalifikaciu na mieste.
+
+Minimalne otazky pred odchodom na objekt
+- Fuka viac nez pri poslednej predpovedi?
+- Hrozi dazd pocas okna realizacie?
+- Je povrch suchy a citatelny?
+- Bude mozne oddelit ludi a auta od pracovnej zony?
+- Mame plan B pre presun terminu?
+
+TREBA OVERIT
+- presny vietor limit pre realny setup
+- presne teplotne limity pre baterie a pumpu
+- ci chemicky proces meni bezpecny prah pre mokry povrch
+
+Prakticke dalsie kroky
+- po prvych 10-20 realizaciach doplnit realne interny limity
+- drzat foto a incident log pri kazdom weather no-go rozhodnuti
+- nevytvarat tlak na dokoncenie za kazdu cenu

@@ -1,0 +1,53 @@
+AI UPGRADE PLAN
+
+Ucel dokumentu
+- Urcit kde ma AI realny biznis alebo bezpecnostny prinos a kde je zatial zbytocna.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Priorita je funnel, cashflow, operacie a dodavatelnost.
+- PRACOVNY ODHAD:
+  - AI nema byt MVP vrstva. Ma prist tam, kde setri cas alebo znizuje riziko.
+
+Odporucany model / navrh
+
+MVP bez AI
+- landing page, lead capture, pricing, realizacia a follow-up musia fungovat aj bez AI
+- prva hodnota je v assetoch, CRM discipline a operacnom procese
+
+AI use cases, ktore davaju zmysel neskor
+1. Lead triage
+- sumarizacia leadov
+- odporucenie priority kontaktu
+- extrakcia klucovych udajov z fotiek a formularov
+
+2. Asset workflow
+- triedenie before/after materialov
+- navrh popisov a creative variantov
+- rychle pripravenie reklamnych konceptov na review
+
+3. Operacna podpora
+- sumarizacia incidentov a maintenance logov
+- navrh opakovanych slabin v procese
+- vyhladavanie vzorov v no-go dovodoch
+
+4. Bezpecnost a kvalita
+- neskor kontrola obrazov alebo telemetrie na anomalie
+- len ak je dost dat a jasny use case
+
+Co je zatial predcasne
+- plna AI autonomna operacia
+- AI pricing bez realnych historickych dat
+- AI safety tvrdenia bez overenej prevadzky
+
+Rizika
+- AI moze odviest pozornost od funnelu a prevadzky
+- bez kvalitnych vstupnych dat bude AI len generovat hluk
+
+Co treba overit
+- ake data sa budu realne zbierat po prvych zakazkach
+- ci AI triage realne skrati response time a zvysi conversion
+
+Prakticke dalsie kroky
+- neriesit AI ako prioritu pred lead flow, assetmi a operation basics
+- po prvych 20-30 zakazkach rozhodnut, ci AI pomoze v lead triage alebo asset workflow

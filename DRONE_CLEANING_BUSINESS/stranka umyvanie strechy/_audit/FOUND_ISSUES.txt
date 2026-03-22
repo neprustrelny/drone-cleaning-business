@@ -1,0 +1,39 @@
+FOUND ISSUES (audit nálezov)
+
+1) Chýbajúci právny dokument (broken link)
+- Súbor: `index.html:726`
+- Nález: Link smeruje na `/obchodne-podmienky.pdf`, ale súbor v adresári neexistuje.
+- Dopad: 404 pri kliknutí + právne/compliance riziko.
+
+2) Backend endpoint je len placeholder (broken endpoint in practice)
+- Súbor: `index.html:738`
+- Nález: `ORDER_ENDPOINT = '/api/order'` je placeholder, v tomto workspaci nie je žiadny server/API kód.
+- Dopad: Form submit pravdepodobne zlyhá, Stripe sa po chybe neotvorí (`index.html:832-838` logika).
+
+3) Stripe je v TEST režime
+- Súbor: `index.html:645`, komentár `index.html:644`
+- Nález: Použitý testovací Stripe Checkout link (`buy.stripe.com/test...`).
+- Dopad: Nie je pripravené na produkčný predaj.
+
+4) Chýbajúce analytics / event tracking
+- Súbor: `index.html`
+- Nález: Nenašli sa GA/gtag/Meta Pixel/analytics eventy.
+- Dopad: Žiadna merateľnosť funnelu a optimalizácie konverzie.
+
+5) Neaktuálny alebo chybný audit dokument v `_delivery`
+- Súbor: `_delivery/CONTACTS_SCAN.md:5`
+- Nález: Obsahuje `tvoj@email.sk` (placeholder z formulára, nie reálny kontakt).
+- Súbor: `_delivery/CONTACTS_SCAN.md:8` a `:15`
+- Nález: Tvrdí „(none)“ pre `tel:` odkazy, ale v `index.html:492` tel link existuje.
+- Dopad: Dokumentácia je nekonzistentná, môže mýliť pri handovere.
+
+6) TODOs explicitne uvedené v dokumentácii
+- Súbor: `SITE_OVERVIEW.md:31-35` (rovnako v `_delivery/SITE_OVERVIEW.md`)
+- TODO: backend `/api/order`, Stripe prod link, právne dokumenty, reálne referencie/fotky.
+- Súbor: `PROJECT_HANDOVER.md:33-38` (rovnako v `_delivery/PROJECT_HANDOVER.md`)
+- TODO: backend, Stripe produkcia, právne docs, tracking/webhooky, meranie konverzií.
+
+7) Prevádzkový stav repozitára
+- Súbor: `_delivery/REPO_STATE.txt`
+- Nález: `fatal: not a git repository`.
+- Dopad: Chýba git kontext pre auditovateľnú históriu zmien v tomto exporte.

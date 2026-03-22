@@ -1,0 +1,5 @@
+### git status -sb
+fatal: not a git repository (or any of the parent directories): .git
+
+### git log -n 10 --oneline --decorate
+fatal: not a git repository (or any of the parent directories): .git

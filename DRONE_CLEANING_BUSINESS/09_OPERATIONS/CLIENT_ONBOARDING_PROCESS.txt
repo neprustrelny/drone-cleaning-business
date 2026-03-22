@@ -1,0 +1,107 @@
+CLIENT ONBOARDING PROCESS
+
+Ucel dokumentu
+- Popisat co sa deje od leadu po realizaciu a doplatok.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Funnel ma zachytit lead alebo zalohu.
+  - Hlavny produktovy flow je formular -> backend -> Stripe / follow-up.
+  - SK testovacie zakazky maju prist pred DE scale.
+
+Odporucany model / navrh
+
+KROK 1 - Prijatie leadu
+- Zaznamenat:
+  - meno
+  - adresa objektu
+  - email
+  - telefon
+  - vybrany balik
+  - poznamka
+  - cas prijatia leadu
+  - status: new
+
+KROK 2 - Prvy kontakt do 24 hodin
+- Ciel:
+  - potvrdit prijatie
+  - overit vaznost dopytu
+  - ziskat chybajuce udaje
+- Minimalne otazky:
+  - typ objektu
+  - povrch strechy / fasady
+  - viditelne znecistenie
+  - pristup k objektu
+  - dostupnost vody a parkovania
+  - ci su v okoli ludia, prevadzka alebo citlive zony
+
+KROK 3 - Kvalifikacia objektu
+- Rozdelit lead na:
+  - vhodny bez obhliadky
+  - vhodny po doplneni fotiek
+  - vhodny po osobnej obhliadke
+  - nevhodny / vysoke riziko / odlozit
+- Vyziadat minimalne 3 fotky:
+  - celok objektu
+  - detail znecistenia
+  - pristupova strana a okoli
+
+KROK 4 - Potvrdenie obchodneho modelu
+- Potvrdit klientovi:
+  - predbezny rozsah
+  - ci plati standardny balik alebo individualna cena
+  - ci sa pouzije zaloha alebo len rezervacia / obhliadka
+  - predbezny termin
+
+KROK 5 - Booked status
+- Lead prechadza do booked az ked je:
+  - potvrdeny objekt
+  - potvrdeny kontakt
+  - potvrdeny termin alebo terminove okno
+  - potvrdeny dalsi obchodny krok
+
+KROK 6 - Pred-vyjazdova priprava
+- Skontrolovat:
+  - pocasie
+  - adresu a trasu
+  - vybavenie
+  - kontakt na klienta
+  - obmedzenia v okoli
+  - interny go / no-go status
+
+KROK 7 - Realizacia na mieste
+- Potvrdit klienta na mieste alebo telefonicky.
+- Vytvorit bezpecny perimeter.
+- Spravit pred-foto dokumentaciu.
+- Zrealizovat pracu alebo prerusit, ak podmienky nesedia.
+
+KROK 8 - Odovzdanie a doplatok
+- Ukazat vysledok.
+- Spravit po-foto dokumentaciu.
+- Potvrdit finalny rozsah a doplatok.
+- Vyziadat testimonial a odporucanie.
+
+Minimalne udaje, ktore treba od klienta
+- meno a priezvisko
+- adresa objektu
+- email
+- telefon
+- typ objektu
+- fotky objektu
+- preferovany termin
+- upozornenie na pristup alebo rizika
+
+Rizika
+- lead bez telefonu ma nizsiu operativnu kvalitu
+- objekt bez fotiek zvysuje pravdepodobnost zlej kvalifikacie
+- bez jasneho status modelu sa leady stracaju medzi marketingom a realizaciou
+
+Co treba overit
+- pri akych objektoch je obhliadka povinna
+- kedy ma mat klient moznost vratky alebo prebookingu
+- ake pravne potvrdenie bude potrebne pred realizaciou
+
+Prakticke dalsie kroky
+- zaviest lead status pipeline
+- doplnit povinne polia pre onboarding tam, kde chyba telefon a fotky
+- po prvych 20 lead stageoch upravit kvalifikacne pravidla

@@ -1,0 +1,130 @@
+FUNNEL STRUCTURE
+
+Ucel dokumentu
+- Definovat predajny funnel od trafficu po zalohu, lead a realizovanu zakazku.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Funnel je priorita c. 1.
+  - Aktualny web je one-page landing page.
+  - Frontend a backend uz pocitaju s flow formular -> /api/order -> Stripe.
+  - Hlavna metrika je pocet zaplatenych zaloh a CAC na zalohu.
+
+Odporucany model / navrh
+
+KROK 1 - Traffic
+- Zdroj: Meta ads, lokalne skupiny, odporucania, organicke video/foto, neskor Google search.
+- Ciel: priviest relevantneho majitela objektu na landing page.
+- KPI:
+  - CTR reklamy
+  - cena za navstevu
+  - lokalna relevancia trafficu
+
+KROK 2 - Landing page
+- Offer: cistenie strechy a fasady dronom bez lesenia.
+- CTA: vyplnit formular a rezervovat termin / zaplatit zalohu podla aktualneho modelu.
+- Dolezite bloky:
+  - co sluzba riesi
+  - cena alebo cenovy anchor
+  - preco zaloha dava zmysel
+  - bezpecnost a jednoduchost
+  - kontakt
+- KPI:
+  - landing visit -> form start
+  - scroll depth k objednavke
+
+KROK 3 - Form alebo payment step
+- Minimalne polia:
+  - balik
+  - meno
+  - adresa objektu
+  - email
+  - telefon volitelne, ale odporucany
+  - poznamka / fotky neskor
+- CTA:
+  - dokoncit objednavku
+  - rezervovat termin
+- KPI:
+  - form start -> submit
+  - submit -> Stripe click
+
+KROK 4 - Lead capture
+- Backend ulozi lead a vrati dalsi krok.
+- Minimalny vystup:
+  - lead record
+  - cas prijatia
+  - vybrany balik
+  - kontakt
+  - stav: new / contacted / qualified / booked / paid / done
+- KPI:
+  - response success rate
+  - lead completeness
+
+KROK 5 - Qualification / pricing
+- Do 24 hodin skontrolovat:
+  - vhodnost objektu
+  - pristup
+  - povrch
+  - odhad zlozitosti
+  - ci je potrebna obhliadka
+- Rozhodnutie:
+  - potvrdit rezervaciu
+  - vyziadat doplnujuce fotky
+  - upravit cenu
+  - odmietnut nevhodny objekt
+- KPI:
+  - lead -> qualified
+  - qualified -> booked
+
+KROK 6 - Job execution
+- Potvrdit termin.
+- Spravit pred-vyjazdovu kontrolu.
+- Realizovat zakazku.
+- Ziskat foto/video dokaz a testimonial.
+- KPI:
+  - booked -> done
+  - on-time completion
+
+KROK 7 - Final payment / repeat business
+- Po realizacii vyziadat doplatok.
+- Poziadat o referenciu a odporucanie.
+- Ponuknut upsell alebo dalsi objekt.
+- KPI:
+  - average revenue per job
+  - testimonial rate
+  - referral rate
+
+Objection handling body
+- Bezpecnost: nikto nelezie po streche, proces je kontrolovany zo zeme.
+- Poskodenie strechy: tlak a postup sa prisposobuju objektu, nevhodne objekty sa maju vyradit.
+- Zaloha: rezervuje kapacitu a oddeluje vaznych zaujemcov od zvedavych navstevnikov.
+- Cena: verejne balicky su anchor, finalny rozsah sa potvrdzuje podla objektu.
+- Pocasie: termin sa presuva podla operacnych pravidiel, nie ad hoc.
+
+Follow-up standard
+- do 15 minut: automaticke potvrdenie prijatia
+- do 24 hodin: manualny kontakt
+- do 48 hodin: potvrdenie dalsieho kroku alebo ziadost o doplnujuce info
+- po realizacii: follow-up na testimonial a referral
+
+Minimalne assety pre funkcny funnel
+- 1 jasny hero obrazok alebo video
+- 3-5 realnych before/after materialov
+- FAQ k bezpecnosti, cene a zaloham
+- testimonialy zo SK pilotov
+- lokalne kontaktne udaje
+
+Rizika
+- traffic bez dostatocnej dovery neprejde do zalohy
+- lead capture bez rychleho follow-upu znizi konverziu
+- slaby objection handling znici Stripe click rate
+
+Co treba overit
+- ktory CTA text dava najlepsi conversion rate
+- pri ktorych segmentoch funguje zaloha lepsie ako lead-first flow
+- kolko leadov potrebuje manualnu obhliadku pred potvrdenim
+
+Prakticke dalsie kroky
+- Merat visit -> form start -> submit -> Stripe click -> payment success.
+- Zaviest lead status pipeline.
+- Do funnelu doplnit realne referencie a objection layer.

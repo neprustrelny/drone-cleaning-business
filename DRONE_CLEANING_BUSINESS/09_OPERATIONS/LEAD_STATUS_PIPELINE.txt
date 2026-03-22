@@ -1,0 +1,172 @@
+LEAD STATUS PIPELINE
+
+Ucel dokumentu
+- Zaviest jeden riadeny status model od prijatia leadu po uzatvorenie zakazky.
+- Znizit stratu leadov medzi funnelom, kvalifikaciou, bookingom a realizaciou.
+
+Zakladne pravidlo
+- Jeden lead ma v jednom case jeden hlavny status.
+- Kazda zmena statusu musi mat datum, vlastnika a poznamku.
+- Bez aktualizacie statusu sa lead nepovazuje za riadeny.
+
+Statusy a pravidla
+
+1. new
+- Vyznam: lead prisiel z formulara, telefonu, spravy alebo odporucania a este nebol spracovany.
+- Do dalsieho statusu posuva: manualny prvy kontakt alebo automaticke potvrdenie + manualne prevzatie.
+- Evidovat:
+  - datum a cas prijatia
+  - zdroj leadu
+  - meno
+  - telefon
+  - email
+  - adresa objektu
+  - typ dopytu: strecha / fasada / bundle / nejasne
+  - vybrany balik alebo poznamka
+- KPI:
+  - cas od prijatia po prvy kontakt
+
+2. contacted
+- Vyznam: klient bol kontaktovany a vie, ze lead sa riesi.
+- Do dalsieho statusu posuva: doplnenie udajov a prva kvalifikacia objektu.
+- Evidovat:
+  - kanal kontaktu
+  - vysledok kontaktu
+  - ci klient reagoval
+  - chybajuce udaje
+  - termin dalsieho follow-upu
+- KPI:
+  - response rate po prvom kontakte
+  - podiel leadov kontaktovanych do 24 hodin
+
+3. qualified
+- Vyznam: objekt je predbezne vyhodnoteny ako vhodny, podmienecne vhodny alebo nevhodny.
+- Do dalsieho statusu posuva: vystavenie cenoveho navrhu alebo vyradenie.
+- Evidovat:
+  - typ objektu
+  - fotky objektu
+  - povrch a znecistenie
+  - pristup
+  - voda / parkovanie
+  - potreba obhliadky: ano / nie
+  - predbezna ekonomika jobu
+  - rizika a obmedzenia
+- KPI:
+  - lead -> qualified rate
+  - podiel leadov bez dostatocnych dat na kvalifikaciu
+
+4. quote_sent
+- Vyznam: klient dostal orientacnu cenu alebo individualnu ponuku.
+- Do dalsieho statusu posuva: potvrdenie klientom, uhrada zalohy alebo odmietnutie.
+- Evidovat:
+  - datum odoslania ponuky
+  - typ ponuky: orientacna / individualna
+  - cenove pasmo alebo finalna suma
+  - platnost ponuky
+  - co cena obsahuje a neobsahuje
+  - dalsi follow-up datum
+- KPI:
+  - qualified -> quote_sent rate
+  - quote_sent -> deposit_pending alebo booked rate
+
+5. deposit_pending
+- Vyznam: klient chce rezervovat termin alebo pokracovat, ale zaloha este nebola pripisana.
+- Do dalsieho statusu posuva: uhrada zalohy alebo zmena modelu na rezervaciu bez zalohy.
+- Evidovat:
+  - suma zalohy
+  - datum vyzvy na platbu
+  - deadline na uhradu
+  - vysledok follow-upu
+  - dovod neuhrady, ak je znamy
+- KPI:
+  - payment rate na zalohu
+  - priemerny cas od quote_sent po zalohu
+
+6. booked
+- Vyznam: termin alebo terminove okno je potvrdene a job je operacne pripraveny.
+- Do dalsieho statusu posuva: vyjazd a zaciatok realizacie.
+- Evidovat:
+  - datum realizacie alebo terminove okno
+  - potvrdeny kontakt na den realizacie
+  - obchodny model: so zalohou / bez zalohy / obhliadka first
+  - finalny scope
+  - specialne poznamky k pristupu a pocasiu
+- KPI:
+  - deposit_pending -> booked rate
+  - no-show / presun rate
+
+7. in_progress
+- Vyznam: job sa realizuje alebo je tim na mieste a prebieha operacia.
+- Do dalsieho statusu posuva: dokoncenie alebo prerusenie.
+- Evidovat:
+  - cas startu
+  - tim na mieste
+  - go / no-go rozhodnutie
+  - odchylky oproti planu
+  - incident / near-miss ano / nie
+- KPI:
+  - start rate booked -> in_progress
+  - podiel prerusenych jobov
+
+8. completed
+- Vyznam: praca bola vykonana a technicky ukoncena.
+- Do dalsieho statusu posuva: inkaso doplatku a administrativne uzatvorenie.
+- Evidovat:
+  - cas ukoncenia
+  - pred / po dokumentacia
+  - potvrdeny rozsah
+  - finalna cena
+  - otvorene reklamacie alebo vyhrady
+- KPI:
+  - in_progress -> completed rate
+  - completion bez incidentu
+
+9. closed_won
+- Vyznam: zakazka je uzatvorena, doplatok vybaveny a pripad je obchodne vyhraty.
+- Do dalsieho statusu posuva: nikto, ide o finalny stav.
+- Evidovat:
+  - finalne inkaso
+  - marza alebo aspon odhad ekonomiky jobu
+  - testimonial ano / nie
+  - referral potencial
+  - datum uzatvorenia
+- KPI:
+  - close rate
+  - average revenue/job
+  - testimonial rate
+
+10. closed_lost
+- Vyznam: lead alebo job sa nepretavil do realizacie.
+- Do dalsieho statusu posuva: nikto, ide o finalny stav.
+- Evidovat:
+  - dovod prehry
+  - faza, v ktorej lead odpadol
+  - ci bol lead nekvalitny, neekonomicky, rizikovy alebo cenovo strateny
+  - ci sa ma lead vratit neskor
+- KPI:
+  - lost rate
+  - top 5 dovodov straty
+
+Najcastejsie miesta straty leadu
+- medzi new a contacted: pomaly follow-up alebo chybajuce telefonne cislo
+- medzi contacted a qualified: klient neposle fotky alebo udaje o objekte
+- medzi quote_sent a deposit_pending: slaba dovodovost ceny alebo nedostatok trustu
+- medzi deposit_pending a booked: klient neuhradi zalohu alebo sa nevie rozhodnut
+- medzi booked a in_progress: pocasie, zly pristup, zla kvalifikacia objektu
+
+Prakticke KPI na pipeline
+- time to first contact
+- new -> contacted rate
+- contacted -> qualified rate
+- qualified -> quote_sent rate
+- quote_sent -> deposit_pending rate
+- deposit_pending -> booked rate
+- booked -> completed rate
+- completed -> closed_won rate
+- celkovy lead -> closed_won rate
+- top reasons for closed_lost
+
+Riadiace pravidlo
+- Ak lead nema dalsi termin follow-upu, je operacne opusteny.
+- Ak status stoji viac ako 48 hodin bez poznamky v aktivnej faze, treba review.
+- Ak je objekt neekonomicky alebo rizikovy, ma sa uzavriet ako closed_lost s dovodom, nie nechat visiet.

@@ -1,0 +1,26 @@
+[4.0K]  /home/neprustrelny/Desktop/codex workspace/DRON/DRONE_CLEANING_BUSINESS/stranka umyvanie strechy
+├── [ 989]  AGENTS.md
+├── [ 31M]  Biznis_plán__Čistenie_dronom.mp4
+├── [2.6M]  ChatGPT Image Jan 27, 2026, 05_32_36 PM.png
+├── [ 12M]  Kassel_Drone_Profit_Scenarios.pdf
+├── [3.1K]  PROJECT_HANDOVER.md
+├── [2.8K]  SITE_OVERVIEW.md
+├── [4.0K]  _audit
+│   ├── [3.3K]  EXEC_SUMMARY.txt
+│   ├── [1.9K]  FOUND_ISSUES.txt
+│   ├── [2.0K]  NEXT_STEPS.txt
+│   └── [   0]  TREE.txt
+├── [4.0K]  _delivery
+│   ├── [ 989]  AGENTS.md
+│   ├── [ 389]  CONTACTS_SCAN.md
+│   ├── [ 904]  DELIVERY_MANIFEST.md
+│   ├── [1.3K]  FLOW_ORDER_STRIPE.md
+│   ├── [3.1K]  PROJECT_HANDOVER.md
+│   ├── [1.1K]  README_FOR_AUDIT.md
+│   ├── [ 197]  REPO_STATE.txt
+│   ├── [1.2K]  SEO_A11Y.md
+│   ├── [2.8K]  SITE_OVERVIEW.md
+│   └── [ 25K]  index.html
+└── [ 25K]  index.html
+
+3 directories, 21 files

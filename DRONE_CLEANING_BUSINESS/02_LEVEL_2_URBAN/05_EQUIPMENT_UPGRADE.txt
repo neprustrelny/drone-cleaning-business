@@ -1,0 +1,65 @@
+EQUIPMENT UPGRADE
+
+Ucel dokumentu
+- Ukazat, aky rozumny technicky upgrade dava zmysel pri prechode z Level 1 na Level 2 urban joby.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - MVP setup ma byt lean a bez maximalizmu.
+  - Telemetry, checklist a incident zapis su uz definovane ako zaklad.
+- PRACOVNY ODHAD:
+  - Level 2 nevyzaduje nutne kompletne novy system, ale vyzaduje vyssiu rezervu, kontrolu a prevadzkovu disciplinu.
+
+Co uz pri Level 2 nestaci
+- setup bez rezervnych dielov
+- setup bez jasneho perimetroveho kitu
+- setup bez druhej osoby pri tesnom urban jobe
+- prilis slaby log a dokumentacia pri vyssom riziku
+- improvozovane nabijanie, voda alebo transport
+
+Rozumny upgrade oproti MVP
+- viac baterii alebo rychlejsi charging workflow
+- lepsi perimetrovy a bezpecnostny kit
+- rezervne fitingy, hadice, trysky a rychle servisne diely
+- spolahlivejsi komunikacny setup medzi operatorom a spotterom
+- lepsie ulozenie a oznacenie vybavenia pre rychly urban deployment
+- silnejsi dokumentacny kit pre pred / po a incident evidence
+
+Safety-critical upgrade
+- rezervne kriticke diely pre pump system a rozvod
+- jasne perimeter vybavenie
+- komunikacia operator - spotter
+- spolahlive logovanie a evidencia jobu
+- stabilnejsi pracovny setup, ak Level 1 zariadenie pracuje na hranici svojich moznosti
+
+Productivity upgrade
+- viac bateriovej kapacity
+- rychlejsia priprava medzi jobmi
+- lepsie asset capture pre klienta a referral
+- lepsia organizacia auta, nabijania a spotrebneho materialu
+
+Nice-to-have
+- vyssia automatizacia bez jasneho prevadzkoveho prinosu
+- AI vrstva bez realnych internych dat
+- high-end marketing video gear, ak este nie je stabilny sales engine
+- scale hardware pre velke industrial joby, ak sa stale validuje urban retail a mensi commercial segment
+
+Prepojenie na CAPEX a ROI logiku
+- Level 2 upgrade ma davat zmysel iba vtedy, ak zlepsuje bezpecnost alebo umozni vyssiu cenu a lepsiu vyuzitelnost jobov.
+- Ak upgrade len zvysi CAPEX bez dopadu na bezpecnost, konverziu alebo throughput, je predcasny.
+- PRACOVNY ODHAD: prve Level 2 upgrady maju byt mensie, modulove a naviazane na realne urban joby, nie na hypoteticky scale.
+
+Rizika
+- pretechnizovanie bez dopytu
+- kupovanie scale vybavenia skor, nez pricing unesie navratnost
+- ignorovanie safety-critical prvkov a investovanie do nice-to-have vrstiev
+
+Co treba overit
+- ktore casti MVP setupu realne zlyhavaju alebo brzdia Level 2
+- ake upgrade polozky maju najlepsi dopad na bezpecnost a throughput
+- aku vyssiu cenu realne unesie urban job po sprisneni scope a dokumentacie
+
+Prakticke dalsie kroky
+- po prvych urban joboch zaznamenat, kde setup nestacil
+- upgrade robit po moduloch, nie naraz
+- kazdy upgrade obhajit cez bezpecnost, throughput alebo marzu

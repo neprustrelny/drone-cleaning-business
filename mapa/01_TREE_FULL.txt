@@ -1,0 +1,154 @@
+DRON/
+|-- .wrangler/ [generated; 6 files, 13 dirs, ~108K]
+|   |-- state/
+|   `-- tmp/
+|-- 00_RUNBOOK_CODEX.md
+|-- CASHFLOW_2026.md
+|-- CHANGELOG.md
+|-- DRONE_CLEANING_BUSINESS/
+|   |-- 00_MASTER_STRATEGY/
+|   |   |-- CASHFLOW_MODEL.txt [empty placeholder]
+|   |   |-- RISK_MATRIX.txt [empty placeholder]
+|   |   |-- ROADMAP_LEVELS.txt [empty placeholder]
+|   |   |-- SERVICE_MISSION_DESCRIPTION.txt [filled]
+|   |   `-- VISION.txt [empty placeholder]
+|   |-- 01_LEVEL_1_BASIC/
+|   |   |-- 01_LEGAL_REQUIREMENTS_SK.txt [empty placeholder]
+|   |   |-- 02_LEGAL_REQUIREMENTS_DE.txt [empty placeholder]
+|   |   |-- 03_INSURANCE.txt [empty placeholder]
+|   |   |-- 04_TECH_SETUP.txt [empty placeholder]
+|   |   |-- 05_OPERATION_SOP.txt [empty placeholder]
+|   |   |-- 06_PRICING_MODEL.txt [empty placeholder]
+|   |   |-- 07_MARKETING_FUNNEL.txt [empty placeholder]
+|   |   `-- CHECKLIST_LEVEL_1.txt [filled]
+|   |-- 02_LEVEL_2_URBAN/
+|   |   |-- 01_EXTENDED_LEGAL.txt [empty placeholder]
+|   |   |-- 02_RISK_ASSESSMENT_TEMPLATE.txt [empty placeholder]
+|   |   |-- 03_CLIENT_CONTRACT_TEMPLATE.txt [empty placeholder]
+|   |   |-- 04_HIGH_RISE_SOP.txt [empty placeholder]
+|   |   |-- 05_EQUIPMENT_UPGRADE.txt [empty placeholder]
+|   |   |-- 06_CITY_COMMUNICATION_PROCESS.txt [empty placeholder]
+|   |   `-- CHECKLIST_LEVEL_2.txt [filled]
+|   |-- 03_LEVEL_3_HIGH_RISE/
+|   |   |-- 01_SPECIFIC_CATEGORY_GUIDE.txt [empty placeholder]
+|   |   |-- 02_SORA_FRAMEWORK.txt [empty placeholder]
+|   |   |-- 03_OPERATION_MANUAL_STRUCTURE.txt [empty placeholder]
+|   |   |-- 04_NOTAM_PROCESS.txt [empty placeholder]
+|   |   |-- 05_SAFETY_MANAGEMENT_SYSTEM.txt [empty placeholder]
+|   |   |-- 06_TENDER_STRATEGY.txt [empty placeholder]
+|   |   `-- CHECKLIST_LEVEL_3.txt [filled]
+|   |-- 04_LEVEL_4_INDUSTRIAL/
+|   |   |-- 01_COMPLIANCE_REQUIREMENTS.txt [empty placeholder]
+|   |   |-- 02_ISO_PREPARATION.txt [empty placeholder]
+|   |   |-- 03_RISK_CONTROL_SYSTEM.txt [empty placeholder]
+|   |   |-- 04_B2B_CONTRACT_MODEL.txt [empty placeholder]
+|   |   |-- 05_SCALE_STRATEGY.txt [empty placeholder]
+|   |   `-- CHECKLIST_LEVEL_4.txt [filled]
+|   |-- 05_MARKETING_AND_SALES/
+|   |   |-- AD_STRATEGY.txt [empty placeholder]
+|   |   |-- FUNNEL_STRUCTURE.txt [empty placeholder]
+|   |   |-- INVESTOR_PITCH.txt [empty placeholder]
+|   |   |-- PREORDER_STRATEGY.txt [empty placeholder]
+|   |   `-- TARGET_SEGMENTS.txt [empty placeholder]
+|   |-- 06_FINANCIALS/
+|   |   |-- CAPEX_BREAKDOWN.txt [empty placeholder]
+|   |   |-- OPEX_MODEL.txt [empty placeholder]
+|   |   |-- ROI_CALCULATOR.txt [empty placeholder]
+|   |   |-- SCENARIO_AGGRESSIVE.txt [empty placeholder]
+|   |   |-- SCENARIO_PESSIMISTIC.txt [empty placeholder]
+|   |   `-- SCENARIO_REALISTIC.txt [empty placeholder]
+|   |-- 07_TECHNICAL_ARCHITECTURE/
+|   |   |-- AI_UPGRADE_PLAN.txt [empty placeholder]
+|   |   |-- DRONE_SETUP.txt [empty placeholder]
+|   |   |-- MAINTENANCE_SCHEDULE.txt [empty placeholder]
+|   |   |-- PUMP_SYSTEM.txt [empty placeholder]
+|   |   `-- TELEMETRY_SYSTEM.txt [empty placeholder]
+|   |-- 08_REGULATORY_DATABASE/
+|   |   |-- AIRSPACE_LIMITATIONS.txt [empty placeholder]
+|   |   |-- EASA_RULES_SUMMARY.txt [empty placeholder]
+|   |   |-- GERMANY_LBA_NOTES.txt [empty placeholder]
+|   |   `-- SLOVAKIA_CAA_NOTES.txt [empty placeholder]
+|   |-- 09_OPERATIONS/
+|   |   |-- CLIENT_ONBOARDING_PROCESS.txt [empty placeholder]
+|   |   |-- DAILY_CHECKLIST.txt [empty placeholder]
+|   |   |-- INCIDENT_REPORT_TEMPLATE.txt [empty placeholder]
+|   |   `-- WEATHER_DECISION_MATRIX.txt [empty placeholder]
+|   |-- 10_EXPANSION_PLAN/
+|   |   |-- FRANCHISE_STRUCTURE.txt [empty placeholder]
+|   |   |-- GERMANY_MARKET_ENTRY.txt [empty placeholder]
+|   |   `-- PARTNERSHIP_MODEL.txt [empty placeholder]
+|   |-- Skalica_dotacie_z_rozpoctu_mesta/
+|   |   |-- VZN č. 1_2019  o poskytovani dotácii z rozpočtu Mesta Skalica.pdf
+|   |   |-- Vyúčtovanie poskytnutej dotácie.docx
+|   |   `-- ziadost o poskytnutie dotacie z rozpoctu mesta.docx
+|   `-- stranka umyvanie strechy/
+|       |-- .dev.vars.example
+|       |-- .gitignore
+|       |-- .netlify/ [generated metadata; 2 files]
+|       |   |-- netlify.toml
+|       |   `-- state.json
+|       |-- .wrangler/ [generated dev bundles; 18 files, 15 dirs, ~408K]
+|       |-- AGENTS.md
+|       |-- Biznis_plán__Čistenie_dronom.mp4
+|       |-- ChatGPT Image Jan 27, 2026, 05_32_36 PM.png
+|       |-- Kassel_Drone_Profit_Scenarios.pdf
+|       |-- PROJECT_HANDOVER.md
+|       |-- Projektový Runbook.pdf
+|       |-- README_DEPLOY_CLOUDFLARE.md
+|       |-- README_PROD_SETUP.md
+|       |-- README_RUN_LOCAL_AND_TEST.md
+|       |-- SITE_OVERVIEW.md
+|       |-- _audit/
+|       |   |-- EXEC_SUMMARY.txt
+|       |   |-- FOUND_ISSUES.txt
+|       |   |-- NEXT_STEPS.txt
+|       |   `-- TREE.txt
+|       |-- _delivery/
+|       |   |-- AGENTS.md
+|       |   |-- CONTACTS_SCAN.md
+|       |   |-- DELIVERY_MANIFEST.md
+|       |   |-- FLOW_ORDER_STRIPE.md
+|       |   |-- PROJECT_HANDOVER.md
+|       |   |-- README_FOR_AUDIT.md
+|       |   |-- REPO_STATE.txt
+|       |   |-- SEO_A11Y.md
+|       |   |-- SITE_OVERVIEW.md
+|       |   `-- index.html
+|       |-- functions/
+|       |   `-- api/
+|       |       |-- order.ts
+|       |       `-- stripe/
+|       |           `-- webhook.ts
+|       |-- index.html
+|       |-- node_modules/ [vendor; 1527 files, 258 dirs, ~199M]
+|       |-- order-form.js
+|       |-- package-lock.json
+|       |-- package.json
+|       `-- wrangler.toml
+|-- QUEUE.md
+|-- REPORT.md
+|-- STATUS.md
+|-- index.js
+|-- mapa/
+|   |-- 00_MASTER_MAP.md
+|   |-- 01_TREE_FULL.txt
+|   |-- 02_ROOT_ANALYSIS.md
+|   |-- 03_PROJECTS_OVERVIEW.md
+|   |-- 04_FILES_INDEX.md
+|   |-- 05_DEPENDENCIES_AND_TECH.md
+|   |-- 06_RISKS_AND_CONFUSION.md
+|   |-- 07_RECOMMENDED_NAVIGATION.md
+|   `-- 08_SUMMARY_FOR_MAREK.md
+|-- node_modules/ [vendor; 1528 files, 260 dirs, ~199M]
+|-- order-handler.js
+|-- package-lock.json
+|-- package.json
+|-- test/
+|   |-- order-form.test.js
+|   `-- order-handler.test.js
+`-- wrangler.toml
+
+Poznamky:
+- Mimo vendor a generated vrstiev som napocital 114 suborov.
+- V dokumentacnych priecinkoch `00_...` az `10_...` je 60 `.txt` suborov, z toho 55 prazdnych placeholderov a 5 realne naplnenych.
+- Root `node_modules/` a nested `stranka umyvanie strechy/node_modules/` su dve oddelene vendor kopy podobnej velkosti.

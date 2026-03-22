@@ -1,0 +1,103 @@
+PREORDER STRATEGY
+
+Ucel dokumentu
+- Urcit kedy a ako pouzivat zalohu, rezervaciu alebo pre-order ako obchodny filter a cashflow nastroj.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Aktualne dokumenty pracuju so zalohou 50 EUR.
+  - Hlavna metrika je pocet zaplatenych zaloh.
+  - Zaloha sa ma odpocitat z finalnej ceny.
+  - SK validacia ma prist pred DE scale.
+- PRACOVNY ODHAD:
+  - Pre-order funguje len vtedy, ak je jasne vysvetlene, co klient dostane po zaplateni.
+
+Odporucany model / navrh
+
+Zakladny model
+- Prvy plateny krok = rezervacna zaloha.
+- Zaloha ma 4 funkcie:
+  - filtruje vaznych zaujemcov
+  - tvori vcasny cashflow
+  - viaze klienta na termin
+  - dava timu prioritu v follow-upe
+
+Kedy pouzit zalohu
+- vhodne pre:
+  - jednoduchy rodinny dom
+  - standardny balik
+  - lokalitu, ktoru vieme obsluzit
+  - objekt, pri ktorom nepredpokladame vysoku neistotu
+- nevhodne ako jediny krok pre:
+  - komplikovane B2B objekty
+  - nejasny rozsah prace
+  - lokality s neistou prevadzkou alebo regulaciou
+
+Kedy pouzit lead-first bez zalohy
+- ak treba najprv obhliadku
+- ak ide o vacsi alebo rizikovy objekt
+- ak este nemame dostatocny trust layer pre dany segment alebo trh
+
+Minimalne pravidla pre preorder / rezervaciu
+- klient musi vediet:
+  - co rezervuje
+  - co zaloha kryje
+  - kedy sa odpocita z finalnej ceny
+  - co sa stane pri nevhodnom objekte
+  - ako funguje prelozenie terminu
+- interny tim musi vediet:
+  - kto kontaktuje klienta
+  - do akeho casu
+  - kto schvaluje objekt
+  - ako sa eviduje stav zalohy
+
+CTA model
+- Hlavne CTA:
+  - rezervovat termin
+  - zaplatit zalohu
+- Sekundarne CTA:
+  - poslat dopyt
+  - vyziadat obhliadku
+
+Follow-up po pre-orderi
+- do 15 minut potvrdenie prijatia
+- do 24 hodin kontakt a potvrdenie vhodnosti objektu
+- do 48 hodin potvrdeny dalsi krok: termin / doplnujuce fotky / uprava ceny
+
+Objection handling
+- Preco zaloha?:
+  - rezervuje kapacitu a termin, nie je to cela cena
+- Co ak je objekt zlozitejsi?:
+  - finalny rozsah sa potvrdi po fotkach alebo obhliadke
+- Co ak nebude pocasie?:
+  - termin sa presunie, rezervacia nezanika automaticky
+- Co ak objekt nebude vhodny?:
+  - treba mat jasne pravidlo vratky alebo alternativneho riesenia
+
+SK a DE predpoklady
+- SK:
+  - zaloha moze fungovat skor, ak je rychly follow-up a lokalny trust
+- DE:
+  - zaloha bude fungovat az po silnejsej trust vrstve, DE copy a lokalizovanom procese
+
+Minimalne marketingove assety pre preorder
+- vysvetlenie preco zaloha existuje
+- FAQ k vratke / presunu / vhodnosti objektu
+- 2-3 realne ukazky vysledku
+- jasne balicky alebo anchor ceny
+- kontakt a reakcia do 24 hodin
+
+Rizika
+- zaloha bez trust vrstvy znizi konverziu
+- nejasne podmienky zalohy vytvoria konflikt a refund tlak
+- prilis skoro pouzita zaloha na B2B alebo DE segmente znizi response rate
+
+Co treba overit
+- aku mieru refund / cancel vyvola preorder model
+- ktore segmenty prijimaju zalohe lepsie nez lead-first model
+- ci je 50 EUR psychologicky najlepsia hranica aj po prvych realnych kampaniach
+
+Prakticke dalsie kroky
+- dopisat FAQ k zalohe a terminom
+- zavest lead status pre paid vs unpaid lead
+- po prvych 20 lead stageoch prehodnotit, kde zaloha pomaha a kde brzdi

@@ -1,0 +1,68 @@
+CITY COMMUNICATION PROCESS
+
+Ucel dokumentu
+- Dat timu jednoduchy komunikacny proces pre joby v citlivejsom mestskom prostredi.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Projekt riesi booking, onboarding, weather decision a incident zapis, ale nema zatial urban communication standard.
+- PRACOVNY ODHAD:
+  - V meste casto nerozhoduje iba technika. Rozhoduje aj to, ci klient, spravca a okolie vedia, co sa ide diat.
+
+Co treba pripravit pred realizaciou
+- potvrdit klientovi scope, termin a casove okno
+- potvrdit pristup na miesto
+- potvrdit, ci treba informovat spravcu, recepciu, susedov alebo prevadzku
+- pripravit kratky vysvetlovaci text: co sa bude robit, kedy, ako dlho a ake budu obmedzenia
+- urcit, kto komunikuje navonok: klientsky kontakt / operator / spotter
+
+Co povedat klientovi
+- co sa bude robit a v akom okne
+- co musi klient pripravit: pristup, parkovanie, informacia o okoli, voda ak je relevantna
+- ze job podlieha weather a safety go / no-go pravidlam
+- ze pri urban jobe moze byt potrebne kratke lokalne usmernenie ludi alebo koordinacia s okolitou prevadzkou
+
+Co povedat spravcovi / susedom / okoli, ak treba
+- kto sme a preco sme na mieste
+- aky je rozsah prace
+- ako dlho bude aktivita trvat
+- aku cast priestoru treba docasne drzat volnu
+- koho kontaktovat pri otazke alebo probleme
+- komunikacia ma byt vecna, kratka a bez slubov, ktore tim nevie garantovat
+
+Co musi byt zdokumentovane
+- kto bol informovany
+- kedy bol informovany
+- aky bol vysledok komunikacie
+- ci boli vznesene namietky alebo obmedzenia
+- kto je kontaktna osoba na mieste
+- ci komunikacia meni risk assessment alebo booking podmienky
+
+Otazky, staznosti a odpor
+- vypocut problem
+- neoponovat emocionalne
+- vysvetlit rozsah, cas a bezpecnostny ramec
+- ak sa spor neda rychlo vyriesit a ovplyvnuje perimeter alebo bezpecnost, job sa stopne alebo presunie
+- kazdy vyznamny konflikt zapisat do job poznamky alebo incident logu
+
+Komunikacny trigger na stop alebo escalation
+- spravca alebo klient nevie garantovat pristup
+- susedia alebo okolie aktivne narusaju perimeter
+- vznikne konflikt s pohybom ludi alebo vozidiel
+- objavia sa nove citlive body, ktore neboli v kvalifikacii
+- vznikne reputacne alebo bezpecnostne riziko nad bezny Level 2 ramec
+
+Rizika
+- klient neinformuje relevantne osoby a tim pride do konfliktu na mieste
+- operator musi riesit komunikaciu aj perimeter naraz
+- slaba komunikacia vytvori odpor aj pri technicky zvladnutelnom jobe
+
+Co treba overit
+- kedy je vhodne pouzit pisomne avizo a kedy staci telefonicka koordinacia
+- ake miestne alebo regulatorne oznamovacie povinnosti mozu vznikat v citlivych lokalitach
+- TREBA OVERIT: finalne hranice medzi beznou operacnou koordinaciou a formalnou notifikaciou v mestskom prostredi
+
+Prakticke dalsie kroky
+- pripravit kratku internu komunikacnu sablonu pre klienta a spravcu
+- po prvych urban joboch zapisat najcastejsie konflikty z okolia
+- komunikacny plan pripojit k risk assessmentu pri kazdom citlivejsom jobe

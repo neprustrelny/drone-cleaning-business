@@ -1,0 +1,44 @@
+PRIORITNÝ CHECKLIST (Top 10)
+
+1. Implementovať produkčný endpoint `/api/order` (validácia, uloženie leadu, notifikácia).
+Impact: High | Effort: Medium
+
+2. Nastaviť produkčný Stripe Checkout link a otestovať end-to-end flow.
+Impact: High | Effort: Low
+
+3. Pridať Stripe webhook (`checkout.session.completed`) na potvrdenie záloh.
+Impact: High | Effort: Medium
+
+4. Doplniť reálne obchodné podmienky + GDPR/privacy dokument a opraviť link vo footeri.
+Impact: High | Effort: Low
+
+5. Zaviesť analytics eventy pre celý funnel (CTA klik, form start, form submit, API success/error, Stripe open/success).
+Impact: High | Effort: Medium
+
+6. Doplniť antispam ochranu formulára (rate-limit/honeypot/reCAPTCHA podľa potreby).
+Impact: Medium | Effort: Medium
+
+7. Opraviť a znovu vygenerovať `_delivery/CONTACTS_SCAN.md` (tel odkazy + odstrániť placeholder email).
+Impact: Medium | Effort: Low
+
+8. Nahradiť placeholder referencie/fotky reálnymi podkladmi so súhlasom na použitie.
+Impact: Medium | Effort: Medium
+
+9. Definovať operačný post-payment proces (SLA kontaktu, plánovanie termínu, doplatok/fakturácia).
+Impact: Medium | Effort: Low
+
+10. Zjednotiť source-of-truth režim (root vs `_delivery`) a zaviesť release checklist pre handover.
+Impact: Medium | Effort: Low
+
+MINIMUM VIABLE GO-LIVE CHECKLIST
+
+[ ] `/api/order` beží v produkcii a vracia 2xx pri validných dátach.
+[ ] Stripe link je produkčný (nie `buy.stripe.com/test...`).
+[ ] Stripe webhook zapisuje stav platby a notifikuje tím.
+[ ] Link na obchodné podmienky a GDPR dokument je funkčný (bez 404).
+[ ] Formulár prejde úspešne: submit → API → Stripe open → payment success.
+[ ] Chybové stavy sú ošetrené a používateľ dostane jasnú správu + kontakt.
+[ ] Analytics meria minimálne: CTA click, form submit, API success/error, Stripe success.
+[ ] Kontakty (email/telefón) sú konzistentné v UI aj dokumentácii.
+[ ] Obsah je finálne schválený (ceny, termíny, právne texty).
+[ ] Je pripravený rollback/incident postup pre prvé dni po spustení.

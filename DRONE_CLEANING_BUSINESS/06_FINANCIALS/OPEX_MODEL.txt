@@ -1,0 +1,70 @@
+OPEX MODEL
+
+Ucel dokumentu
+- Rozdelit pravidelne naklady na fixne, polofixne a premenne.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Priama prevadzkova cena na realizovanu zakazku je 120 EUR.
+  - Fixne naklady v cashflow modeli su low-overhead.
+  - Marketing spend v scenaroch sa pohybuje priblizne od 120 do 1 260 EUR mesacne podla fazy.
+- PRACOVNY ODHAD:
+  - OPEX treba riadit striktne, kym nie je stabilny dopyt.
+
+Odporucany model / navrh
+
+FIXNE MESACNE NAKLADY
+| Polozka | Lean | Realisticky | Scale |
+|---|---:|---:|---:|
+| Telefon a admin | 40 EUR | 70 EUR | 120 EUR |
+| Web, domeny, software | 60 EUR | 120 EUR | 220 EUR |
+| Uctovnictvo a pravny servis rezerva | 80 EUR | 150 EUR | 250 EUR |
+| Poistenie / poistna rezerva | 120 EUR | 220 EUR | 400 EUR |
+| Marketing baseline | 150 EUR | 500 EUR | 1 000 EUR |
+| SPOLU FIXNE | 450 EUR | 1 060 EUR | 1 990 EUR |
+
+PREMENNE NAKLADY NA 1 REALIZOVANU ZAKAZKU
+| Polozka | Pracovny odhad |
+|---|---:|
+| Voda, chemia, spotrebny material | 35 EUR |
+| Cestovanie a lokalny presun | 35 EUR |
+| Baterie / energia / opotrebenie | 20 EUR |
+| Servisna rezerva | 15 EUR |
+| Payment / transakcne poplatky | 15 EUR |
+| SPOLU PREMENNE | 120 EUR |
+
+VOLITELNE SEMI-FIX NAKLADY PRI RASTE
+| Polozka | Kedy pridat | Pracovny odhad |
+|---|---|---:|
+| Pomocnik na mieste | od 8+ zakaziek mesacne | 300-900 EUR / mesiac |
+| Externy editor / asset produkcia | ak ide paid social naplno | 200-600 EUR / mesiac |
+| Lokalny obchodny support v DE | az po pilotnej validacii | 500-1 500 EUR / mesiac |
+
+Riadiaci model OPEX
+- do 5 realizacii mesacne: drzat len lean alebo realisticky rezim
+- 6-10 realizacii mesacne: pridavat len to, co zvysi throughput alebo trust
+- 10+ realizacii mesacne: prvy helper, viac assetov, silnejsi remarketing
+
+Scenarovy pohlad
+- Pesimisticky: fixne 450-900 EUR mesacne, marketing len test budget
+- Realisticky: fixne 1 000-1 600 EUR mesacne, marketing riadeny CAC na zalohu
+- Agresivny: fixne 1 800-3 000 EUR mesacne, ale len po dokazanej konverzii
+
+Zaver, ci to ekonomicky dava zmysel
+- Ano, ak ostane priama cena okolo 120 EUR / job a CAC na zalohu sa drzi na urovni, ktoru predpoklada cashflow model.
+- Nie, ak sa pridaju ludia, assety a legal overhead skor, nez funnel dokaze stabilne generovat zakazky.
+
+Rizika
+- najvacsi zabijak marze bude predcasny spend a predcasny team overhead
+- ak sa realna priama cena dostane vyrazne nad 120 EUR / job, padne ekonomika balickov
+- DE expanzia zvysi OPEX skor, nez musi zvysit cashflow
+
+Co treba overit
+- realna cena chemie, vody a transportu na prvy mesiac prevadzky
+- realna poistna sadzba
+- realny poplatkovy dopad platobnych bran
+
+Prakticke dalsie kroky
+- zaviest mesacny P&L prehlad po kategoriiach vyssie
+- po prvych 10 zakazkach prepocitat realny cost per job
+- oddelit test budget od scale budgetu

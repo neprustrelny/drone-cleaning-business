@@ -1,0 +1,70 @@
+HIGH RISE SOP
+
+Ucel dokumentu
+- Dat sprisneny operacny standard pre Level 2 vyssie alebo citlivejsie objekty v urban prostredi.
+
+Aktualny stav / vychodisko
+- FAKT Z WORKSPACE:
+  - Level 1 SOP uz riesi lead, booking, checklist, weather a incident log.
+- PRACOVNY ODHAD:
+  - Pri Level 2 vyssich objektoch nestaci iba bezny Level 1 flow. Treba viac kontroly perimetra, ludi, vozidiel a dokumentacie.
+
+Co sa meni oproti Level 1
+- Povinna risk assessment sablona pred bookingom alebo finalnym go.
+- Povinna obhliadka alebo silnejsia vizualna kvalifikacia pri nejasnom objekte.
+- Vyssia disciplina v perimetri, case realizacie a komunikacii s okolim.
+- Vyssia pravdepodobnost, ze treba spottera alebo pomocnika.
+
+Extra kontroly pred jobom
+- potvrdit risk assessment
+- potvrdit city communication plan
+- potvrdit, ci je potrebny spotter / pomocnik
+- potvrdit presny pristup na miesto a escape route
+- potvrdit, ci sa job robi v okne s nizsim pohybom ludi a vozidiel
+- potvrdit, ze klient alebo spravca vie o realizacii
+
+Perimeter
+- Perimeter musi byt vacsi a jasnejsi nez pri Level 1.
+- Ak pod objektom prechadzaju ludia alebo jazdia vozidla bez moznosti kontroly, job ide do no-go alebo escalation.
+- PRACOVNY ODHAD: pri tesnom urban priestore treba mat vyznacenu pracovnu zonu a osobu, ktora sleduje okolie, nie iba operatora.
+
+Ludia a vozidla
+- Ak je pohyb ludi vysoky, musi byt spotter alebo pomocnik.
+- Ak nie je mozne udrzat chodnik, vstup alebo parkovacie miesto mimo pracovnej zony, job sa neposuva do startu.
+- Pri neplanovanom zhromazdeni, zvedavcoch alebo konflikte s okoli sa job prerusi.
+
+Spotter / pomocnik
+- Odporucany pri kazdom tesnejsom urban jobe.
+- Prakticky povinny, ak operator sam nevie naraz sledovat objekt, pohyb ludi a perimeter.
+- Uloha: drzat okolie pod kontrolou, komunikovat s klientom alebo okoli, potvrdzovat cistu pracovnu zonu.
+
+Pristup
+- Bez potvrdeneho pristupu sa job nespusta.
+- Ak klient nevie zabezpecit vstup, parkovanie alebo pristupovy bod, job sa presuva alebo stopuje.
+
+Pocasie
+- Weather matica plati prisnejsie ako pri Level 1.
+- Podmienecne go ma byt pri Level 2 vnimane opatrnejsie. Ak sa kumuluje vietor, ludi v okoli a vyssia vyska objektu, vysledok ma byt skor no-go.
+
+Dokumentacia
+- pred-foto a po-foto povinne
+- zapis risk assessmentu povinny
+- zapis odchylok oproti scope povinny
+- incident / near-miss zapis povinny pri kazdom bezpecnostnom naruseni alebo stope
+- telemetry minimum povinne pre kazdy Level 2 job
+
+Kedy je job stop
+- perimeter sa neda udrzat
+- ludia alebo vozidla vstupuju do zony a nie je ich mozne kontrolovat
+- realny objekt nezodpoveda kvalifikacii
+- weather padne do no-go alebo je pochybnost o stabilite systemu
+- vznikne technicky problem, uniky, chyba pumpy alebo strata operacnej kontroly
+
+Kedy sa job preradi do vyssieho levelu
+- objekt je vyskovy alebo exponovany nad bezny urban job
+- prostredie je natolko huste alebo citlive, ze Level 2 mitigacie nestacia
+- treba regulatorne alebo bezpecnostne posudenie nad ramec bezneho urban risk assessmentu
+- TREBA OVERIT: presne hranice, od ktorych sa Level 2 meni na Level 3 High Rise alebo inu vyssiu triedu prevadzky
+
+Prakticky zaver
+- Level 2 nie je iba drahsi Level 1 job. Je to job s vyssim operacnym trenim, kde rozhoduje perimeter, timing, dokumentacia a disciplina stop pravidiel.

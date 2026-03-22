@@ -1,0 +1,7 @@
+name = "dron"
+main = "index.js"
+compatibility_date = "2026-02-12"
+
+kv_namespaces = [
+  { binding = "LEADS", id = "f9a734dcc29e4bb9abcc0806953dac18", preview_id = "877707eac5cc4cbfb48709aea29c9731" }
+]

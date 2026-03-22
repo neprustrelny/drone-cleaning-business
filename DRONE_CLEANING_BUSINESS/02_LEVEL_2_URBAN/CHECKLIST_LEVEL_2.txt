@@ -1,0 +1,31 @@
+CHECKLIST LEVEL 2 (URBAN) – Mestské prostredie, vyššie prevádzkové riziko
+
+Legislatíva & povolenia
+- [ ] Posúdenie letov nad zastavaným územím a blízkosť tretích osôb | kde vybaviť: interný risk assessment + EASA pravidlá | odhad času: 1 deň
+- [ ] Ohlásenie/koordinácia s vlastníkom objektu a správcom priestoru | kde vybaviť: klient + správca budovy | odhad času: 0.5 dňa na zákazku
+- [ ] Overenie miestnych obmedzení (mestské podujatia, školy, citlivé zóny) | kde vybaviť: mesto/obec + airspace nástroje | odhad času: 30–60 min na zákazku
+  - DE poznámka: V mestách v DE často treba striktnejšiu koordináciu s Ordnungsamt/Luftfahrtbehörde.
+
+Poistenie
+- [ ] Navýšenie poistného krytia pre škody na majetku tretích strán | kde vybaviť: poisťovňa | odhad času: 1–2 dni
+- [ ] Doplniť profesijné poistenie pre B2B objednávky v meste | kde vybaviť: poisťovňa / broker | odhad času: 1–3 dni
+
+Pilotná spôsobilosť
+- [ ] A2 kompetencia pre pilotov v urban scenároch (ak profil misie vyžaduje) | kde vybaviť: certifikačný subjekt | odhad času: 1–3 dni
+- [ ] Tréning crowd-management a bezpečnostný perimetr | kde vybaviť: interný praktický tréning | odhad času: 1 deň
+
+Prevádzkové procesy
+- [ ] Urban SOP: vymedzenie zóny, spotter, komunikácia s okoloidúcimi | kde vybaviť: interný operačný manuál | odhad času: 1 deň
+- [ ] Štandard pre dokumentovanie stavu pred/po čistení (foto/video) | kde vybaviť: interný QA proces | odhad času: 0.5 dňa
+- [ ] Eskalačný proces pri sťažnostiach susedov alebo správcu | kde vybaviť: interný proces + kontaktná osoba | odhad času: 0.5 dňa
+
+Dokumenty pre klienta
+- [ ] Urban zmluvná príloha: prístup, okolie, bezpečnostné opatrenia | kde vybaviť: právny template + obchod | odhad času: 1 deň
+- [ ] Protokol o vykonaní práce pre SVB/facility management | kde vybaviť: interná šablóna | odhad času: 0.5 dňa
+  - DE poznámka: Pri DE klientovi doplniť nemeckú jazykovú verziu protokolu.
+- [ ] Reklamačný proces a SLA odpovede | kde vybaviť: interné obchodné podmienky | odhad času: 0.5 dňa
+
+Technika & údržba
+- [ ] Redundantná výbava pre urban výjazd (záložný dron/batérie) | kde vybaviť: interný fleet plán | odhad času: 1 deň
+- [ ] Kalibrácia a záznam o funkčnosti bezpečnostných senzorov | kde vybaviť: predletový servisný checklist | odhad času: 15 min pred misiou
+- [ ] Tichší pracovný režim a časové okná pre hlučnosť | kde vybaviť: interný SOP + dohoda s klientom | odhad času: 0.5 dňa

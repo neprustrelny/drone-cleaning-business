@@ -1,0 +1,46 @@
+SCENARIO REALISTIC
+
+Ucel dokumentu
+- Popisat scenar, na ktory ma byt naviazane planovanie a rozhodovanie.
+
+FAKT Z WORKSPACE
+- Rocny scenar v cashflow dokumente:
+  - 149 zaloh
+  - 127 dokoncenych zakaziek
+  - 133 350 EUR trzba
+  - 5 960 EUR marketing spend
+  - 107 000 EUR cisty cashflow
+
+Pracovny operacny preklad
+- priemer: 10-11 dokoncenych zakaziek mesacne v aktivnych mesiacoch, menej mimo sezony
+- funnel uz funguje, ale stale ho treba riadit cez data
+- SK validacia je hotova a DE pilot je pripraveny, nie masivne skalovany
+
+Predpoklady
+- CAC na zalohu okolo 40 EUR
+- vyssia conversion zo zalohy na realizaciu
+- dostatok referencii, foto a videa pre trust layer
+- OPEX zostava disciplinovany
+
+Cisla pre rozhodovanie
+| Metrika | Hodnota |
+|---|---:|
+| Rocne zaloha cash-in | 7 450 EUR |
+| Dokoncene zakazky | 127 |
+| Trzba | 133 350 EUR |
+| Marketing spend | 5 960 EUR |
+| Cisty cashflow | 107 000 EUR |
+
+Co tento scenar znamena
+- biznis dava ekonomicky zmysel
+- marketing uz nie je len test, ale riadeny akvizicny kanal
+- je priestor na helpera, lepsie assety a silnejsi follow-up system
+
+Rizika
+- ak padne average revenue pod 1 050 EUR, model sa zhorsuje
+- ak sa rozbehne DE skor, nez je pripraveny support a legal review, cashflow sa moze zhorsit
+
+Dalsie kroky
+- tento scenar pouzivat ako hlavny planovaci zaklad
+- budovat asset pipeline a CRM follow-up
+- DE spustat len po udrzani stabilneho SK throughputu

@@ -1,0 +1,49 @@
+SCENARIO PESSIMISTIC
+
+Ucel dokumentu
+- Popisat slabsi, ale este prezitelny rok.
+
+FAKT Z WORKSPACE
+- Zaloha: 50 EUR
+- Realizovana trzba: 1 050 EUR / zakazka
+- Rocny scenar v cashflow dokumente:
+  - 81 zaloh
+  - 54 dokoncenych zakaziek
+  - 56 700 EUR trzba
+  - 4 860 EUR marketing spend
+  - 42 410 EUR cisty cashflow
+
+Pracovny operacny preklad
+- priemer: 4-5 dokoncenych zakaziek mesacne pocas aktivnej sezony
+- nizke tempo dopytu
+- vyssia citlivost na pocasie a kvalitu creative
+
+Predpoklady
+- CAC na zalohu okolo 60 EUR
+- conversion zo zalohy na realizaciu je slabsia
+- assety a trust vrstva este nie su silne
+- DE sa nescaleuje
+
+Cisla pre rozhodovanie
+| Metrika | Hodnota |
+|---|---:|
+| Rocne zaloha cash-in | 4 050 EUR |
+| Dokoncene zakazky | 54 |
+| Trzba | 56 700 EUR |
+| Marketing spend | 4 860 EUR |
+| Cisty cashflow | 42 410 EUR |
+
+Co tento scenar znamena
+- biznis je funkcny, ale krehky
+- marketing si este nevie sam financovat rast len zo zaloh
+- priorita je fixnut conversion a zvysit trust, nie pridavat overhead
+
+Rizika
+- 1-2 slabe mesiace v sezone mozu vyrazne zhorsit cashflow
+- ak realne naklady na job stupnu nad 120 EUR, marza sa zhorsuje
+- prilis skoro kupeny drahy setup zvysi tlak na trzby
+
+Dalsie kroky
+- drzat lean OPEX
+- tlacit SK referencie a objection handling
+- nescaleovat DE, kym sa nezlepsi CAC na zalohu

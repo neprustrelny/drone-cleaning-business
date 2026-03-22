@@ -1,0 +1,90 @@
+SENSITIVITY MODEL
+
+Ucel dokumentu
+Ukazat, ktore metriky najviac rozhoduju o uspechu biznisu a co sa stane pri zhorseni klucovych predpokladov.
+
+Aktualny stav / vychodisko
+- PRACOVNY ODHAD: Zakladny plan vychadza z tychto pracovnych hodnot:
+- average revenue na realizaciu: 1 050 EUR
+- direct cost na realizaciu: 120 EUR
+- CAC na zalohu: 40 EUR
+- conversion zo zalohy na realizaciu: 85 %
+- marketing cost na realizovanu zakazku pri tomto modeli: cca 47 EUR
+- orientacny prispevok po direct cost a acquisition: cca 883 EUR na realizovanu zakazku
+
+Citlive premennne
+- average revenue na realizovanu zakazku
+- direct cost na realizovanu zakazku
+- CAC na zalohu
+- conversion zo zalohy na realizaciu
+
+Varianty
+
+1. Priaznivy variant
+- average revenue/job: 1 200 EUR
+- direct cost/job: 110 EUR
+- CAC na zalohu: 30 EUR
+- conversion zaloha -> realizacia: 90 %
+- acquisition cost na realizovanu zakazku: cca 33 EUR
+- prispevok po direct cost a acquisition: cca 1 057 EUR/job
+- Interpretacia: velmi zdravy model. Biznis ma priestor na chyby, sezonne vypadky aj rychlejsie splatenie CAPEX.
+
+2. Stredny variant
+- average revenue/job: 1 050 EUR
+- direct cost/job: 120 EUR
+- CAC na zalohu: 40 EUR
+- conversion zaloha -> realizacia: 85 %
+- acquisition cost na realizovanu zakazku: cca 47 EUR
+- prispevok po direct cost a acquisition: cca 883 EUR/job
+- Interpretacia: funkcny model, ale stale zavisly od discipliny v cene, follow-upe a route planningu.
+
+3. Zly variant
+- average revenue/job: 850 EUR
+- direct cost/job: 180 EUR
+- CAC na zalohu: 65 EUR
+- conversion zaloha -> realizacia: 70 %
+- acquisition cost na realizovanu zakazku: cca 93 EUR
+- prispevok po direct cost a acquisition: cca 577 EUR/job
+- Interpretacia: model sa stava krehky. Stale moze prezit, ale citelne horsie znasa prazdne dni, reklamacie, presuny a slabe mesiace.
+
+Co sa stane pri zhorseni jednotlivych metrik
+1. Ked average revenue klesne
+- Kazdy pokles ceny ide priamo proti marzi.
+- Ak sa revenue znizi bez poklesu cost/job, treba vyrazne viac zakaziek na rovnaky vysledok.
+- Toto je najnebezpecnejsie pri zbytocnom discountingu.
+
+2. Ked cost/job stupne
+- Rast spotreby chemie, vody, cestovania alebo pomocnika berie marzu z kazdeho jobu.
+- Problem je zvlast silny pri malych zakazkach, kde sa fixna priprava rozklada na nizku fakturu.
+
+3. Ked CAC na zalohu stupne
+- Drahsie leady este nemusia znicit biznis, ale rychlo zhorsuju marketing efficiency.
+- Ak sa sucasne nezvysi conversion alebo average revenue, funnel prestava byt zdravy.
+
+4. Ked conversion zo zalohy na realizaciu klesne
+- Marketing sa predrazuje na jednu realizovanu zakazku.
+- Zhorsuje sa planovanie kapacity aj cashflow, lebo deposit flow vyzera dobre, ale skutocna realizacia zaostava.
+
+Prakticky dopad na rocny model pri 149 zalohoch
+- Pri 90 % conversion vznikne asi 134 realizacii.
+- Pri 85 % conversion vznikne asi 127 realizacii.
+- Pri 70 % conversion vznikne asi 104 realizacii.
+- Rozdiel medzi 127 a 104 realizaciami je pre maly sezonny biznis velmi podstatny aj bez zmeny reklamy.
+
+Ktore metriky rozhoduju najviac
+1. Average revenue/job
+- Najvacsi pakovy efekt. Vyssia cena alebo vacsi kosik zlepsuje kazdu realizaciu.
+
+2. Conversion zaloha -> realizacia
+- Priamo rozhoduje, kolko z funnelu sa realne premeni na peniaze.
+
+3. CAC na zalohu v kombinacii s kvalitou leadu
+- Samotny CAC je dolezity, ale kriticke je, ci drahsi lead naozaj donesie realizaciu.
+
+Sekundarna metrika
+- direct cost/job je velmi dolezity, ale da sa casto lepsie riadit cez trasovanie, pricing disciplinu a vyber zakaziek nez market price.
+
+Zaver
+- Najvacsiu prioritu ma branit average revenue, nenechat padat conversion a neprepalit acquisition.
+- Biznis sa kazi najrychlejsie kombinaciou troch javov: zlavovanie, drahsi lead a slaba premena zalohy na realizaciu.
+- Tento model je v1. Po prvych realnych kampaniach treba doplnit skutocne CAC, refund spravanie a skutocny direct cost/job.

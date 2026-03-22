@@ -1,0 +1,78 @@
+INCIDENT REPORT TEMPLATE
+
+Ucel dokumentu
+- Mat jednotny zapis pri incidente, near-misse alebo reklamacii.
+
+ZAKLADNE UDAJE
+- ID incidentu:
+- Datum:
+- Cas:
+- Miesto:
+- Klient / objekt:
+- Tim na mieste:
+- Kontaktna osoba:
+
+TYP UDALOSTI
+- [ ] Near-miss
+- [ ] Technicka chyba
+- [ ] Bezpecnostny incident
+- [ ] Poskodenie majetku
+- [ ] Zranenie osoby
+- [ ] Reklamacia klienta
+- [ ] Pocasie / prerusenie prace
+- [ ] Ina udalost
+
+STRUCNY POPIS
+- Co sa stalo:
+- Kedy sa to stalo:
+- V ktorej faze prace sa to stalo:
+
+DOPAD
+- Dopad na osobu:
+- Dopad na majetok:
+- Dopad na techniku:
+- Dopad na termin / zakazku:
+- Dopad na klienta:
+
+OKOLNOSTI
+- Pocasie:
+- Vietor:
+- Povrch / podmienky objektu:
+- Pocet ludi v okoli:
+- Stav perimetra:
+- Stav techniky pred incidentom:
+
+OKAMZITE KROKY
+- Co bolo urobene okamzite:
+- Bola praca zastavena? ano / nie
+- Bol kontaktovany klient? ano / nie
+- Bol potrebny servis / zdravotna pomoc / policia? ano / nie
+
+PRAVDEPODOBNA PRICINA
+- Technicka
+- Ludska
+- Operacna
+- Pocasie
+- Neznama
+- Popis:
+
+DOKAZY
+- Foto: ano / nie
+- Video: ano / nie
+- Telemetria / log: ano / nie
+- Svedkovia: ano / nie
+
+NASLEDNE OPATRENIA
+- Co treba opravit alebo zmenit:
+- Kto je zodpovedny:
+- Termin uzatvorenia:
+- Treba update SOP / checklistu? ano / nie
+
+KATEGORIZACIA ZAVAZNOSTI
+- NIZKA - bez skody, len interny zapis
+- STREDNA - dopad na termin, klienta alebo techniku bez vaznej skody
+- VYSOKA - skoda, zranenie, pravny alebo reputacny dopad
+
+Prakticke pravidlo
+- Kazdy near-miss sa zapisuje.
+- Kazdy incident so skodou alebo klientskym konfliktom sa uzatvara az po opatreniach a review.

@@ -1,0 +1,51 @@
+MONTHLY SEASONAL MODEL
+
+Ucel dokumentu
+Prelozit rocny cashflow do mesacnej prevadzkovej logiky a ukazat, kedy je slabina sezonnost a aku rezervu treba drzat.
+
+Aktualny stav / vychodisko
+- PRACOVNY ODHAD: Biznis je silno sezonny. Dopyt, pocasie a realizacna kapacita sa nebudu rozkladat rovnomerne pocas roka.
+- Financial model v workspace pracuje so silnejsou castou roka od jari do jesene a slabsimi zimnymi mesiacmi.
+- Tento dokument je planovaci model pre cashflow, nie garantovana predikcia.
+
+Mesacny model - pracovny realisticky plan
+
+Mesiac | Dopyt | Realizacie | Cashflow efekt | Operacna interpretacia
+Januar | velmi slaby | 0 - 1 | negativny az nulovy | priprava sezony, servis, ponuky, obsah, bez tlaku na vyjazdy
+Februar | velmi slaby | 0 - 2 | negativny az nizky | stale slaby dopyt, vhodne testovat lead gen a lokalne referencie
+Marec | slaby az rastuci | 3 - 6 | nizky pozitivny | start sezony, prve realizacie, zber referencii
+April | rastuci | 6 - 10 | pozitivny | pravidelne kampane, plnenie kalendara, disciplinovany follow-up
+Maj | silny | 10 - 14 | silne pozitivny | jedna z klucovych predajnych vln, vhodne tlacit bundle a upsell
+Jun | silny | 12 - 16 | silne pozitivny | vysoka vytazenost, dolezita logistika a terminovy poriadok
+Jul | silny | 12 - 16 | silne pozitivny | peak vykonu, tlak na operacie, servis a kvalitu dorucenia
+August | silny | 12 - 16 | silne pozitivny | peak alebo tesne pod peakom, vhodne drzat vyssiu cenovu disciplinu
+September | velmi silny | 14 - 18 | velmi silne pozitivny | casto najlepsi mesiac na vyuzitie dopytu aj marze
+Oktober | silny | 10 - 14 | pozitivny | stale dobry mesiac, ale treba strazit pocasie a backlog
+November | stredny | 5 - 9 | stredny | dopyt uz slabne, vhodne zatvarat rozrobene pripady a inkasovat doplatky
+December | slaby | 1 - 4 | nizky az negativny | obmedzene realizacie, fokus na vyuctovanie, retenciu a plan na dalsi rok
+
+Slabe vs silne mesiace
+- Slabe mesiace: januar, februar, december.
+- Prechodne mesiace: marec, april, november.
+- Silne mesiace: maj az oktober, s peakom typicky jún az september.
+
+Co to robi s cashflow
+- Marketing a priprava zacinaju skor, nez pride plny objem realizacii. To vytvara tlak na hotovost na zaciatku sezony.
+- Najviac hotovosti sa pravdepodobne vytvara v mesiacoch s vysokou vytazenostou a vyssim average revenue, nie iba s vysokym poctom leadov.
+- Ak sa v slabych mesiacoch drzi rovnaka uroven reklamy ako v peaku, cashflow sa vie rychlo zhorsit.
+- Deposit flow moze pomoct tlmit sezonny tlak, ale sam o sebe nenahradi silny objem realizovanych zakaziek.
+
+Odporucany rezervny model
+- Minimalna rezerva: aspon 3 mesiace fixed cost + 1 slabsi mesiac marketingu.
+- PRACOVNY ODHAD pri aktualnom modeli: minimum 5 000 - 7 000 EUR hotovostnej rezervy.
+- Bezpecnejsia rezerva pred sezonou: 10 000 - 15 000 EUR, najma ak sa ide do agresivnejsich kampani, servisu techniky alebo rozsirenia vybavenia.
+
+Operacne odporucanie
+- V peak mesiacoch treba uprednostnovat zakazky s vyssou hodnotou kosika a nizsim logistickym odpadom.
+- V slabych mesiacoch treba znizit neefektivne spendy, upratat pipeline, servisovat techniku a pripravit referencny obsah.
+- Cashflow treba riadit po mesiacoch, nie iba po roku. Jedna slaba seria mesiacov vie pokazit aj papierovo dobry rocny plan.
+
+Co treba overit
+- Realnu mesacnu konverziu lead -> zaloha -> realizacia.
+- Realny vplyv pocasia na posuny terminov v SK a DE.
+- Kolko pracovnych dni za mesiac je skutocne lietatelnych pri bezpecnom standarde.
