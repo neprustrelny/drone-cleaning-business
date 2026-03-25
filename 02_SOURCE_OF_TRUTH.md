@@ -13,6 +13,8 @@ Tieto root subory su hlavne pre pochopenie smerovania:
 - `CASHFLOW_2026.md` - kanonicky financny model, preorder cash logika a scenare.
 - `00_RUNBOOK_CODEX.md` - operacny runbook pre dennu prioritizaciu funnelu, predobjednavok a cashflow.
 
+Root `README.md` sluzi ako public-facing billboard repa. Ma rychlo vysvetlit, co repo je a co nie je. Detailne interne operativne veci patria sem, do runbookov a do aktivnych technickych docs, nie do verejneho README.
+
 Source of truth je v tomto workspaci vrstveny:
 - biznis ciel = `01_PROJECT_GOAL_AND_BUSINESS_MODEL.md`
 - orientacia = `02_SOURCE_OF_TRUTH.md`
