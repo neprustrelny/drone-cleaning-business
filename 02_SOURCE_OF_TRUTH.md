@@ -56,3 +56,29 @@ Tieto casti nie su hlavne source-of-truth oblasti:
 6. `CASHFLOW_2026.md`
 7. web project handover a site overview
 8. technicke subory
+
+## 7. GitHub push workflow (SSH)
+Tento repo je nastavene na SSH remote, nie na HTTPS.
+
+Over remote:
+- `git remote -v`
+- ocakavany SSH remote: `git@github.com:neprustrelny/drone-cleaning-business.git`
+
+Over stav pred pushom:
+- `git status`
+- `git log --oneline --decorate -3`
+
+Push do hlavneho branchu:
+- `git push origin main`
+
+Troubleshooting:
+- pri `Permission denied (publickey)`
+  - over, ze mas nacitany spravny SSH key a ze GitHub ucet ma priradeny jeho public key
+  - otestuj spojenie cez `ssh -T git@github.com`
+- kde je SSH public key
+  - hlavny lokalny public key je v `~/.ssh/id_ed25519.pub`
+  - v tomto prostredi existuje aj `~/.ssh/tunnel_key.pub`
+  - do GitHubu patri ten key, ktory realne pouzivas na git push
+- GitHub nastavenie
+  - otvor `Settings -> SSH and GPG keys`
+  - pridaj obsah public key a potom znovu over `git remote -v` aj `git push origin main`
