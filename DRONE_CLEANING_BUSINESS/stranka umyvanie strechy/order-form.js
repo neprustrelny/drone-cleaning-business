@@ -1,16 +1,28 @@
-export const REQUIRED_FIELDS = ['balik', 'meno', 'adresa', 'email'];
+import {
+  DEFAULT_COUNTRY,
+  DEFAULT_LEAD_SOURCE,
+  getPackageConfig,
+  normalizeCountry,
+  normalizeLeadSource,
+  normalizePackageId,
+} from './order-packages.js';
+
+export const REQUIRED_FIELDS = ['balik', 'typObjektu', 'krajina', 'meno', 'adresa', 'email'];
 export const EMAIL_REGEX = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-const LOCAL_TEST_HOSTNAMES = new Set(['localhost', '127.0.0.1']);
 const trimValue = (value) => String(value ?? '').trim();
 
 export const readFormData = (form) => ({
-  balik: trimValue(form?.balik?.value),
+  balik: normalizePackageId(form?.balik?.value),
+  typObjektu: trimValue(form?.typObjektu?.value),
+  krajina: normalizeCountry(form?.krajina?.value),
   meno: trimValue(form?.meno?.value),
   adresa: trimValue(form?.adresa?.value),
-  email: trimValue(form?.email?.value),
+  email: trimValue(form?.email?.value).toLowerCase(),
   telefon: trimValue(form?.telefon?.value),
   poznamka: trimValue(form?.poznamka?.value),
+  leadSource: normalizeLeadSource(form?.leadSource?.value),
+  website: trimValue(form?.website?.value),
 });
 
 export const validateOrderData = (data) => {
@@ -21,6 +33,10 @@ export const validateOrderData = (data) => {
       errors[field] = 'required';
     }
   });
+
+  if (!errors.balik && !getPackageConfig(data?.balik)) {
+    errors.balik = 'invalid';
+  }
 
   if (!errors.email && !EMAIL_REGEX.test(trimValue(data?.email))) {
     errors.email = 'invalid';
@@ -33,37 +49,42 @@ export const validateOrderData = (data) => {
 };
 
 export const serializeOrderData = (data, now = () => new Date().toISOString()) => ({
-  balik: trimValue(data?.balik),
+  balik: normalizePackageId(data?.balik),
+  typObjektu: trimValue(data?.typObjektu),
+  krajina: normalizeCountry(data?.krajina),
   meno: trimValue(data?.meno),
   adresa: trimValue(data?.adresa),
-  email: trimValue(data?.email),
+  email: trimValue(data?.email).toLowerCase(),
   telefon: trimValue(data?.telefon),
   poznamka: trimValue(data?.poznamka),
+  leadSource: normalizeLeadSource(data?.leadSource),
+  website: trimValue(data?.website),
   submittedAt: now(),
 });
 
-export const resolveCheckoutUrl = ({ apiResult, fallbackUrl = '', locationRef } = {}) => {
-  const checkoutUrl = trimValue(apiResult?.checkoutUrl);
-  if (checkoutUrl) {
-    return checkoutUrl;
+export const resolveLeadSource = ({ locationRef, documentRef } = {}) => {
+  const params = new URLSearchParams(locationRef?.search || '');
+
+  for (const key of ['leadSource', 'lead_source', 'utm_source', 'source']) {
+    const value = trimValue(params.get(key));
+    if (value) {
+      return value;
+    }
   }
 
-  const fallback = trimValue(fallbackUrl);
-  if (!fallback) {
-    return '';
+  const referrer = trimValue(documentRef?.referrer);
+  if (referrer) {
+    try {
+      return new URL(referrer).hostname || DEFAULT_LEAD_SOURCE;
+    } catch {
+      return referrer;
+    }
   }
 
-  const hostname = trimValue(locationRef?.hostname).toLowerCase();
-  const search = locationRef?.search || '';
-  const params = new URLSearchParams(search);
-  const allowTestStripe = params.get('allowTestStripe') === '1';
-
-  if (LOCAL_TEST_HOSTNAMES.has(hostname) || allowTestStripe) {
-    return fallback;
-  }
-
-  return '';
+  return DEFAULT_LEAD_SOURCE;
 };
+
+export const resolveCheckoutUrl = ({ apiResult } = {}) => trimValue(apiResult?.checkoutUrl);
 
 export const getCheckoutStatusFromLocation = (locationRef) => {
   const params = new URLSearchParams(locationRef?.search || '');
@@ -71,14 +92,14 @@ export const getCheckoutStatusFromLocation = (locationRef) => {
 
   if (checkoutStatus === 'success') {
     return {
-      message: 'Platba zálohy 50 € prebehla úspešne. Ozveme sa s termínom.',
+      message: 'Rezervacia pilotneho slotu bola uspesne uhradena. Ozveme sa s potvrdenim dalsieho kroku.',
       isError: false,
     };
   }
 
   if (checkoutStatus === 'cancel') {
     return {
-      message: 'Platba nebola dokončená. Formulár môžeš odoslať znova.',
+      message: 'Rezervacia nebola dokoncena. Formular mozes odoslat znova.',
       isError: true,
     };
   }
@@ -121,7 +142,7 @@ export const createOrderSubmitHandler = ({
     };
   }
 
-  showStatus('Spracovávame objednávku...', { isError: false });
+  showStatus('Spracovavame rezervaciu...', { isError: false });
   setButtonState(true);
 
   try {
@@ -133,13 +154,13 @@ export const createOrderSubmitHandler = ({
       throw new Error('Stripe checkout is not configured.');
     }
 
-    showStatus('Objednávku máme. Presmerovávame na zálohu 50 € v Stripe.', { isError: false });
+    showStatus('Objednavku mame. Presmerovavame na rezervaciu pilotneho slotu v Stripe.', { isError: false });
     resetForm();
     openStripeCheckout(checkoutUrl);
     return { ok: true, payload, apiResult, checkoutUrl };
   } catch (error) {
-    logError('Odoslanie objednávky zlyhalo', error);
-    showStatus('Odoslanie zlyhalo alebo Stripe nie je pripravený. Skús znova alebo napíš na strechy@dronservis.sk.', {
+    logError('Odoslanie objednavky zlyhalo', error);
+    showStatus('Objednavka sa neodoslala alebo checkout nie je pripraveny. Skus znova alebo napis na strechy@dronservis.sk.', {
       isError: true,
     });
     return { ok: false, reason: 'send_failed', error };
@@ -188,8 +209,11 @@ export const initOrderForm = ({
     return null;
   }
 
-  const stripeFallbackUrl = checkoutButton.dataset.stripeFallbackUrl || '';
   const locationRef = windowRef.location || { hostname: '', search: '' };
+
+  if (form.krajina && !form.krajina.value) {
+    form.krajina.value = DEFAULT_COUNTRY;
+  }
 
   const showStatus = (message, { isError = false } = {}) => {
     if (!message) {
@@ -254,20 +278,24 @@ export const initOrderForm = ({
   };
 
   const handleCheckoutClick = createOrderSubmitHandler({
-    readData: () => readFormData(form),
-    sendOrder,
-    resolveStripeUrl: (apiResult) => resolveCheckoutUrl({
-      apiResult,
-      fallbackUrl: stripeFallbackUrl,
-      locationRef,
+    readData: () => ({
+      ...readFormData(form),
+      leadSource: resolveLeadSource({ locationRef, documentRef }),
     }),
+    sendOrder,
+    resolveStripeUrl: (apiResult) => resolveCheckoutUrl({ apiResult }),
     openStripeCheckout,
     showStatus,
     setButtonState,
     getButtonDisabled: () => checkoutButton.dataset.disabled === 'true',
     clearErrors,
     applyErrors,
-    resetForm: () => form.reset(),
+    resetForm: () => {
+      form.reset();
+      if (form.krajina) {
+        form.krajina.value = DEFAULT_COUNTRY;
+      }
+    },
   });
 
   checkoutButton.addEventListener('click', handleCheckoutClick);
@@ -280,6 +308,9 @@ export const initOrderForm = ({
 };
 
 if (typeof document !== 'undefined') {
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearNode = document.getElementById('year');
+  if (yearNode) {
+    yearNode.textContent = new Date().getFullYear();
+  }
   initOrderForm();
 }

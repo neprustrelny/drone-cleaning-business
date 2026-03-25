@@ -1,41 +1,50 @@
 # SITE OVERVIEW – Čistá strecha z neba
-Last updated: 2026-01-29
+Last updated: 2026-03-25
 
 ## STATUS
-- Staging / lokálne – landing page pripravená, texty sa dolaďujú na konverziu a zálohy 50 €
+- Aktívna landing page je nastavená na 4 balíky a rezerváciu pilotného slotu 149 / 199 / 299 / 990 €.
+- Frontend už nepracuje s pevnou 50 € sumou ani s dôverou v klientsku cenu.
 
 ## STRUCTURE (pages)
-- index.html – hlavná predajná landing page pre čistenie striech dronom (predobjednávky na apríl – jún, formulár + Stripe záloha 50 €); sekcie: hero s CTA, benefit bar, orientačné info o zálohe/cenách, „Pre koho je služba“, FAQ (vrátane `<details>` s technickými info), objednávkový formulár, recenzie, 5-krokový proces, záverečné CTA a „Kto sme“
+- `index.html` – hlavná landing page pre čistenie striech a fasád dronom; sekcie: hero s CTA, benefit bar, orientačné info, 4-balikový pricing, „Pre koho je služba“, FAQ, objednávkový formulár, recenzie, proces a finálne CTA.
 
 ## NAVIGATION & LINKS
-- sticky header s CTA „Začať objednávku“ smeruje na sekciu formulára (`#objednavka`)
-- vnútorné anchor linky na sekcie: úvod/hero (`#uvod`), benefit bar, informácie (`#informacie`), „Pre koho je služba“, FAQ, objednávka (`#objednavka`), recenzie, „Ako to prebieha“, finálne CTA, „Kto sme“
-- kontakt funguje cez email a telefón v sekcii „Ako to prebieha“ + vo footeri (strechy@dronservis.sk, +421 910 123 456)
+- Sticky header s CTA „Chcem pilotný termín“ smeruje na sekciu `#objednavka`.
+- Vnútorné anchor linky používajú hlavne hero a objednávku; flow je zámerne minimalistický.
+- Kontakt ostáva cez email a telefón v hero, krokoch a footeri.
 
 ## CTA LOGIC
-- hlavné CTA: tlačidlá „Začať objednávku“ / „Vyplniť údaje k streche“ v hero a závere + „Dokončiť objednávku s povinnosťou platby“ (Stripe Checkout, záloha 50 €)
-- sekundárne CTA: vyplnenie formulára (meno, adresa, email, telefón, poznámka) – validácia + JSON POST na `/api/order`, počas odosielania je CTA dočasne deaktivované
-- po úspešnom POST: krátka stavová hláška a otvorenie Stripe Checkout v novom okne
-- ďalšie CTA: kontaktný email/telefón (strechy@dronservis.sk / +421 910 123 456) pre otázky („Chceš sa opýtať?“ texty v hero, krokoch a footeri)
+- Hlavné CTA: „Chcem pilotný termín“.
+- Form CTA: „Pokračovať na rezerváciu slotu“.
+- Po odoslaní formulára frontend pošle JSON na `/api/order`, preberie serverom vrátený `checkoutUrl` a redirectne na Stripe Checkout.
+- Checkout suma vzniká server-side podľa balíka `house_s`, `house_m`, `house_l`, `b2b_audit`.
+
+## FORM FIELDS
+- Povinné: `balik`, `typObjektu`, `krajina`, `meno`, `adresa`, `email`.
+- Voliteľné: `telefon`, `poznamka`.
+- Technické: `website` honeypot, `leadSource` sa odvodzuje z URL parametrov alebo referrera.
 
 ## CONTACTS
-- Email: strechy@dronservis.sk
-- Telefón: +421 910 123 456
-- Pravidlo: rovnaké kontakty musia byť v krokoch „Ako to prebieha“, v správach pri formulári a vo footeri
+- Email: `strechy@dronservis.sk`
+- Telefón: `+421 910 123 456`
+- Pravidlo: rovnaké kontakty musia byť v hero, v procese a vo footeri.
 
 ## ASSETS
 - CSS: inline `<style>` v `index.html`
-- JS: inline `<script>` v `index.html` (validácia formulára, JSON POST na `/api/order`, stavové hlášky, otvorenie Stripe)
-- Obrázky: `ChatGPT Image Jan 27, 2026, 05_32_36 PM.png` (hlavná fotka dronu) v root priečinku + externé logo Stripe
+- JS: externý `order-form.js`
+- Shared package mapping: `order-packages.js`
+- Obrázok: `ChatGPT Image Jan 27, 2026, 05_32_36 PM.png`
+
+## RELATED DOCS
+- `PROJECT_HANDOVER.md`
+- `FLOW_ORDER_STRIPE.md`
+- `README_RUN_LOCAL_AND_TEST.md`
+- `README_PROD_SETUP.md`
+- `README_DEPLOY_CLOUDFLARE.md`
 
 ## TODO / OPEN QUESTIONS
-- prepojiť `/api/order` na reálny backend / emailový handler a otestovať 2xx odpoveď
-- vymeniť Stripe TEST link (`buy.stripe.com/test...`) za produkčný Checkout
-- doplniť reálny dokument obchodných podmienok / GDPR
-- pridať reálne fotografie a referencie namiesto generických ukážok
-- vyjasniť finálne nacenenie a fakturačný proces po zaplatení zálohy
-
-## WHAT CHANGED (last cycle)
-- Hero, benefity a CTA texty skrátené na 1–2 vety podľa rozhodovacieho tunela.
-- „Pre koho“ rozšírené na 5 konkrétnych kartičiek, proces prekopaný na jasných 5 krokov.
-- FAQ doplnené o bezpečnosť/počasie/mach + `<details>` pre technické info, formulár dostal stručnú poznámku o Stripe.
+- Nastaviť live `STRIPE_SECRET_KEY` a produkčné return URL.
+- Pridať post-payment potvrdenie zaplatenej rezervácie.
+- Doplniť ostré obchodné podmienky a refund workflow.
+- Pridať reálne referencie a vizuály z pilotných realizácií.
+- Vytvoriť DE variantu landing page.

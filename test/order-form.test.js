@@ -5,105 +5,162 @@ import {
   readFormData,
   validateOrderData,
   serializeOrderData,
+  resolveLeadSource,
   resolveCheckoutUrl,
   createOrderSubmitHandler,
 } from '../DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-form.js';
 
 const createForm = (values = {}) => ({
   balik: { value: values.balik ?? '' },
+  typObjektu: { value: values.typObjektu ?? '' },
+  krajina: { value: values.krajina ?? '' },
   meno: { value: values.meno ?? '' },
   adresa: { value: values.adresa ?? '' },
   email: { value: values.email ?? '' },
   telefon: { value: values.telefon ?? '' },
   poznamka: { value: values.poznamka ?? '' },
+  leadSource: { value: values.leadSource ?? '' },
+  website: { value: values.website ?? '' },
 });
 
-test('balik je povinný', () => {
-  const result = validateOrderData({ balik: '', meno: 'Meno', adresa: 'Adresa', email: 'test@example.com' });
+test('balik je povinny', () => {
+  const result = validateOrderData({
+    balik: '',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Slovensko',
+    meno: 'Meno',
+    adresa: 'Adresa',
+    email: 'test@example.com',
+  });
   assert.equal(result.valid, false);
   assert.equal(result.errors.balik, 'required');
 });
 
-test('meno, adresa a email sú povinné', () => {
-  const result = validateOrderData({ balik: '199', meno: '', adresa: '', email: '' });
+test('balik musi byt validny identifikator', () => {
+  const result = validateOrderData({
+    balik: '50_eur',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Slovensko',
+    meno: 'Meno',
+    adresa: 'Adresa',
+    email: 'test@example.com',
+  });
   assert.equal(result.valid, false);
+  assert.equal(result.errors.balik, 'invalid');
+});
+
+test('typ objektu, krajina, meno, adresa a email su povinne', () => {
+  const result = validateOrderData({
+    balik: 'house_s',
+    typObjektu: '',
+    krajina: '',
+    meno: '',
+    adresa: '',
+    email: '',
+  });
+  assert.equal(result.valid, false);
+  assert.equal(result.errors.typObjektu, 'required');
+  assert.equal(result.errors.krajina, 'required');
   assert.equal(result.errors.meno, 'required');
   assert.equal(result.errors.adresa, 'required');
   assert.equal(result.errors.email, 'required');
 });
 
-test('serializeOrderData vytvorí správny payload', () => {
+test('serializeOrderData vytvori spravny payload', () => {
   const payload = serializeOrderData(
     {
-      balik: '299',
-      meno: ' Ján Novák ',
+      balik: ' house_m ',
+      typObjektu: ' rodinny_dom ',
+      krajina: ' Slovensko ',
+      meno: ' Jan Novak ',
       adresa: ' Ulica 12 ',
-      email: ' jan@example.com ',
+      email: ' JAN@example.com ',
       telefon: ' +421900000000 ',
-      poznamka: ' prístup zozadu ',
+      poznamka: ' pristup zozadu ',
+      leadSource: ' meta_ads ',
+      website: ' ',
     },
-    () => '2026-03-20T10:00:00.000Z',
+    () => '2026-03-25T10:00:00.000Z',
   );
 
   assert.deepEqual(payload, {
-    balik: '299',
-    meno: 'Ján Novák',
+    balik: 'house_m',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Slovensko',
+    meno: 'Jan Novak',
     adresa: 'Ulica 12',
     email: 'jan@example.com',
     telefon: '+421900000000',
-    poznamka: 'prístup zozadu',
-    submittedAt: '2026-03-20T10:00:00.000Z',
+    poznamka: 'pristup zozadu',
+    leadSource: 'meta_ads',
+    website: '',
+    submittedAt: '2026-03-25T10:00:00.000Z',
   });
 });
 
-test('readFormData načíta všetky funnel polia', () => {
+test('readFormData nacita vsetky funnel polia', () => {
   const data = readFormData(createForm({
-    balik: '399',
+    balik: 'house_l',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Nemecko',
     meno: 'Marek',
     adresa: 'Kassel 1',
     email: 'marek@example.com',
     telefon: '123',
     poznamka: 'poznamka',
+    leadSource: 'google_ads',
+    website: '',
   }));
 
   assert.deepEqual(data, {
-    balik: '399',
+    balik: 'house_l',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Nemecko',
     meno: 'Marek',
     adresa: 'Kassel 1',
     email: 'marek@example.com',
     telefon: '123',
     poznamka: 'poznamka',
+    leadSource: 'google_ads',
+    website: '',
   });
 });
 
-test('resolveCheckoutUrl pustí test fallback len na localhoste', () => {
+test('resolveLeadSource uprednostni utm_source', () => {
   assert.equal(
-    resolveCheckoutUrl({
-      apiResult: {},
-      fallbackUrl: 'https://buy.stripe.com/test_123',
-      locationRef: { hostname: 'localhost', search: '' },
+    resolveLeadSource({
+      locationRef: { search: '?utm_source=meta_ads' },
+      documentRef: { referrer: 'https://example.com/' },
     }),
-    'https://buy.stripe.com/test_123',
+    'meta_ads',
   );
 
   assert.equal(
-    resolveCheckoutUrl({
-      apiResult: {},
-      fallbackUrl: 'https://buy.stripe.com/test_123',
-      locationRef: { hostname: 'cistastrecha.sk', search: '' },
+    resolveLeadSource({
+      locationRef: { search: '' },
+      documentRef: { referrer: 'https://google.com/search?q=strecha' },
     }),
-    '',
+    'google.com',
   );
 });
 
-test('submit flow sa nespustí pri nevalidnom formulári', async () => {
+test('resolveCheckoutUrl vrati checkoutUrl z backendu', () => {
+  assert.equal(
+    resolveCheckoutUrl({
+      apiResult: { checkoutUrl: 'https://checkout.stripe.com/c/pay/cs_live_123' },
+    }),
+    'https://checkout.stripe.com/c/pay/cs_live_123',
+  );
+});
+
+test('submit flow sa nespusti pri nevalidnom formulari', async () => {
   let sendCalled = 0;
   let stripeCalled = 0;
   let statusMessage = 'initial';
   const appliedErrors = [];
 
   const handler = createOrderSubmitHandler({
-    readData: () => ({ balik: '', meno: '', adresa: '', email: '' }),
+    readData: () => ({ balik: '', typObjektu: '', krajina: '', meno: '', adresa: '', email: '' }),
     sendOrder: async () => {
       sendCalled += 1;
     },
@@ -128,29 +185,34 @@ test('submit flow sa nespustí pri nevalidnom formulári', async () => {
   assert.equal(statusMessage, '');
   assert.equal(appliedErrors.length, 1);
   assert.equal(appliedErrors[0].balik, 'required');
+  assert.equal(appliedErrors[0].typObjektu, 'required');
+  assert.equal(appliedErrors[0].krajina, 'required');
   assert.equal(appliedErrors[0].meno, 'required');
   assert.equal(appliedErrors[0].adresa, 'required');
   assert.equal(appliedErrors[0].email, 'required');
 });
 
-test('submit flow odošle serializovaný payload a použije checkoutUrl z backendu', async () => {
+test('submit flow odosle serializovany payload a pouzije checkoutUrl z backendu', async () => {
   const sentPayloads = [];
   const openedUrls = [];
 
   const handler = createOrderSubmitHandler({
     readData: () => ({
-      balik: '199',
-      meno: 'Ján Novák',
+      balik: 'house_s',
+      typObjektu: 'rodinny_dom',
+      krajina: 'Slovensko',
+      meno: 'Jan Novak',
       adresa: 'Skalica 1',
       email: 'jan@example.com',
       telefon: '0900',
       poznamka: 'Mach',
+      leadSource: 'meta_ads',
+      website: '',
     }),
     sendOrder: async (payload) => {
       sentPayloads.push(payload);
-      return { checkoutUrl: 'https://checkout.stripe.com/c/pay/cs_test_123' };
+      return { checkoutUrl: 'https://checkout.stripe.com/c/pay/cs_live_123' };
     },
-    resolveStripeUrl: (apiResult) => apiResult.checkoutUrl,
     openStripeCheckout: (checkoutUrl) => {
       openedUrls.push(checkoutUrl);
     },
@@ -159,21 +221,25 @@ test('submit flow odošle serializovaný payload a použije checkoutUrl z backen
     clearErrors: () => {},
     applyErrors: () => {},
     resetForm: () => {},
-    serialize: (data) => serializeOrderData(data, () => '2026-03-20T12:00:00.000Z'),
+    serialize: (data) => serializeOrderData(data, () => '2026-03-25T12:00:00.000Z'),
   });
 
   const result = await handler({ preventDefault() {} });
 
   assert.equal(result.ok, true);
   assert.equal(sentPayloads.length, 1);
-  assert.deepEqual(openedUrls, ['https://checkout.stripe.com/c/pay/cs_test_123']);
+  assert.deepEqual(openedUrls, ['https://checkout.stripe.com/c/pay/cs_live_123']);
   assert.deepEqual(sentPayloads[0], {
-    balik: '199',
-    meno: 'Ján Novák',
+    balik: 'house_s',
+    typObjektu: 'rodinny_dom',
+    krajina: 'Slovensko',
+    meno: 'Jan Novak',
     adresa: 'Skalica 1',
     email: 'jan@example.com',
     telefon: '0900',
     poznamka: 'Mach',
-    submittedAt: '2026-03-20T12:00:00.000Z',
+    leadSource: 'meta_ads',
+    website: '',
+    submittedAt: '2026-03-25T12:00:00.000Z',
   });
 });

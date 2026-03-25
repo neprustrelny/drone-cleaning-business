@@ -9,3 +9,4 @@
 - 2026-03-20 — Added minimal `node:test` coverage for the funnel: extracted order form logic from `index.html`, implemented tested `/api/order` validation in `index.js`, and added frontend/backend tests for required fields, payload serialization and response codes.
 - 2026-03-20 — Audited funnel tests against required scope, found no new missing scenarios beyond response-shape assertions, tightened backend test coverage, and re-ran npm test successfully.
 - 2026-03-20 — Prepared repo for manual browser testing: added root `npm run dev`, aligned Pages `/api/order` validation with required `balik`, and updated the local run checklist for landing page + backend flow.
+- 2026-03-25 — Migrated the project from the old 50 € deposit funnel to a package-based preorder model: new landing copy, 149/199/299/990 € reservations, server-side Stripe pricing, updated cashflow scenarios and refreshed source-of-truth docs.

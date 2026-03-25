@@ -1,6 +1,5 @@
-# Stripe Checkout Session pre 50 € zálohu
+# Stripe Checkout Session pre package-based rezervacie
 STRIPE_SECRET_KEY=sk_test_xxx
-STRIPE_PRICE_ID_DEPOSIT_50=price_xxx
 STRIPE_SUCCESS_URL=http://localhost:8788/?checkout=success
 STRIPE_CANCEL_URL=http://localhost:8788/?checkout=cancel
 

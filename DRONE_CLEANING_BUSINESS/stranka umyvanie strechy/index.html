@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Čistá strecha z neba – Čistenie striech a fasád dronom</title>
-  <meta name="description" content="Vyber si balík 199 €, 299 € alebo 399 €, vyplň formulár a zaplať zálohu 50 € cez Stripe. Testovacie termíny Slovensko 2026." />
+  <meta name="description" content="Rezervuj si pilotné čistenie dronom od 149 €. Bez lešenia, bez ľudí na streche, s rýchlym nacenením a prioritnými slotmi pre prvé objekty." />
   <style>
     :root {
       --bg: #f5f7fa;
@@ -55,6 +55,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.9rem 0;
+      gap: 1rem;
     }
 
     .brand {
@@ -112,6 +113,11 @@
       margin: 0.5rem 0;
     }
 
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+    }
+
     p {
       margin: 0 0 1rem;
       color: var(--muted);
@@ -152,6 +158,7 @@
       justify-content: center;
       font-weight: 700;
       font-size: 0.85rem;
+      flex: none;
     }
 
     .benefit-bar {
@@ -173,7 +180,7 @@
 
     .benefit-card h3 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--accent);
     }
 
@@ -216,15 +223,16 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
-    .price p {
-      font-weight: 600;
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.95rem 1rem;
+      font: inherit;
+      background: #fff;
       color: var(--text);
-    }
-
-    form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.5rem;
     }
 
     label {
@@ -235,25 +243,15 @@
       color: var(--text);
     }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 1rem;
-      font-family: inherit;
-      background: rgba(255, 255, 255, 0.95);
-      transition: border 150ms ease, box-shadow 150ms ease;
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
     }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
-      outline: none;
+    textarea {
+      min-height: 120px;
+      resize: vertical;
     }
 
     .image-demo {
@@ -266,25 +264,6 @@
       text-align: center;
       font-style: italic;
       color: var(--muted);
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      object-fit: cover;
-    }
-
-    .hero-photo p {
-      text-align: center;
-      margin-top: 0.75rem;
-      color: var(--muted);
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
     }
 
     .stripe-btn {
@@ -372,9 +351,34 @@
     .package-price {
       font-size: 2rem;
       line-height: 1;
-      margin: 0.35rem 0 0.75rem;
+      margin: 0.35rem 0 0.65rem;
       color: var(--accent);
       font-weight: 800;
+    }
+
+    .package-meta {
+      margin: 0.45rem 0;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .package-meta span {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .package-reservation {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .package-reservation strong {
+      color: var(--success-dark);
     }
 
     .reviews blockquote {
@@ -469,15 +473,11 @@
       font-weight: 600;
     }
 
-    .cta-bottom {
-      text-align: center;
-      padding: 3rem 0 4rem;
-    }
-
     footer {
-      background: #0b172d;
-      color: rgba(255, 255, 255, 0.8);
+      background: #0f172a;
+      color: rgba(255, 255, 255, 0.82);
       padding: 2.5rem 0;
+      margin-top: 3rem;
     }
 
     footer a {
@@ -508,7 +508,7 @@
   <header>
     <div class="container top-bar">
       <span class="brand">Čistá strecha z neba</span>
-      <a class="btn btn-primary" href="#objednavka">Rezervovať termín za 50 €</a>
+      <a class="btn btn-primary" href="#objednavka">Chcem pilotný termín</a>
     </div>
   </header>
 
@@ -516,167 +516,172 @@
     <section class="hero" id="uvod">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Testovacie termíny Slovensko 2026</p>
-          <h1>Rezervuj si čistenie strechy alebo fasády za 50 € zálohu</h1>
-          <p>Vyberieš si balík 199 €, 299 € alebo 399 €, vyplníš údaje a zaplatíš zálohu 50 € cez Stripe. Zvyšok riešime až po realizácii.</p>
+          <p class="eyebrow">Pilotné sloty | Slovensko + Nemecko</p>
+          <h1>Rezervuj si pilotné čistenie dronom od 149 €</h1>
+          <p>Prvé termíny a zakladateľské ceny pre prvé objekty na Slovensku a v Nemecku. Rezervácia sa odpočíta z finálnej ceny.</p>
           <ul class="list-check">
-            <li><span>✓</span>Balík si vyberieš hneď: 199 €, 299 € alebo 399 €</li>
-            <li><span>✓</span>Bez lešenia a bez lezenia po streche</li>
-            <li><span>✓</span>Záloha 50 € ti drží termín, zvyšok platíš po práci</li>
+            <li><span>✓</span>Bez lešenia a bez ľudí na streche</li>
+            <li><span>✓</span>Rýchle nacenenie podľa fotiek a adresy</li>
+            <li><span>✓</span>Prioritné sloty pre prvých zákazníkov</li>
           </ul>
           <div class="limited-offer">
-            <strong>Momentálne zbierame testovacie zákazky na Slovensku. Záloha 50 € rezervuje kapacitu a odpočítame ju z finálnej ceny.</strong>
+            <strong>Zakladateľská rezervácia drží prioritný slot. Po potvrdení vhodnosti objektu ju odpočítame z finálnej ceny, pri väčších objektoch sa audit odpočítava podľa podmienok a rozsahu.</strong>
           </div>
           <div style="margin-top: 1.5rem;">
-            <a class="btn btn-primary" href="#objednavka">Vybrať balík a rezervovať</a>
+            <a class="btn btn-primary" href="#objednavka">Chcem pilotný termín</a>
           </div>
           <p style="margin-top: 0.85rem; color: var(--muted); font-weight: 600;">
-            Chceš sa len opýtať? <a href="tel:+421910123456">+421 910 123 456</a> · <a href="mailto:strechy@dronservis.sk">strechy@dronservis.sk</a>
+            Otázky? <a href="tel:+421910123456">+421 910 123 456</a> · <a href="mailto:strechy@dronservis.sk">strechy@dronservis.sk</a>
           </p>
         </div>
         <div class="card">
           <h2>Prečo rezervovať teraz?</h2>
-          <p>Získaš pilotný termín, jasný balík a nízky vstup cez 50 € zálohu namiesto celej platby vopred.</p>
-          <p>Čistenie robíme dronom zo zeme, takže krytinu nezaťažujeme a výsledok vidíš hneď pri odovzdaní.</p>
+          <p>Získaš skorý pilotný termín, zakladateľskú cenu a rýchle vyhodnotenie objektu bez zdĺhavých obhliadok.</p>
+          <p>Čistenie riešime dronom zo zeme, takže šetríme krytinu, skracujeme prípravu a vieme rýchlo potvrdiť ďalší krok.</p>
         </div>
       </div>
     </section>
+
     <section class="benefit-bar">
       <div class="container benefit-grid">
         <article class="benefit-card">
-          <h3>50 € rezervácia</h3>
-          <p>Termín si držíš malou zálohou, nie celou sumou.</p>
-        </article>
-        <article class="benefit-card">
-          <h3>3 jasné balíčky</h3>
-          <p>Základný dom, strecha + fasáda alebo veľká strecha.</p>
-        </article>
-        <article class="benefit-card">
           <h3>Bez lešenia</h3>
-          <p>Nevstupujeme na krytinu, nič nerozoberáš.</p>
+          <p>Bez montáže konštrukcií a bez ľudí na streche.</p>
         </article>
         <article class="benefit-card">
-          <h3>Rýchly objednávkový flow</h3>
-          <p>Formulár, záloha a potvrdenie bez zbytočného volania.</p>
+          <h3>Rýchle nacenenie</h3>
+          <p>Adresu a fotky vyhodnotíme skôr, než začne zdĺhavé dohadovanie.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Prioritné sloty</h3>
+          <p>Prví zákazníci idú do pilotného plánu pred hlavným rolloutom.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Zakladateľské ceny</h3>
+          <p>Prvý okruh objektov ide za zvýhodnených štartovacích podmienok.</p>
         </article>
       </div>
     </section>
+
     <section class="image-demo">
       <img src="ChatGPT Image Jan 27, 2026, 05_32_36 PM.png" alt="Dron čistí strechu vodou" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-      <p style="text-align: center; font-style: italic; margin-top: 8px;">Ukážka čistenia strechy pomocou dronu – rýchlo, bez lešenia.</p>
+      <p>Ukážka čistenia strechy pomocou dronu – rýchlo, bez lešenia a bez vstupu na krytinu.</p>
     </section>
 
     <section id="informacie">
       <div class="container grid grid-three">
-        <article class="card price">
-          <h3>Čo platíš hneď</h3>
-          <p>Záloha 50 € cez Stripe ti drží termín a odpočítame ju z finálnej ceny.</p>
-          <p>Zvyšok doplatíš až po odovzdaní práce.</p>
+        <article class="card">
+          <h3>Rezervácia pilotného slotu</h3>
+          <p>Platíš teraz 149 € až 990 € podľa balíka. Rezervácia sa pri realizácii odpočíta z finálnej ceny.</p>
         </article>
         <article class="card">
-          <h3>Balíčky na webe</h3>
-          <p>Komunikujeme tri jasné vstupné balíčky: 199 €, 299 € a 399 €.</p>
-          <p>Ak je objekt zložitejší, cenu ti potvrdíme po fotkách alebo obhliadke.</p>
+          <h3>Vyhodnotenie objektu</h3>
+          <p>Stačí typ objektu, adresa a ideálne pár fotiek. Rýchlo potvrdíme, čo je vhodné a čo nie.</p>
         </article>
         <article class="card">
-          <h3>Po odoslaní</h3>
-          <p>Po formulári a zálohe ťa zaradíme do plánu a ozveme sa s potvrdením termínu.</p>
+          <h3>Potvrdenie termínu</h3>
+          <p>Termín realizácie potvrdzujeme po vyhodnotení objektu, počasia a prevádzkovej pripravenosti.</p>
         </article>
       </div>
     </section>
+
     <section id="balicky">
       <div class="container">
         <h2>Vyber si balík</h2>
         <div class="package-grid">
           <article class="package-card">
-            <h3>Základný dom</h3>
-            <p class="package-price">199 €</p>
-            <p>Pre bežný rodinný dom so strechou bez výrazných komplikácií.</p>
-            <p>Vhodné pre rýchlu pilotnú realizáciu bez fasády.</p>
+            <h3>Rodinný dom S</h3>
+            <p class="package-price">od 349 €</p>
+            <p class="package-meta"><span>Cena služby od</span>349 €</p>
+            <p>Pre menší rodinný dom a jednoduchú strechu bez zbytočných komplikácií.</p>
+            <p class="package-reservation"><span>Rezervácia teraz</span> <strong>149 €</strong></p>
           </article>
           <article class="package-card featured">
             <span class="package-badge">Najčastejšie</span>
-            <h3>Strecha + fasáda</h3>
-            <p class="package-price">299 €</p>
-            <p>Balík pre klienta, ktorý chce vyriešiť dom zvonka naraz.</p>
-            <p>Najlepší pomer ceny a viditeľného výsledku.</p>
+            <h3>Rodinný dom M</h3>
+            <p class="package-price">od 590 €</p>
+            <p class="package-meta"><span>Strecha + jednoduchá fasáda</span>590 €</p>
+            <p>Pre dom, kde chceš vyriešiť strechu a viditeľnú fasádnu plochu v jednom kroku.</p>
+            <p class="package-reservation"><span>Rezervácia teraz</span> <strong>199 €</strong></p>
           </article>
           <article class="package-card">
-            <h3>Veľká strecha</h3>
-            <p class="package-price">399 €</p>
-            <p>Pre väčšie alebo členitejšie strechy s vyšším rozsahom práce.</p>
-            <p>Finálny rozsah si potvrdíme po fotkách alebo pri plánovaní.</p>
+            <h3>Veľká alebo členitá strecha</h3>
+            <p class="package-price">od 890 €</p>
+            <p class="package-meta"><span>Cena služby od</span>890 €</p>
+            <p>Pre rozsiahlejší objekt, komplikovanejší sklon, väčší rozsah alebo náročnejší prístup.</p>
+            <p class="package-reservation"><span>Rezervácia teraz</span> <strong>299 €</strong></p>
+          </article>
+          <article class="package-card">
+            <h3>Firma / obec / väčší objekt</h3>
+            <p class="package-price">990 €</p>
+            <p class="package-meta"><span>Pilotný audit a prioritný slot</span>990 €</p>
+            <p>Pre haly, obce, kostoly, firemné areály alebo objekty, kde treba audit, koordináciu a prioritu.</p>
+            <p class="package-reservation"><span>Audit / rezervácia teraz</span> <strong>990 €</strong></p>
           </article>
         </div>
-        <p class="steps-note"><strong>Platíš teraz len 50 €.</strong> Zvyšok doplatíš až po realizácii a odovzdaní výsledku.</p>
+        <p class="steps-note"><strong>Rezervácia sa odpočíta z finálnej ceny.</strong> Pri B2B audite sa odpočet uplatní pri následnej realizácii podľa podmienok a odsúhlaseného rozsahu.</p>
       </div>
     </section>
+
     <section class="for-whom">
       <div class="container">
         <h2>Pre koho je služba</h2>
         <div class="for-whom-grid">
           <article class="card">
             <h3>Rodinné domy</h3>
-            <p>Škridla, plech, betón – odstránime mach a špinu bez lešenia.</p>
+            <p>Škridla, plech, betón a bežné rezidenčné strechy bez lezenia po krytine.</p>
           </article>
           <article class="card">
-            <h3>Firmy a prevádzky</h3>
-            <p>Ploché strechy, showroomy a haly vybavíme mimo špičky.</p>
+            <h3>Vily a väčšie domy</h3>
+            <p>Členitejšie tvary, väčší rozsah a jednoduché fasádne plochy v jednom pláne.</p>
           </article>
           <article class="card">
-            <h3>Historické budovy</h3>
-            <p>Šetrný tlak a postup, aby ostal pôvodný charakter.</p>
+            <h3>Bytové a obecné objekty</h3>
+            <p>Objekty, kde treba audit, koordináciu, bezpečnostný režim a jasný harmonogram.</p>
           </article>
           <article class="card">
-            <h3>Reklamné plochy</h3>
-            <p>Billboardy, fasády a bannery vo výške vyčistíme dronom.</p>
+            <h3>Firmy a haly</h3>
+            <p>Prevádzky, showroomy a haly, kde je dôležitá rýchlosť a minimum zásahov do chodu.</p>
           </article>
           <article class="card">
-            <h3>Priemyselné objekty</h3>
-            <p>Sila, nádrže a technologické strechy bez odstávok.</p>
+            <h3>Kostoly a špecifické stavby</h3>
+            <p>Objekty, kde je rozhodujúca šetrnosť, bezpečný prístup a individuálne posúdenie.</p>
           </article>
         </div>
       </div>
     </section>
+
     <section class="faq">
       <div class="container">
-        <h2>Najčastejšie otázky (FAQ)</h2>
+        <h2>Najčastejšie otázky</h2>
         <div class="faq-list">
           <article class="faq-item">
-            <h3>Je to bezpečné pre strechu?</h3>
-            <p>Dron držíme v odstupe, prúd vody je nastavený na typ krytiny a po streche nikto nelezie.</p>
+            <h3>Kedy potvrdíte termín realizácie?</h3>
+            <p>Po vyhodnotení objektu, počasia a prevádzkovej pripravenosti. Rezervácia drží prioritu, presný deň potvrdíme až po tomto kroku.</p>
           </article>
           <article class="faq-item">
-            <h3>Čo ak v deň čistenia prší alebo silno fúka?</h3>
-            <p>Pri zlom počasí termín presunieme a dostaneš novú SMS/e-mail bez ďalších poplatkov.</p>
+            <h3>Je rezervácia odpočítaná z finálnej ceny?</h3>
+            <p>Áno. Pri rodinných domoch sa rezervácia odpočíta z finálnej ceny. Pri B2B audite sa odpočíta pri následnej realizácii podľa podmienok a rozsahu.</p>
           </article>
           <article class="faq-item">
-            <h3>Čo odo mňa potrebujete?</h3>
-            <p>Adresu, kontakty, krátky opis prístupu a ideálne 1–2 fotky strechy alebo link z máp.</p>
+            <h3>Čo ak objekt nebude vhodný na bezpečnú realizáciu?</h3>
+            <p>Dohodneme náhradný postup, upravený rozsah alebo storno podľa podmienok. Neťaháme klienta do realizácie, ktorá nie je bezpečná.</p>
           </article>
           <article class="faq-item">
-            <h3>Čo ak je strecha strmá alebo stará?</h3>
-            <p>Dron ju čistí z výšky, tlak prispôsobíme povrchu. Ak vidíme riziko, povieme ti to vopred.</p>
+            <h3>Čo potrebujete na rýchle nacenenie?</h3>
+            <p>Typ objektu, adresu, kontakt a ideálne 1–2 fotky strechy alebo fasády. To väčšinou stačí na prvé vyhodnotenie.</p>
           </article>
           <article class="faq-item">
-            <h3>Zvládne to mach a lišajníky?</h3>
-            <p>Áno, používame jemnú chémiu na odmachovanie a výsledok vidíš ihneď.</p>
+            <h3>Je čistenie bezpečné pre strechu?</h3>
+            <p>Áno. Dron pracuje z odstupu, bez ľudí na krytine a bez zbytočného zaťaženia strechy.</p>
           </article>
           <article class="faq-item">
-            <h3>Čo v zime?</h3>
-            <p>Pracujeme, keď je nad nulou. Ak je mráz, termín dáme na ďalší voľný deň.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Musím byť pri čistení doma?</h3>
-            <p>Stačí zabezpečiť prístup na pozemok. Ak si mimo, stačí dohodnuté inštrukcie.</p>
-          </article>
-          <article class="faq-item">
-            <h3>Čo ak nemám prívod vody?</h3>
-            <p>Viem priniesť vlastnú vodu alebo sa dohodneme na inom zdroji pri plánovaní.</p>
+            <h3>Čo ak prší alebo silno fúka?</h3>
+            <p>Termín presunieme na bezpečné okno. Priorita rezervácie zostáva zachovaná.</p>
           </article>
           <details class="faq-item">
-            <summary>Pre zvedavých – technické detaily</summary>
-            <p>Používame drony s presným dávkovaním tlaku a jemnou chémiou pre odmachovanie. Bežne pracujeme z výšky 3–5 m nad krytinou, takže sa jej nedotýkame.</p>
+            <summary>Technické detaily</summary>
+            <p>Používame pracovný dron s presným dávkovaním tlaku a čistiaceho postupu podľa typu povrchu. Objekt posudzujeme ešte pred potvrdením realizácie.</p>
           </details>
         </div>
       </div>
@@ -685,18 +690,40 @@
     <section id="objednavka">
       <div class="container">
         <div class="card">
-          <h2>Objednávkový formulár</h2>
+          <h2>Rezervácia pilotného slotu</h2>
           <p class="form-note" style="margin-bottom: 1rem; color: var(--muted); font-weight: 500;">
-            Vyber balík, vyplň údaje a presmerujeme ťa na platbu zálohy 50 € cez Stripe.
+            Vyber balík, doplň pár údajov a server ťa presmeruje na bezpečný Stripe Checkout s rezerváciou podľa zvoleného balíka.
           </p>
           <form id="orderForm" novalidate>
             <div>
-              <label for="balik">Balíček *</label>
+              <label for="balik">Balík *</label>
               <select id="balik" name="balik" required>
                 <option value="">Vyber balík</option>
-                <option value="199">199 € – Základný dom</option>
-                <option value="299">299 € – Strecha + fasáda</option>
-                <option value="399">399 € – Veľká strecha</option>
+                <option value="house_s">Rodinný dom S · služba od 349 € · rezervácia 149 €</option>
+                <option value="house_m">Rodinný dom M / strecha + jednoduchá fasáda · služba od 590 € · rezervácia 199 €</option>
+                <option value="house_l">Veľká alebo členitá strecha · služba od 890 € · rezervácia 299 €</option>
+                <option value="b2b_audit">Firma / obec / kostol / hala / väčší objekt · audit a prioritný slot 990 €</option>
+              </select>
+            </div>
+            <div>
+              <label for="typObjektu">Typ objektu *</label>
+              <select id="typObjektu" name="typObjektu" required>
+                <option value="">Vyber typ objektu</option>
+                <option value="rodinny_dom">Rodinný dom</option>
+                <option value="vila">Vila / väčší dom</option>
+                <option value="bytovy_dom">Bytový dom</option>
+                <option value="firemny_objekt">Firemný objekt</option>
+                <option value="obecny_objekt">Obecný objekt</option>
+                <option value="kostol">Kostol / historický objekt</option>
+                <option value="hala">Hala / výrobný objekt</option>
+                <option value="iny_objekt">Iný objekt</option>
+              </select>
+            </div>
+            <div>
+              <label for="krajina">Krajina *</label>
+              <select id="krajina" name="krajina" required>
+                <option value="Slovensko" selected>Slovensko</option>
+                <option value="Nemecko">Nemecko</option>
               </select>
             </div>
             <div>
@@ -704,7 +731,7 @@
               <input type="text" id="meno" name="meno" placeholder="Ján Novák" required />
             </div>
             <div>
-              <label for="adresa">Adresa strechy *</label>
+              <label for="adresa">Adresa objektu *</label>
               <input type="text" id="adresa" name="adresa" placeholder="Ulica 12, Mesto" required />
             </div>
             <div>
@@ -712,87 +739,93 @@
               <input type="email" id="email" name="email" placeholder="ja@domena.sk" required />
             </div>
             <div>
-              <label for="telefon">Telefón (voliteľné)</label>
+              <label for="telefon">Telefón</label>
               <input type="tel" id="telefon" name="telefon" placeholder="+421 910 123 456" />
             </div>
             <div>
-              <label for="poznamka">Poznámky (voliteľné)</label>
-              <textarea id="poznamka" name="poznamka" placeholder="Prístup, sklon, ďalšie info."></textarea>
+              <label for="poznamka">Poznámka</label>
+              <textarea id="poznamka" name="poznamka" placeholder="Prístup, fotky, sklon, fasáda, špecifiká objektu."></textarea>
             </div>
-            <!-- Stripe fallback URL používaj len lokálne. Produkcia má ísť cez backendom vrátený checkoutUrl. -->
-            <a id="checkoutButton" class="stripe-btn" href="#" data-stripe-fallback-url="https://buy.stripe.com/test_bIY14d0eW4TB3pu4gg">
-              Odoslať údaje a zaplatiť 50 € zálohu
+            <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <a id="checkoutButton" class="stripe-btn" href="#" data-stripe-fallback-url="">
+              Pokračovať na rezerváciu slotu
             </a>
-            <p class="notice">Záloha 50 € drží termín. Vybraný balík je štartovacia cena, finálny rozsah potvrdíme podľa objektu.</p>
+            <p class="notice">Rezervácia sa odpočíta z finálnej ceny. Ak objekt nebude vhodný na bezpečnú realizáciu, dohodne sa náhradný postup alebo storno podľa podmienok.</p>
             <div class="trust">
               <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Stripe_Logo%2C_revised_2016.svg" alt="Stripe logo" style="height: 30px;" />
-              <p>Bezpečná platba cez Stripe. Platobné údaje spracúva Stripe, my vidíme len potvrdenie o úhrade.</p>
+              <p>Bezpečná platba cez Stripe. Frontend posiela len identifikátor balíka a checkout sumu vždy určuje server podľa vybraného balíka.</p>
             </div>
             <div id="status" class="status" role="status" aria-live="polite"></div>
           </form>
         </div>
       </div>
     </section>
+
     <section class="reviews">
       <div class="container">
         <h2>Čo hovoria naši zákazníci</h2>
         <blockquote>
-          „Strecha ako nová za necelú hodinu. Nečakal som, že to bude tak čisté.“
+          „Strecha vyzerala čisto bez toho, aby po nej niekto chodil. Oceňujem rýchlu komunikáciu a jasný postup.“
           <footer>– Jozef K., Holíč</footer>
         </blockquote>
         <blockquote>
-          „Oveľa lepšie ako tradičné čistenie. Bezpečné, rýchle, a bez neporiadku.“
+          „Vedeli rýchlo naceniť podľa fotiek a celý proces pôsobil profesionálne. Toto je typ služby, ktorý má zmysel riešiť dronom.“
           <footer>– Andrea S., Skalica</footer>
         </blockquote>
       </div>
     </section>
+
     <section class="steps">
       <div class="container">
         <h2>Ako to prebieha</h2>
         <div class="steps-grid">
           <article class="step-card">
             <div class="step-number">1</div>
-            <h3>Vyplníš údaje</h3>
-            <p>Vyberieš balík, zadáš adresu a doplníš krátke poznámky.</p>
+            <h3>Vyberieš balík</h3>
+            <p>Zvolíš typ služby, objekt a krajinu bez dlhého enterprise formulára.</p>
           </article>
           <article class="step-card">
             <div class="step-number">2</div>
-            <h3>Potvrdíš zálohu 50 €</h3>
-            <p>Stripe Checkout ťa prevedie platbou, tým držíme termín.</p>
+            <h3>Uhradíš rezerváciu</h3>
+            <p>Server vráti checkoutUrl a Stripe ťa prevedie rezerváciou 149 € až 990 € podľa balíka.</p>
           </article>
           <article class="step-card">
             <div class="step-number">3</div>
-            <h3>Dohodneme termín</h3>
-            <p>Ozveme sa, potvrdíme rozsah a dohodneme presný deň.</p>
+            <h3>Vyhodnotíme objekt</h3>
+            <p>Skontrolujeme vhodnosť realizácie, doplníme otázky a potvrdíme ďalší krok.</p>
           </article>
           <article class="step-card">
             <div class="step-number">4</div>
-            <h3>Prídeme s dronom</h3>
-            <p>Bez lešenia vyčistíme strechu a ukážeme výsledok.</p>
+            <h3>Potvrdíme termín</h3>
+            <p>Termín finálne uzatvárame podľa počasia, bezpečnosti a prevádzkovej pripravenosti.</p>
           </article>
           <article class="step-card">
             <div class="step-number">5</div>
-            <h3>Doplatíš zvyšok</h3>
-            <p>Po odovzdaní práce vyriešime doplatok podľa reálneho rozsahu.</p>
+            <h3>Odpočítame rezerváciu</h3>
+            <p>Pri finálnej realizácii sa rezervácia odpočíta z ceny podľa potvrdeného rozsahu a podmienok.</p>
           </article>
         </div>
-        <p class="steps-note"><strong>Kontakt:</strong> strechy@dronservis.sk · +421 910 123 456 – ozvi sa, ak potrebuješ konkrétny termín alebo fakturáciu.</p>
+        <p class="steps-note"><strong>Kontakt:</strong> strechy@dronservis.sk · +421 910 123 456 – ozvi sa, ak potrebuješ rýchly audit alebo firemnú fakturáciu.</p>
       </div>
     </section>
 
     <section class="cta-bottom">
       <div class="container">
-        <h2>Strechu vybavíš za pár minút</h2>
-        <p>Vyberieš si balík, vyplníš údaje a zaplatíš zálohu 50 €. Termín držíme pre teba, zvyšok riešime po práci.</p>
-        <a class="btn btn-primary" href="#objednavka">Rezervovať za 50 €</a>
-        <p style="margin-top: 1rem;">Chceš sa najprv opýtať? <a href="mailto:strechy@dronservis.sk">strechy@dronservis.sk</a> · <a href="tel:+421910123456">+421 910 123 456</a></p>
+        <h2>Prvé sloty sa zatvárajú rýchlo</h2>
+        <p>Bez lešenia, bez ľudí na streche a bez zdĺhavého nacenovania. Vyber balík a rezervuj si pilotný termín.</p>
+        <a class="btn btn-primary" href="#objednavka">Chcem pilotný termín</a>
+        <p style="margin-top: 1rem;">Otázky? <a href="mailto:strechy@dronservis.sk">strechy@dronservis.sk</a> · <a href="tel:+421910123456">+421 910 123 456</a></p>
       </div>
     </section>
+
     <section class="about">
       <div class="container">
         <h2>Kto sme</h2>
-        <p>Sme tím, ktorý chce postaviť predajný a prevádzkový model najprv na slovenských testovacích zákazkách a potom ho preniesť do regiónu Kassel.</p>
-        <p>Naša ponuka je jednoduchá: jasný balík, nízka záloha, bezpečné čistenie dronom a doplatok až po odovzdaní výsledku.</p>
+        <p>Budujeme prevádzku čistenia striech a fasád dronom s dôrazom na bezpečnosť, rýchle nacenenie a reálne pilotné zákazky.</p>
+        <p>Zakladateľské rezervácie nám pomáhajú spustiť vlastnú heavy-duty prevádzku, licencie a prvé prioritné sloty bez kompromisov v kvalite.</p>
       </div>
     </section>
   </main>
@@ -800,7 +833,7 @@
   <footer>
     <div class="container">
       <p><strong>Kontakt:</strong> strechy@dronservis.sk · +421 910 123 456</p>
-      <p>GDPR: Vaše údaje budú použité len na vybavenie objednávky. Neodovzdávame ich tretím stranám.</p>
+      <p>GDPR: Vaše údaje používame len na vybavenie rezervácie, nacenenia a súvisiacej komunikácie.</p>
       <p><a href="/obchodne-podmienky.pdf" target="_blank" rel="noopener">Obchodné podmienky</a></p>
       <p>© <span id="year"></span> Čistenie strechy dronom</p>
     </div>

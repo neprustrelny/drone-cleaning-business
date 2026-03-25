@@ -1,71 +1,68 @@
 # PROJECT HANDOVER – Čistá strecha z neba
-Last updated: 2026-03-20
+Last updated: 2026-03-25
 Prepared for: nový chat / nový pracovný blok bez predchádzajúceho kontextu
 
 ## 1) Čo je projekt
-Jednoduchá landing page pre službu dronového čistenia striech a fasád pod značkou „Čistá strecha z neba“. Biznis cieľ nie je len zber leadov, ale priamo inkaso 50 € záloh cez Stripe, aby projekt generoval cashflow ešte pred realizáciou.
+Jednoduchá landing page pre službu dronového čistenia striech a fasád pod značkou „Čistá strecha z neba“. Biznis cieľ nie je len zber leadov. Aktívny model je platená rezervácia pilotného slotu, ktorá financuje rozbeh heavy-duty dronu a prevádzky.
 
 ## 2) Fixné parametre, ktoré sa už nemenia
-- Trh pre nemeckú expanziu: konzervatívne 25 000 rodinných domov v regióne Kassel + 50 km.
-- Verejné balíčky: 199 € (základný dom), 299 € (strecha + fasáda), 399 € (veľká strecha).
-- Absolútna priorita č. 1: maximalizovať počet zaplatených záloh 50 €.
-- Interná priemerná realizovaná tržba: 1 050 € na zákazku.
-- Go-to-market stratégia: najprv testovacie zákazky na Slovensku, až potom expanzia do Nemecka.
+- Cieľ gross preorder cash: 42 000 €.
+- Rozpad cieľa: 30k dron / akontácia, 6k compliance a licencie, 4k príslušenstvo a testy, 2k buffer.
+- Verejný model:
+  - `house_s`: služba od 349 €, rezervácia 149 €
+  - `house_m`: služba od 590 €, rezervácia 199 €
+  - `house_l`: služba od 890 €, rezervácia 299 €
+  - `b2b_audit`: audit a prioritný slot 990 €
+- KPI: average preorder value min. 250 €, paid B2C preorder CAC do 55 €, sledovať aj B2B audit close rate a refund rate.
+- Checkout suma sa rozhoduje len na serveri podľa identifikátora balíka.
 
 ## 3) Aktuálny stav
-Landing page je pripravená ako predajný funnel. Front-end už komunikuje cez `formulár -> /api/order -> Stripe`, ale produkčný backend, ostrý Stripe link, GDPR dokumenty a analytika ešte nie sú hotové. Aktuálny copywriting je orientovaný na jasný výber balíčka, rýchle vyplnenie formulára a zaplatenie zálohy.
+Landing page, formulár aj backend sú prepnuté na nový package-based preorder flow. Frontend zbiera len balík + kontext leadu a server vracia `checkoutUrl`. Dokumentácia v root aj v tomto priečinku je zosúladená s novým modelom.
 
 ## 4) Source of truth
-- `STATUS.md`
-- `QUEUE.md`
-- `CASHFLOW_2026.md`
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/index.html`
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/SITE_OVERVIEW.md`
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/PROJECT_HANDOVER.md`
+1. Aktuálny živý kód:
+   - `index.html`
+   - `order-form.js`
+   - `functions/api/order.ts`
+   - `order-packages.js`
+2. Mapa projektu v root `mapa/`
+3. Root `STATUS.md`, `QUEUE.md`, `CASHFLOW_2026.md`, `00_RUNBOOK_CODEX.md`
+4. Tento handover a `SITE_OVERVIEW.md`
 
 ## 5) Ako má produkt a funnel fungovať
-- Landing page musí človeku odpovedať na 4 otázky:
-  - čo dostane,
-  - koľko to stojí,
-  - prečo má zaplatiť zálohu hneď,
-  - prečo je to bezpečné a jednoduché.
-- Flow je záväzný:
-  1. človek príde na landing,
-  2. vyberie balíček,
-  3. vyplní formulár,
-  4. odošle údaje na `/api/order`,
-  5. zaplatí 50 € cez Stripe,
-  6. dostane potvrdenie a návrh termínu.
-- CTA má vždy tlačiť na jeden cieľ: zaplatiť zálohu 50 € alebo sa minimálne dostať do formulára.
+1. Človek príde na landing page.
+2. Vyberie si balík a typ objektu.
+3. Vyplní stručný formulár.
+4. Frontend odošle JSON na `/api/order`.
+5. Server validuje balík, rozhodne cenu, vytvorí Stripe Checkout Session a vráti `checkoutUrl`.
+6. Frontend len redirectne na `checkoutUrl`.
+7. Po checkoute dostane klient potvrdenie a nasleduje vyhodnotenie objektu, počasia a prevádzkovej pripravenosti.
 
 ## 6) Dôležité obchodné pravidlá
-- Texty musia zostať krátke, predajné a orientované na akciu.
-- Každý nový blok na stránke musí zvyšovať dôveru alebo konverziu, nie len „vysvetľovať“.
-- Balíčky 199/299/399 € sú verejná cenová kotva.
-- Priemer 1 050 € sa používa pre interný cashflow model a musí byť neskôr podložený upsellom, väčšími zákazkami alebo širším mixom služieb.
-- Nemecká verzia landing page je vysoká priorita, ale veľký launch do Kasselu sa nemá robiť bez SK validácie.
-- Pri reguláciách pre DE sa má pracovať len s aktuálnymi EASA/LBA 2026 podkladmi a Specific/SORA logikou.
+- Na webe preferuj „rezervácia pilotného slotu“ alebo „zakladateľská rezervácia“, nie lacný 50 € positioning.
+- Texty majú zostať krátke, priamočiare a predajné.
+- Dôraz na: bez lešenia, bez ľudí na streche, rýchle nacenenie, prioritné sloty, zakladateľské ceny.
+- V právnych a obchodných textoch môže zostať slovo záloha tam, kde dáva zmysel.
+- Ak objekt nebude vhodný na bezpečnú realizáciu, dohodne sa náhradný postup alebo storno podľa podmienok.
 
 ## 7) Najväčšie otvorené medzery
-1. Produkčný backend pre `/api/order`.
-2. Produkčný Stripe Checkout link a success flow.
-3. Analytics a meranie conversion funnelu.
-4. Nemecká landing page pre Kassel.
-5. Reálne fotografie, videá a referencie zo slovenských testovacích zákaziek.
-6. Právne podklady: GDPR, obchodné podmienky, DE compliance podklady.
+1. Live `STRIPE_SECRET_KEY` a ostré environment variables v Cloudflare Pages.
+2. Post-payment zápis / webhook a automatické potvrdenie zaplatenej rezervácie.
+3. Analytika pre CAC, checkout success rate a refund rate.
+4. Reálne fotografie, videá a referencie z prvých pilotných objektov.
+5. Samostatná DE landing verzia a lokálny trust layer pre Kassel.
 
 ## 8) Priorita ďalších krokov
-1. Dokončiť funnel copy a CTA tak, aby rástol počet 50 € záloh.
-2. Napojiť reálny backend a Stripe bez ručného zásahu.
-3. Pripraviť nemeckú verziu stránky pre Kassel + 50 km.
-4. Získať prvé platené testovacie zákazky na Slovensku a z nich vytvoriť referencie.
-5. Nastaviť analytiku a sledovať CAC na zálohu.
-6. Až potom zrýchľovať DE launch a regulácie pre Specific/SORA.
+1. Nasadiť live Stripe a potvrdenie platieb.
+2. Získať prvé SK pilotné realizácie a referencie.
+3. Spustiť analytiku a sledovať mix balíkov, CAC a refundy.
+4. Rozbehnúť B2B audit funnel.
+5. Pripraviť DE variantu landing page.
 
 ## 9) Pokyny pre nový chat
 1. Prečítaj `STATUS.md`.
 2. Prečítaj `QUEUE.md`.
 3. Prečítaj `CASHFLOW_2026.md`.
-4. Prečítaj tento handover.
-5. Prezri `index.html`.
-6. Až potom rob úpravy alebo navrhuj ďalší krok.
+4. Prečítaj tento handover a `SITE_OVERVIEW.md`.
+5. Prezri `index.html`, `order-form.js` a `functions/api/order.ts`.
+6. Až potom rob ďalšie úpravy.

@@ -1,20 +1,29 @@
+import {
+  getPackageConfig,
+  normalizeCountry,
+  normalizeLeadSource,
+  normalizePackageId,
+} from '../../order-packages.js';
+
 const CORS_HEADERS: Record<string, string> = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Stripe-Signature",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Stripe-Signature',
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const ALLOWED_BALIKY = new Set(["199", "299", "399"]);
 const RATE_LIMIT_MAX_REQUESTS_PER_MINUTE = 10;
 
 type LeadPayload = {
   balik?: unknown;
+  typObjektu?: unknown;
+  krajina?: unknown;
   meno?: unknown;
   adresa?: unknown;
   email?: unknown;
   telefon?: unknown;
   poznamka?: unknown;
+  leadSource?: unknown;
   website?: unknown;
 };
 
@@ -23,25 +32,31 @@ type LeadRecord = {
   clientIp: string;
   userAgent: string;
   balik: string;
+  packageLabel: string;
+  servicePriceEur: number;
+  reservationPriceEur: number;
+  typObjektu: string;
+  krajina: string;
   meno: string;
   adresa: string;
   email: string;
   telefon: string;
   poznamka: string;
+  leadSource: string;
 };
 
 function jsonResponse(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
-      "Content-Type": "application/json; charset=utf-8",
+      'Content-Type': 'application/json; charset=utf-8',
       ...CORS_HEADERS,
     },
   });
 }
 
 function asTrimmedString(value: unknown): string {
-  return typeof value === "string" ? value.trim() : "";
+  return typeof value === 'string' ? value.trim() : '';
 }
 
 function truncateForStripe(value: string, maxLength = 400): string {
@@ -50,62 +65,58 @@ function truncateForStripe(value: string, maxLength = 400): string {
 }
 
 function getClientIp(request: Request): string {
-  const cfIp = request.headers.get("CF-Connecting-IP");
+  const cfIp = request.headers.get('CF-Connecting-IP');
   if (cfIp && cfIp.trim()) return cfIp.trim();
 
-  const forwardedFor = request.headers.get("X-Forwarded-For");
+  const forwardedFor = request.headers.get('X-Forwarded-For');
   if (forwardedFor && forwardedFor.trim()) {
-    return forwardedFor.split(",")[0].trim();
+    return forwardedFor.split(',')[0].trim();
   }
 
-  return "unknown";
+  return 'unknown';
 }
 
 function createLeadId(): string {
   return `lead:${Date.now()}-${crypto.randomUUID().slice(0, 8)}`;
 }
 
-function getReturnUrl(request: Request, configuredUrl: string, checkoutState: "success" | "cancel"): string {
+function getReturnUrl(request: Request, configuredUrl: string, checkoutState: 'success' | 'cancel'): string {
   if (configuredUrl) {
     return configuredUrl;
   }
 
   const origin = new URL(request.url).origin;
-  if (checkoutState === "success") {
+  if (checkoutState === 'success') {
     return `${origin}/?checkout=success&session_id={CHECKOUT_SESSION_ID}`;
   }
 
   return `${origin}/?checkout=cancel`;
 }
 
-function readStripeConfig(env: any, request: Request): null | {
+function readStripeConfig(
+  env: any,
+  request: Request,
+): null | {
   secretKey: string;
-  priceId: string;
   successUrl: string;
   cancelUrl: string;
 } {
   const secretKey = asTrimmedString(env?.STRIPE_SECRET_KEY);
-  const priceId = asTrimmedString(env?.STRIPE_PRICE_ID_DEPOSIT_50);
 
-  if (!secretKey && !priceId) {
+  if (!secretKey) {
     return null;
-  }
-
-  if (!secretKey || !priceId) {
-    throw new Error("stripe_config_incomplete");
   }
 
   return {
     secretKey,
-    priceId,
-    successUrl: getReturnUrl(request, asTrimmedString(env?.STRIPE_SUCCESS_URL), "success"),
-    cancelUrl: getReturnUrl(request, asTrimmedString(env?.STRIPE_CANCEL_URL), "cancel"),
+    successUrl: getReturnUrl(request, asTrimmedString(env?.STRIPE_SUCCESS_URL), 'success'),
+    cancelUrl: getReturnUrl(request, asTrimmedString(env?.STRIPE_CANCEL_URL), 'cancel'),
   };
 }
 
 async function checkAndIncrementRateLimit(env: any, ip: string): Promise<boolean> {
   const kv = env?.LEADS;
-  if (!kv || ip === "unknown") return false;
+  if (!kv || ip === 'unknown') return false;
 
   const minuteBucket = Math.floor(Date.now() / 60000);
   const key = `rate:${ip}:${minuteBucket}`;
@@ -116,7 +127,7 @@ async function checkAndIncrementRateLimit(env: any, ip: string): Promise<boolean
     currentCount = existing ? Number(existing) : 0;
     if (!Number.isFinite(currentCount)) currentCount = 0;
   } catch (error) {
-    console.error("Rate-limit read failed", error);
+    console.error('Rate-limit read failed', error);
     return false;
   }
 
@@ -125,7 +136,7 @@ async function checkAndIncrementRateLimit(env: any, ip: string): Promise<boolean
   try {
     await kv.put(key, String(currentCount), { expirationTtl: 120 });
   } catch (error) {
-    console.error("Rate-limit write failed", error);
+    console.error('Rate-limit write failed', error);
   }
 
   return currentCount > RATE_LIMIT_MAX_REQUESTS_PER_MINUTE;
@@ -138,65 +149,76 @@ async function storeLeadIfPossible(env: any, leadId: string, leadRecord: Record<
   await kv.put(leadId, JSON.stringify(leadRecord));
 }
 
-async function notifyWebhookIfConfigured(
-  env: any,
-  leadRecord: Record<string, unknown>
-): Promise<void> {
+async function notifyWebhookIfConfigured(env: any, leadRecord: Record<string, unknown>): Promise<void> {
   const webhookUrl = asTrimmedString(env?.NOTIFY_WEBHOOK_URL);
   if (!webhookUrl) return;
 
   try {
     const response = await fetch(webhookUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        source: "strecha-api",
-        event: "lead_created",
+        source: 'strecha-pages-api',
+        event: 'lead_created',
         lead: leadRecord,
       }),
     });
 
     if (!response.ok) {
-      console.error("Notification webhook returned non-2xx", response.status);
+      console.error('Notification webhook returned non-2xx', response.status);
     }
   } catch (error) {
-    console.error("Notification webhook request failed", error);
+    console.error('Notification webhook request failed', error);
   }
+}
+
+function appendStripeMetadata(formData: URLSearchParams, key: string, value: string): void {
+  formData.set(`metadata[${key}]`, value);
+  formData.set(`payment_intent_data[metadata][${key}]`, value);
 }
 
 async function createStripeCheckoutUrl(
   env: any,
   request: Request,
   leadId: string,
-  leadRecord: LeadRecord
-): Promise<string | null> {
+  leadRecord: LeadRecord,
+  packageConfig: NonNullable<ReturnType<typeof getPackageConfig>>,
+): Promise<string> {
   const stripeConfig = readStripeConfig(env, request);
   if (!stripeConfig) {
-    return null;
+    throw new Error('stripe_not_configured');
   }
 
   const formData = new URLSearchParams();
-  formData.set("mode", "payment");
-  formData.set("success_url", stripeConfig.successUrl);
-  formData.set("cancel_url", stripeConfig.cancelUrl);
-  formData.set("client_reference_id", leadId);
-  formData.set("customer_email", leadRecord.email);
-  formData.set("line_items[0][price]", stripeConfig.priceId);
-  formData.set("line_items[0][quantity]", "1");
-  formData.set("metadata[lead_id]", leadId);
-  formData.set("metadata[balik]", leadRecord.balik);
-  formData.set("metadata[meno]", truncateForStripe(leadRecord.meno));
-  formData.set("metadata[email]", truncateForStripe(leadRecord.email));
-  formData.set("metadata[telefon]", truncateForStripe(leadRecord.telefon, 100));
-  formData.set("metadata[adresa]", truncateForStripe(leadRecord.adresa));
+  formData.set('mode', 'payment');
+  formData.set('success_url', stripeConfig.successUrl);
+  formData.set('cancel_url', stripeConfig.cancelUrl);
+  formData.set('client_reference_id', leadId);
+  formData.set('customer_email', leadRecord.email);
+  formData.set('line_items[0][price_data][currency]', 'eur');
+  formData.set('line_items[0][price_data][product_data][name]', packageConfig.checkoutTitle);
+  formData.set('line_items[0][price_data][product_data][description]', packageConfig.checkoutDescription);
+  formData.set('line_items[0][price_data][unit_amount]', String(packageConfig.reservationPriceEur * 100));
+  formData.set('line_items[0][quantity]', '1');
 
-  const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
-    method: "POST",
+  appendStripeMetadata(formData, 'lead_id', leadId);
+  appendStripeMetadata(formData, 'package', leadRecord.balik);
+  appendStripeMetadata(formData, 'typObjektu', truncateForStripe(leadRecord.typObjektu, 120));
+  appendStripeMetadata(formData, 'krajina', truncateForStripe(leadRecord.krajina, 80));
+  appendStripeMetadata(formData, 'leadSource', truncateForStripe(leadRecord.leadSource, 120));
+  appendStripeMetadata(formData, 'meno', truncateForStripe(leadRecord.meno, 120));
+  appendStripeMetadata(formData, 'email', truncateForStripe(leadRecord.email, 120));
+  appendStripeMetadata(formData, 'telefon', truncateForStripe(leadRecord.telefon, 100));
+  appendStripeMetadata(formData, 'adresa', truncateForStripe(leadRecord.adresa));
+  appendStripeMetadata(formData, 'reservationPriceEur', String(packageConfig.reservationPriceEur));
+
+  const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+    method: 'POST',
     headers: {
       Authorization: `Bearer ${stripeConfig.secretKey}`,
-      "Content-Type": "application/x-www-form-urlencoded",
+      'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: formData.toString(),
   });
@@ -210,11 +232,11 @@ async function createStripeCheckoutUrl(
 
   const checkoutUrl = asTrimmedString(stripeBody?.url);
   if (!response.ok || !checkoutUrl) {
-    console.error("Stripe checkout session creation failed", {
+    console.error('Stripe checkout session creation failed', {
       status: response.status,
       body: stripeBody,
     });
-    throw new Error("stripe_checkout_failed");
+    throw new Error('stripe_checkout_failed');
   }
 
   return checkoutUrl;
@@ -224,19 +246,19 @@ export const onRequest = async (context: any): Promise<Response> => {
   const request: Request = context.request;
   const method = request.method.toUpperCase();
 
-  if (method === "OPTIONS") {
+  if (method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
       headers: CORS_HEADERS,
     });
   }
 
-  if (method !== "POST") {
-    return new Response("Method Not Allowed", {
+  if (method !== 'POST') {
+    return new Response('Method Not Allowed', {
       status: 405,
       headers: {
         ...CORS_HEADERS,
-        Allow: "POST, OPTIONS",
+        Allow: 'POST, OPTIONS',
       },
     });
   }
@@ -245,8 +267,8 @@ export const onRequest = async (context: any): Promise<Response> => {
   const isRateLimited = await checkAndIncrementRateLimit(context.env, ip);
   if (isRateLimited) {
     return jsonResponse(
-      { ok: false, error: "rate_limited", message: "Too many requests. Try again later." },
-      429
+      { ok: false, error: 'rate_limited', message: 'Too many requests. Try again later.' },
+      429,
     );
   }
 
@@ -254,48 +276,62 @@ export const onRequest = async (context: any): Promise<Response> => {
   try {
     payload = (await request.json()) as LeadPayload;
   } catch {
-    return jsonResponse({ ok: false, error: "invalid_json" }, 400);
+    return jsonResponse({ ok: false, error: 'invalid_json' }, 400);
   }
 
-  const balik = asTrimmedString(payload.balik);
+  const balik = normalizePackageId(payload.balik);
+  const packageConfig = getPackageConfig(balik);
+  const typObjektu = asTrimmedString(payload.typObjektu);
+  const krajina = normalizeCountry(payload.krajina);
   const meno = asTrimmedString(payload.meno);
   const adresa = asTrimmedString(payload.adresa);
   const email = asTrimmedString(payload.email).toLowerCase();
   const telefon = asTrimmedString(payload.telefon);
   const poznamka = asTrimmedString(payload.poznamka);
+  const leadSource = normalizeLeadSource(payload.leadSource);
   const website = asTrimmedString(payload.website);
 
   if (website) {
-    return jsonResponse({ ok: false, error: "spam_detected" }, 400);
+    return jsonResponse({ ok: false, error: 'spam_detected' }, 400);
   }
 
-  if (!ALLOWED_BALIKY.has(balik)) {
-    return jsonResponse({ ok: false, error: "invalid_balik" }, 400);
+  if (!packageConfig) {
+    return jsonResponse({ ok: false, error: 'invalid_balik' }, 400);
+  }
+
+  if (typObjektu.length < 2) {
+    return jsonResponse({ ok: false, error: 'invalid_typ_objektu' }, 400);
   }
 
   if (meno.length < 2) {
-    return jsonResponse({ ok: false, error: "invalid_meno" }, 400);
+    return jsonResponse({ ok: false, error: 'invalid_meno' }, 400);
   }
 
   if (adresa.length < 5) {
-    return jsonResponse({ ok: false, error: "invalid_adresa" }, 400);
+    return jsonResponse({ ok: false, error: 'invalid_adresa' }, 400);
   }
 
   if (!EMAIL_REGEX.test(email)) {
-    return jsonResponse({ ok: false, error: "invalid_email" }, 400);
+    return jsonResponse({ ok: false, error: 'invalid_email' }, 400);
   }
 
   const leadId = createLeadId();
   const leadRecord: LeadRecord = {
     createdAt: new Date().toISOString(),
     clientIp: ip,
-    userAgent: request.headers.get("User-Agent") || "",
-    balik,
+    userAgent: request.headers.get('User-Agent') || '',
+    balik: packageConfig.id,
+    packageLabel: packageConfig.label,
+    servicePriceEur: packageConfig.servicePriceEur,
+    reservationPriceEur: packageConfig.reservationPriceEur,
+    typObjektu,
+    krajina,
     meno,
     adresa,
     email,
     telefon,
     poznamka,
+    leadSource,
   };
 
   try {
@@ -304,7 +340,7 @@ export const onRequest = async (context: any): Promise<Response> => {
       ...leadRecord,
     });
   } catch (error) {
-    console.error("Lead KV storage failed", error);
+    console.error('Lead KV storage failed', error);
   }
 
   await notifyWebhookIfConfigured(context.env, {
@@ -312,18 +348,29 @@ export const onRequest = async (context: any): Promise<Response> => {
     ...leadRecord,
   });
 
-  let checkoutUrl: string | null = null;
-  let stripeConfigured = false;
+  let checkoutUrl: string;
   try {
-    checkoutUrl = await createStripeCheckoutUrl(context.env, request, leadId, leadRecord);
-    stripeConfigured = Boolean(checkoutUrl);
+    checkoutUrl = await createStripeCheckoutUrl(context.env, request, leadId, leadRecord, packageConfig);
   } catch (error) {
-    if (error instanceof Error && error.message === "stripe_config_incomplete") {
-      return jsonResponse({ ok: false, error: "stripe_config_incomplete" }, 500);
+    if (error instanceof Error && error.message === 'stripe_not_configured') {
+      return jsonResponse({ ok: false, error: 'stripe_not_configured' }, 503);
     }
 
-    return jsonResponse({ ok: false, error: "stripe_checkout_failed" }, 502);
+    return jsonResponse({ ok: false, error: 'stripe_checkout_failed' }, 502);
   }
 
-  return jsonResponse({ ok: true, leadId, checkoutUrl, stripeConfigured }, 200);
+  return jsonResponse(
+    {
+      ok: true,
+      leadId,
+      reservation: {
+        packageId: packageConfig.id,
+        packageLabel: packageConfig.label,
+        servicePriceEur: packageConfig.servicePriceEur,
+        reservationPriceEur: packageConfig.reservationPriceEur,
+      },
+      checkoutUrl,
+    },
+    200,
+  );
 };

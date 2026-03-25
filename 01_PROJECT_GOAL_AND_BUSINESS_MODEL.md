@@ -1,52 +1,33 @@
 # PROJECT GOAL AND BUSINESS MODEL
 
 ## 1. Core goal
-Ciel tohto projektu nie je len mat web. Ciel je ziskavat dopyty, leady a idealne aj platby alebo zalohy pre sluzbu dronoveho cistenia striech a fasad. Workspace aktualne posobi ako predajna, validacna a operacna vrstva pre tento biznis. Web a backend maju premenit navstevnika na lead, rezervaciu, zalohu alebo neskor na realnu zakazku.
+Cieľ tohto projektu nie je len mať web. Cieľ je premeniť návštevníka na platenú rezerváciu pilotného slotu pre službu dronového čistenia striech a fasád a vyzbierať kapitál na rozbeh prevádzky.
 
 ## 2. What is being sold
-Predava sa sluzba cistenia striech a fasad pomocou dronu. Nepredava sa samotny dron ako produkt. Podla aktualneho workspace moze byt prvy komercny krok lead, rezervacia terminu, obhliadka alebo zaloha podla aktualneho funnel a cashflow modelu; aktualna dokumentacia pracuje so zalohovym modelom ako s hlavnym mechanizmom vcasneho cashflow.
+Predáva sa služba čistenia striech a fasád pomocou dronu. Nepredáva sa samotný dron ako produkt. Komerčný prvý krok je predobjednávka alebo rezervácia pilotného slotu, nie symbolická 50 € záloha.
 
 ## 3. Revenue model
-Zisk ma prichadzat z tychto zdrojov:
-- zalohy, predobjednavky alebo rezervacie
-- realizovane zakazky po vykonani prace
-- upsell doplnkovych sluzieb a vacsieho rozsahu prace
-- neskor B2B zakazky, vacsie objekty a vacsie kontrakty
+Zisk a cashflow majú prichádzať z týchto vrstiev:
+- platené rezervácie pilotných slotov
+- realizované zákazky po vykonaní práce
+- upsell väčšieho rozsahu, fasád a komplikovanejších objektov
+- B2B audity a väčšie objekty
 
-Podla aktualneho cashflow modelu je zaloha samostatny cashflow motor a finalny prijem ma prist z doplatkov po realizacii a z vyssieho blended priemeru na zakazku.
+## 4. Active cash objective
+Aktívny cieľ je 42 000 € gross preorder cash. Tento cieľ kryje dron alebo akontáciu, licencie a compliance, príslušenstvo a rezervu na fees alebo refundy.
 
-## 4. Funnel logic
-Zakladna logika funnelu je:
-traffic -> landing page -> form or payment step -> lead capture -> qualification/pricing -> job execution -> final payment / repeat business
+## 5. Funnel logic
+Základná logika funnelu je:
+traffic -> landing page -> formulár -> server-side checkout -> zaplatená rezervácia -> vyhodnotenie objektu -> realizácia -> finálna cena mínus odpočet rezervácie
 
-V aktualnom workspaci to konkretne posobi ako:
-- navstevnik pride na landing page
-- pochopi sluzbu, cenu a dovod na akcny krok
-- vyplni formular alebo prejde na platobny krok
-- backend zachyti lead a pripravi checkout alebo dalsi follow-up
-- prebehne kvalifikacia, potvrdenie rozsahu a nacenenie
-- prebehne realizacia zakazky
-- pride finalny doplatok, pripadne opakovany obchod alebo referral
+## 6. What the website is for
+Web má tieto úlohy:
+- vysvetliť službu a dôvod rezervácie
+- vytvoriť dôveru
+- zachytiť lead a platbu rezervácie
+- posunúť človeka do ďalšieho obchodného kroku
 
-## 5. What the website is for
-Web ma tieto ulohy:
-- vysvetlit sluzbu
-- vytvorit doveru
-- zachytit lead alebo platbu
-- posunut cloveka do dalsieho obchodneho kroku
+Web nemá pôsobiť ako prezentácia bez akcie. Je to predajný funnel orientovaný na rezerváciu pilotného slotu a následnú realizáciu.
 
-Web nema posobit len ako prezentacny web bez akcie. Aktualne posobi ako predajny funnel orientovany na formular, checkout a konverziu na zalohu alebo lead.
-
-## 6. What must exist for the business to work
-Aby tento biznis fungoval, musi existovat:
-- jasna ponuka
-- landing page
-- order alebo contact flow
-- lead capture a backend vrstva
-- follow-up proces po odoslani formulara alebo po platbe
-- realna schopnost sluzbu dodat legalne, bezpecne a operativne
-
-Bez tychto vrstiev by workspace vedel len komunikovat umysel, ale nie realne generovat a obsluzit obchod.
-
-## 7. Current strategic interpretation of this workspace
-Podla aktualneho workspace je hlavne implementacne jadro v `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`. Root priecinok obsahuje hlavne riadiace dokumenty, financny model, prioritizaciu a paralelnu technicku vetvu. Strategicky tento workspace aktualne posobi ako system na podporu predaja, validacie dopytu, inkasa zaloh a neskorsej realizacie sluzby cistenia striech a fasad dronom.
+## 7. Strategic interpretation of this workspace
+Hlavné implementačné jadro je v `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`. Root priečinok obsahuje riadiace dokumenty, cashflow, prioritizáciu a paralelný test harness. Strategicky tento workspace slúži na validáciu dopytu, inkaso reálnych predobjednávok a rozbeh služby čistenia striech a fasád dronom.
