@@ -1,85 +1,77 @@
-# DRON – Preorder Funnel for Drone Roof and Facade Cleaning
+# DRON - Public preorder funnel for drone roof and facade cleaning
 
-This repository is a business-validation and paid reservation funnel for a drone-based roof and facade cleaning service.
-It contains the landing page, booking flow, checkout logic and operating docs used to test whether customers will reserve paid pilot slots.
-It is not a drone autopilot, flight-control or telemetry codebase.
+## What this repo is
+- Public business-validation repository for a paid pilot-slot reservation funnel for a drone-based roof and facade cleaning service.
+- Current public offer runs as a one-page landing page in `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`.
+- Business goal: validate paid reservations toward a 42,000 EUR preorder cash target before full equipment purchase and launch.
+- Contains the landing page, booking flow, server-side package validation, Stripe Checkout session creation, tests, and operating docs.
 
-## What this repository is
-- Landing page and conversion funnel for a local field-service offer
-- Booking / preorder flow with package selection
-- Server-side order and Stripe Checkout session creation
-- Business-validation documents, pricing logic and cashflow planning
-- Tests for the core order flow and package enforcement
+## What this repo is not
+- Not a drone autopilot repository.
+- No flight-control software.
+- No telemetry stack.
+- No PX4 / ArduPilot / DJI integration.
+- No drone firmware.
 
-## What this repository is not
-- No drone firmware
-- No telemetry stack
-- No PX4 / ArduPilot / DJI integration
-- No flight-control software
+## Current live funnel
+1. A visitor opens the landing page.
+2. The visitor chooses one of four packages: `house_s`, `house_m`, `house_l`, `b2b_audit`.
+3. The visitor submits package, property type, country, and contact details.
+4. `order-form.js` sends JSON to `POST /api/order` without a trusted client-side price.
+5. `functions/api/order.ts` validates the package, resolves pricing from `order-packages.js`, stores the lead when KV is available, optionally sends a lead-created notification webhook, and creates a Stripe Checkout Session when `STRIPE_SECRET_KEY` is configured.
+6. The frontend redirects only to the returned `checkoutUrl`.
+7. The landing page handles `?checkout=success` and `?checkout=cancel`.
+8. A paid reservation is still followed by manual operational review of the property, weather, and readiness. Post-payment automation is not finished yet.
 
-## Current status
-### Current focus
-- Validate paid reservations for pilot cleaning slots
-- Reach the preorder cash target before equipment purchase
-- Keep pricing and reservation amounts enforced server-side
+## What works today
+- Active one-page landing page with the current paid reservation offer.
+- Four server-enforced packages with reservation amounts `149 / 199 / 299 / 990 EUR`.
+- Frontend form validation, honeypot handling, and lead-source resolution.
+- `POST /api/order` validation, rate limiting, optional KV lead storage, and Stripe Checkout session creation.
+- Success / cancel status messaging after return from Stripe.
+- Root tests for order-flow validation and package mapping.
 
-### Implemented
-- Active landing page and booking funnel in `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`
-- Package-based preorder flow: `house_s`, `house_m`, `house_l`, `b2b_audit`
-- Server-side `/api/order` checkout session creation with Stripe
-- Success / cancel return handling in the live funnel
-- Root tests for order flow validation and package mapping
+## What is still missing
+- Live `STRIPE_SECRET_KEY` and full production payment lifecycle in Cloudflare Pages.
+- Stripe webhook and automated paid-reservation confirmation after successful payment.
+- Production analytics for CAC, checkout success rate, and refund rate.
+- Final hardening of refund and post-payment business process handling.
+- Real pilot references and assets.
+- Dedicated DE landing-page variant.
 
-### In progress
-- Production payment lifecycle hardening
-- Webhook completion after successful payment
-- Analytics and funnel measurement
-- Public repo cleanup and clearer public docs
+## Source of truth
+Read in this order:
+1. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/PROJECT_HANDOVER.md`
+2. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/index.html`
+3. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-form.js`
+4. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-packages.js`
+5. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/functions/api/order.ts`
+6. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/SITE_OVERVIEW.md`
+7. `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/FLOW_ORDER_STRIPE.md`
+8. `STATUS.md`, `QUEUE.md`, `CASHFLOW_2026.md`, `00_RUNBOOK_CODEX.md`
 
-## Funnel flow
-1. A visitor lands on the page.
-2. The visitor chooses a package.
-3. The visitor fills in booking details.
-4. The backend validates the package and creates a checkout session.
-5. The customer reserves a paid pilot slot.
+If README conflicts with the live funnel, trust `PROJECT_HANDOVER.md` plus the live code.
 
-## Package structure
-- `house_s`
-- `house_m`
-- `house_l`
-- `b2b_audit`
-
-Pricing and reservation amounts are enforced server-side. The client does not send a trusted price.
-
-## Repository structure
-- Root: business docs, cashflow, status, runbooks and repo-level guidance
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`: active landing page and funnel implementation
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/functions/api/`: order / checkout backend
-- `test/`: root tests for the core order flow
-
-## Who this is for
-- Operators validating a local service business
-- Founders testing paid reservation models
-- People building field-service booking funnels
-
-## What is not public yet
-- Some internal operational and strategy documents are still mixed into this repository
-- Over time, the public showcase layer and internal ops layer should be separated more clearly
-
-## Next milestones
-- Production payment lifecycle
-- Webhook completion
-- Public repo cleanup
-- Demo assets, screenshots and tighter public docs
+## Key files
+- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/index.html` - current public landing page.
+- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-form.js` - form read, validate, submit, and redirect logic.
+- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-packages.js` - authoritative package catalog and reservation amounts.
+- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/functions/api/order.ts` - order validation, lead handling, and Stripe Checkout session creation.
+- `test/order-form.test.js` - frontend order-flow tests.
+- `test/order-handler.test.js` - API order-flow tests.
+- `package.json` - repo-root test and dev entry points.
 
 ## Quick start
+From the repo root:
+
 ```bash
 npm install
 npm test
+npm --prefix "./DRONE_CLEANING_BUSINESS/stranka umyvanie strechy" install
 npm run dev
 ```
 
-Minimum checkout env for local funnel work:
+Minimum local checkout env:
 
 ```env
 STRIPE_SECRET_KEY=sk_test_xxx
@@ -87,7 +79,11 @@ STRIPE_SUCCESS_URL=http://localhost:8788/?checkout=success
 STRIPE_CANCEL_URL=http://localhost:8788/?checkout=cancel
 ```
 
-Main funnel docs:
-- `02_SOURCE_OF_TRUTH.md`
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/SITE_OVERVIEW.md`
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/FLOW_ORDER_STRIPE.md`
+If `STRIPE_SECRET_KEY` is missing, `/api/order` returns `stripe_not_configured` instead of a fake checkout.
+
+## Current priorities
+- Live Stripe and production payment confirmation.
+- First real pilot jobs, references, and assets.
+- Analytics for package mix, CAC, checkout success, and refunds.
+- B2B audit funnel execution.
+- Dedicated DE landing-page variant.
