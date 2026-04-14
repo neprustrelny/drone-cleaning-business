@@ -1,10 +1,10 @@
-# DRON - Public preorder funnel for drone roof and facade cleaning
+# DRON - Public founding-package funnel for drone roof and facade cleaning
 
 ## What this repo is
 - Public business-validation repository for a paid founding-package funnel for a drone-based roof and facade cleaning service.
 - Current public offer runs as a one-page landing page in `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/`.
-- Business goal: validate paid founding packages toward a 42,000 EUR preorder cash target before full equipment purchase and launch.
-- Contains the landing page, booking flow, server-side package validation, Stripe Checkout session creation, tests, and operating docs.
+- Business goal: validate demand and paid founding-package conversion before full service launch.
+- Contains the landing page, order flow, server-side package validation, Stripe Checkout session creation, tests, and operating docs.
 
 ## What this repo is not
 - Not a drone autopilot repository.
@@ -30,7 +30,7 @@
   - `Pilot Dom M` - `649 EUR`
   - `Pilot Dom L` - `949 EUR`
   - `B2B Audit / Fasáda` - `1990 EUR`
-- Pricing is determined server-side from `order-packages.js`; the live funnel is not based on the older low-price reservation model.
+- Pricing is determined server-side from `order-packages.js`; the frontend sends only the selected package and contact data.
 - Frontend form validation, honeypot handling, and lead-source resolution.
 - `POST /api/order` validation, rate limiting, optional KV lead storage, and Stripe Checkout session creation.
 - Success / cancel status messaging after return from Stripe.
@@ -38,7 +38,7 @@
 
 ## What is still missing
 - Live `STRIPE_SECRET_KEY` and full production payment lifecycle in Cloudflare Pages.
-- Stripe webhook and automated paid-reservation confirmation after successful payment.
+- Stripe webhook handling and automated payment confirmation after successful payment.
 - Production analytics for CAC, checkout success rate, and refund rate.
 - Final hardening of refund and post-payment business process handling.
 - Real pilot references and assets.
@@ -59,8 +59,8 @@ If README conflicts with the live app layer, trust `index.html`, `order-packages
 
 ## Key files
 - `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/index.html` - current public landing page.
+- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-packages.js` - source of truth for live founding packages, labels, and server-side pricing.
 - `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-form.js` - form read, validate, submit, and redirect logic.
-- `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/order-packages.js` - authoritative package catalog and server-side founding pricing.
 - `DRONE_CLEANING_BUSINESS/stranka umyvanie strechy/functions/api/order.ts` - order validation, lead handling, and Stripe Checkout session creation from server-side package pricing.
 - `test/order-form.test.js` - frontend order-flow tests.
 - `test/order-handler.test.js` - API order-flow tests.
