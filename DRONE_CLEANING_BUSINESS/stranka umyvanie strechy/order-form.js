@@ -92,14 +92,14 @@ export const getCheckoutStatusFromLocation = (locationRef) => {
 
   if (checkoutStatus === 'success') {
     return {
-      message: 'Rezervacia pilotneho slotu bola uspesne uhradena. Ozveme sa s potvrdenim dalsieho kroku.',
+      message: 'Platba founding balika bola dokoncena. Dalsi krok ti potvrdime e-mailom.',
       isError: false,
     };
   }
 
   if (checkoutStatus === 'cancel') {
     return {
-      message: 'Rezervacia nebola dokoncena. Formular mozes odoslat znova.',
+      message: 'Platba founding balika nebola dokoncena. Formular mozes odoslat znova.',
       isError: true,
     };
   }
@@ -142,7 +142,7 @@ export const createOrderSubmitHandler = ({
     };
   }
 
-  showStatus('Spracovavame rezervaciu...', { isError: false });
+  showStatus('Spracovavame vybrany founding balik...', { isError: false });
   setButtonState(true);
 
   try {
@@ -154,13 +154,13 @@ export const createOrderSubmitHandler = ({
       throw new Error('Stripe checkout is not configured.');
     }
 
-    showStatus('Objednavku mame. Presmerovavame na rezervaciu pilotneho slotu v Stripe.', { isError: false });
+    showStatus('Objednavku mame. Presmerovavame ta na platbu vybraneho balika v Stripe.', { isError: false });
     resetForm();
     openStripeCheckout(checkoutUrl);
     return { ok: true, payload, apiResult, checkoutUrl };
   } catch (error) {
     logError('Odoslanie objednavky zlyhalo', error);
-    showStatus('Objednavka sa neodoslala alebo checkout nie je pripraveny. Skus znova alebo napis na strechy@dronservis.sk.', {
+    showStatus('Balik sa neodoslal alebo checkout nie je pripraveny. Skus znova alebo napis na strechy@dronservis.sk.', {
       isError: true,
     });
     return { ok: false, reason: 'send_failed', error };

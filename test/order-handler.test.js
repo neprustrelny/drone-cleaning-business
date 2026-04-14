@@ -71,25 +71,25 @@ test('backend prijme validny payload a vrati checkoutUrl', async () => {
   });
   assert.deepEqual(json.reservation, {
     packageId: 'house_m',
-    packageLabel: 'Rodinny dom M / strecha + jednoducha fasada',
-    servicePriceEur: 590,
-    reservationPriceEur: 199,
-    reservationPriceCents: 19900,
+    packageLabel: 'Pilot Dom M',
+    servicePriceEur: 649,
+    reservationPriceEur: 649,
+    reservationPriceCents: 64900,
   });
   assert.equal(json.checkoutUrl, 'https://checkout.stripe.com/c/pay/house_m');
   assert.equal(json.stripeConfigured, true);
   assert.equal(checkoutCalls.length, 1);
-  assert.equal(checkoutCalls[0].reservationPriceCents, 19900);
+  assert.equal(checkoutCalls[0].reservationPriceCents, 64900);
   assert.equal(writes.length, 1);
   assert.equal(writes[0].value.reservation.packageId, 'house_m');
 });
 
 test('backend mapuje server-side sumu podla balika', async () => {
   const expectations = [
-    ['house_s', 'rodinny_dom', 14900],
-    ['house_m', 'rodinny_dom', 19900],
-    ['house_l', 'rodinny_dom', 29900],
-    ['b2b_audit', 'firemny_objekt', 99000],
+    ['house_s', 'rodinny_dom', 39900],
+    ['house_m', 'rodinny_dom', 64900],
+    ['house_l', 'rodinny_dom', 94900],
+    ['b2b_audit', 'firemny_objekt', 199000],
   ];
 
   for (const [balik, typObjektu, expectedAmount] of expectations) {
